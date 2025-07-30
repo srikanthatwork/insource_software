@@ -90,7 +90,7 @@ const Header: React.FC = () => {
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 py-2 glass"
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 py-2 "
                       >
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           <motion.div
@@ -132,7 +132,7 @@ const Header: React.FC = () => {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Link
                 to="/contact"
-                className="bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium flex items-center space-x-2 animate-pulse-glow"
+                className="bg-gradient-to-r from-blue-500  to-blue-900 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium flex items-center space-x-2 animate-pulse-glow"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Book Demo</span>

@@ -103,14 +103,14 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center lg:text-left"
+            className="text-center lg:text-left "
           >
             {/* Badge */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full text-sm font-medium mb-6 glass"
+              className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full  text-sm font-medium mb-6 glass"
             >
               <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
               Healthcare Technology Leaders Since {companyInfo.foundedYear}
@@ -130,11 +130,11 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              <span className="animate-gradient-text block mb-2">
+              <span className="animate-gradient-text block mb-2 md:text-xl uppercase">
                 Transforming Healthcare
               </span>
-              <span className="text-gray-800 block mb-2">Digitally Powered</span>
-              <span className="bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+              <span className="text-gray-800  mb-2 md:text-6xl">Digitally Powered Solutions</span>
+              <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent md:text-6xl">
                 Next-Gen Solutions
               </span>
             </motion.h1>
@@ -144,7 +144,7 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.6 }}
-              className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-2xl"
+              className="text-lg md:text-1xl text-gray-600 mb-8 leading-relaxed max-w-2xl"
             >
               {companyInfo.vision}. We provide comprehensive digital solutions that streamline healthcare operations and enhance patient care with cutting-edge AI technology.
             </motion.p>
@@ -161,7 +161,7 @@ const Hero: React.FC = () => {
                   size="lg" 
                   icon={ArrowRight} 
                   iconPosition="right"
-                  className="bg-gradient-to-r from-blue-600 via-green-600 to-blue-600 hover:from-blue-700 hover:via-green-700 hover:to-blue-700 animate-pulse-glow"
+                  className="bg-gradient-to-r from-blue-400  to-blue-600 hover:from-blue-700 hover:via-green-700 hover:to-blue-700 animate-pulse-glow"
                 >
                   Book a Demo
                 </Button>
@@ -192,10 +192,10 @@ const Hero: React.FC = () => {
                   animate={currentStat === index ? { scale: [1, 1.1, 1] } : {}}
                   transition={{ duration: 0.5 }}
                 >
-                  <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+                  {/* <div className={`text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
                     {stat.value}
-                  </div>
-                  <div className="text-sm text-gray-600">{stat.label}</div>
+                  </div> */}
+                  {/* <div className="text-sm text-gray-600">{stat.label}</div> */}
                 </motion.div>
               ))}
             </motion.div>

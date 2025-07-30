@@ -206,7 +206,7 @@ const Vision: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1, duration: 0.6 }}
               >
-                <Card className="p-6 text-center hover-lift">
+                <Card className="p-6 text-center hover-lift ">
                   <div className="w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award className="w-8 h-8 text-white" />
                   </div>
@@ -246,19 +246,19 @@ const Vision: React.FC = () => {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">{companyInfo.clients}</div>
-                  <div className="text-blue-100">Healthcare Facilities</div>
+                  <div className="text-blue-100">+ Projects Done</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">5M+</div>
-                  <div className="text-blue-100">Patients Served</div>
+                  <div className="text-4xl font-bold mb-2">500</div>
+                  <div className="text-blue-100">+ Happy Clients</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">{companyInfo.countries}</div>
-                  <div className="text-blue-100">Countries</div>
+                  <div className="text-blue-100">+ Experts Staffs</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">{companyInfo.employees}</div>
-                  <div className="text-blue-100">Team Members</div>
+                  <div className="text-blue-100">+ Win Awards</div>
                 </div>
               </div>
             </div>

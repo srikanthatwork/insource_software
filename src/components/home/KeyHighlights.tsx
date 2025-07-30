@@ -69,7 +69,7 @@ const KeyHighlights: React.FC = () => {
                   </p>
 
                   {/* Stats */}
-                  <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 rounded-xl">
+                  {/* <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-gray-50 rounded-xl">
                     {Object.entries(highlight.stats).map(([key, value]) => (
                       <div key={key} className="text-center">
                         <div className={`text-lg font-bold bg-gradient-to-r ${highlight.color} bg-clip-text text-transparent`}>
@@ -78,11 +78,11 @@ const KeyHighlights: React.FC = () => {
                         <div className="text-xs text-gray-500 capitalize">{key}</div>
                       </div>
                     ))}
-                  </div>
+                  </div> */}
 
                   <Button 
                     variant="outline" 
-                    className={`w-full group-hover:bg-gradient-to-r group-hover:${highlight.color} group-hover:text-white group-hover:border-transparent transition-all duration-300`}
+                    className={`w-full group-hover:bg-gradient-to-r group-hover:${highlight.color} group-hover:text-black group-hover:border-red-200 transition-all duration-300`}
                     onClick={() => navigate(`/products/${highlight.title.toLowerCase()}`)}
                   >
                     Learn More

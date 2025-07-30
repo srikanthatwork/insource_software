@@ -4,12 +4,12 @@ export const companyInfo = {
   vision: "Re-imagining human potential in healthcare",
   description: "Leading provider of digital solutions for the healthcare industry, specializing in comprehensive management systems that streamline operations and enhance patient care.",
   foundedYear: 2010,
-  employees: "500+",
-  clients: "1000+",
-  countries: "25+",
+  employees: "50",
+  clients: "1200",
+  countries: "1500",
   contact: {
-    phone: "+1 (555) 123-4567",
-    email: "info@insourcesoftware.com",
+    phone: "+91 7708 999 980",
+    email: "info@insourcesoftware.in",
     address: "123 Healthcare Drive, Medical District, NY 10001",
     hours: "Mon-Fri: 8:00 AM - 6:00 PM EST"
   },
@@ -274,7 +274,7 @@ export const awards = [
     title: "Healthcare Innovation Award 2023",
     organization: "Healthcare Technology Association",
     year: "2023",
-    description: "Recognized for outstanding innovation in healthcare management systems"
+    description: "Recognized for outstanding innovation in hrms."
   },
   {
     title: "Best Healthcare Software 2022",
