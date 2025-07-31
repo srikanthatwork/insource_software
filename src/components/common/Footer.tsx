@@ -13,7 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { companyInfo } from "../../data/company";
-import logo from "../../../src/components/assets/insource.jpeg";
+import logo from "../../../src/components/assets/insource-removebg.png";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
