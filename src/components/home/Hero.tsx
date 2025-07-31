@@ -130,7 +130,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.4, duration: 0.6 }}
               className="text-4xl md:text-5xl lg:text-7xl font-bold mb-6 leading-tight"
             >
-              <span className="animate-gradient-text block mb-2 md:text-xl uppercase">
+              <span className="animate-gradient-text block mb-2 md:text-md text-sm uppercase">
                 Transforming Healthcare
               </span>
               <span className="text-gray-800  mb-2 md:text-6xl">Digitally Powered Solutions</span>
