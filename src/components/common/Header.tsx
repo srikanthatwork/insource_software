@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          {/* <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
@@ -138,10 +138,10 @@ const Header: React.FC = () => {
                 <span>Book Demo</span>
               </Link>
             </motion.div>
-          </nav> */}
+          </nav>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <div
                 key={item.name}
@@ -214,7 +214,7 @@ const Header: React.FC = () => {
                 <span>Book Demo</span>
               </Link>
             </motion.div>
-          </nav>
+          </nav> */}
 
           {/* Mobile menu button */}
           <motion.button
