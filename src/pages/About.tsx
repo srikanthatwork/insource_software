@@ -33,11 +33,11 @@ const About: React.FC = () => {
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full text-sm font-medium mb-6"
             >
               <Icons.Sparkles className="w-4 h-4 mr-2" />
-              About Our Company
+              About Us
             </motion.div>
 
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              About <span className="animate-gradient-text">Insource</span>
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              We Provide Best <span className="animate-gradient-text">Business Solutions</span> For You
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {companyInfo.description}
@@ -78,19 +78,19 @@ const About: React.FC = () => {
                   <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                     {companyInfo.clients}
                   </div>
-                  <div className="text-sm text-gray-600">Clients</div>
+                  <div className="text-sm text-gray-600">+ Happy Clients</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
                     {companyInfo.countries}
                   </div>
-                  <div className="text-sm text-gray-600">Countries</div>
+                  <div className="text-sm text-gray-600">+ Experts Staffs</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
                     {companyInfo.employees}
                   </div>
-                  <div className="text-sm text-gray-600">Team Members</div>
+                  <div className="text-sm text-gray-600">+ Win Awards</div>
                 </div>
               </div>
             </AnimatedSection>
@@ -253,15 +253,15 @@ const About: React.FC = () => {
                   </blockquote>
                   
                   <div className="flex items-center">
-                    <img
+                    {/* <img
                       src={testimonial.image}
                       alt={testimonial.name}
                       className="w-12 h-12 rounded-full object-cover mr-4"
-                    />
+                    /> */}
                     <div>
                       <div className="font-semibold text-gray-900">{testimonial.name}</div>
-                      <div className="text-sm text-gray-600">{testimonial.position}</div>
-                      <div className="text-sm text-blue-600">{testimonial.company}</div>
+                      {/* <div className="text-sm text-gray-600">{testimonial.position}</div>
+                      <div className="text-sm text-blue-600">{testimonial.company}</div> */}
                     </div>
                   </div>
                 </Card>

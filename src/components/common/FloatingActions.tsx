@@ -15,7 +15,7 @@ const FloatingActions: React.FC = () => {
   const [newMessage, setNewMessage] = useState("");
 
   const handleWhatsAppClick = () => {
-    const phoneNumber = "1234567890"; // Replace with actual WhatsApp number
+    const phoneNumber = "7569690353"; // Replace with actual WhatsApp number
     const message =
       "Hi! I'm interested in learning more about Insource Software solutions.";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

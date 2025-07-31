@@ -1,36 +1,40 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Target, Users, Zap, Shield, Award, Globe } from 'lucide-react';
-import AnimatedSection from '../common/AnimatedSection';
-import Card from '../common/Card';
-import { companyInfo, awards } from '../../data/company';
+import React from "react";
+import { motion } from "framer-motion";
+import { Target, Users, Zap, Shield, Award, Globe } from "lucide-react";
+import AnimatedSection from "../common/AnimatedSection";
+import Card from "../common/Card";
+import { companyInfo, awards } from "../../data/company";
 
 const Vision: React.FC = () => {
   const visionPoints = [
     {
       icon: Target,
-      title: 'Our Mission',
-      description: 'To revolutionize healthcare through innovative digital solutions that improve patient outcomes and operational efficiency.',
-      color: 'from-blue-500 to-cyan-500'
+      title: "Our Mission",
+      description:
+        "To revolutionize healthcare through innovative digital solutions that improve patient outcomes and operational efficiency.",
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: Users,
-      title: 'Patient-Centric',
-      description: 'Every solution we build puts patients at the center, ensuring better care delivery and enhanced experiences.',
-      color: 'from-green-500 to-emerald-500'
+      title: "Diagnostics Management",
+      description:
+        "There are many variations of passages orem psum available but the majority have suffered alteration in some.",
+      color: "from-green-500 to-emerald-500",
     },
     {
       icon: Zap,
-      title: 'Innovation First',
-      description: 'We leverage cutting-edge technology including AI and machine learning to solve complex healthcare challenges.',
-      color: 'from-orange-500 to-red-500'
+      title: "Retail Store App",
+      description:
+        "There are many variations of passages orem psum available but the majority have suffered alteration in some.",
+      color: "from-orange-500 to-red-500",
     },
     {
       icon: Shield,
-      title: 'Trust & Security',
-      description: 'HIPAA-compliant solutions with enterprise-grade security to protect sensitive healthcare data.',
-      color: 'from-purple-500 to-pink-500'
-    }
+      title: "Distribution ERP",
+      description:
+        "There are many variations of passages orem psum available but the majority have suffered alteration in some.",
+      color: "from-purple-500 to-pink-500",
+    },
   ];
 
   return (
@@ -38,26 +42,26 @@ const Vision: React.FC = () => {
       {/* Background elements */}
       <div className="absolute inset-0">
         <motion.div
-          animate={{ 
+          animate={{
             rotate: 360,
-            scale: [1, 1.2, 1]
+            scale: [1, 1.2, 1],
           }}
-          transition={{ 
-            duration: 30, 
-            repeat: Infinity, 
-            ease: "linear" 
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "linear",
           }}
           className="absolute top-20 right-20 w-40 h-40 bg-gradient-to-r from-blue-200 to-green-200 rounded-full opacity-20 blur-xl"
         />
         <motion.div
-          animate={{ 
+          animate={{
             rotate: -360,
-            scale: [1, 0.8, 1]
+            scale: [1, 0.8, 1],
           }}
-          transition={{ 
-            duration: 25, 
-            repeat: Infinity, 
-            ease: "linear" 
+          transition={{
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear",
           }}
           className="absolute bottom-20 left-20 w-32 h-32 bg-gradient-to-r from-orange-200 to-red-200 rounded-full opacity-30 blur-xl"
         />
@@ -83,10 +87,15 @@ const Vision: React.FC = () => {
                   <span className="animate-gradient-text block mb-2">
                     Re-imagining
                   </span>
-                  <span className="text-gray-800">Human Potential in Healthcare</span>
+                  <span className="text-gray-800">
+                    Human Potential in Healthcare
+                  </span>
                 </h2>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  {companyInfo.vision}. We believe technology should empower healthcare professionals to focus on what matters most - patient care. Our solutions are designed to eliminate administrative burden and enhance clinical decision-making.
+                  {companyInfo.vision}. We believe technology should empower
+                  healthcare professionals to focus on what matters most -
+                  patient care. Our solutions are designed to eliminate
+                  administrative burden and enhance clinical decision-making.
                 </p>
               </div>
 
@@ -100,12 +109,18 @@ const Vision: React.FC = () => {
                     whileHover={{ scale: 1.05 }}
                     className="flex items-start space-x-4 p-4 rounded-xl hover:bg-white/50 transition-all duration-300"
                   >
-                    <div className={`w-12 h-12 bg-gradient-to-r ${point.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}>
+                    <div
+                      className={`w-12 h-12 bg-gradient-to-r ${point.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}
+                    >
                       <point.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{point.title}</h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">{point.description}</p>
+                      <h3 className="font-semibold text-gray-900 mb-2">
+                        {point.title}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed">
+                        {point.description}
+                      </p>
                     </div>
                   </motion.div>
                 ))}
@@ -145,12 +160,20 @@ const Vision: React.FC = () => {
                 <div className="absolute inset-0 flex items-center justify-center">
                   <motion.div
                     animate={{ rotate: 360 }}
-                    transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                    transition={{
+                      duration: 20,
+                      repeat: Infinity,
+                      ease: "linear",
+                    }}
                     className="w-40 h-40 border-4 border-blue-300 rounded-full flex items-center justify-center"
                   >
                     <motion.div
                       animate={{ rotate: -360 }}
-                      transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 15,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                       className="w-24 h-24 bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 rounded-full flex items-center justify-center"
                     >
                       <Target className="w-12 h-12 text-white" />
@@ -191,7 +214,8 @@ const Vision: React.FC = () => {
         <AnimatedSection>
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-              Recognition & <span className="animate-gradient-text">Awards</span>
+              Recognition &{" "}
+              <span className="animate-gradient-text">Awards</span>
             </h3>
             <p className="text-xl text-gray-600">
               Trusted by industry leaders and recognized for excellence
@@ -219,9 +243,9 @@ const Vision: React.FC = () => {
                   <p className="text-gray-600 text-sm mb-2">
                     {award.description}
                   </p>
-                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  {/* <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                     {award.year}
-                  </span>
+                  </span> */}
                 </Card>
               </motion.div>
             ))}
@@ -234,18 +258,21 @@ const Vision: React.FC = () => {
             <div className="absolute inset-0 opacity-10">
               <Globe className="w-full h-full" />
             </div>
-            
+
             <div className="relative z-10 text-center">
               <h3 className="text-3xl md:text-4xl font-bold mb-4">
                 Global Healthcare Transformation
               </h3>
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Serving healthcare organizations across 25+ countries, impacting millions of lives through innovative technology solutions.
+                Serving healthcare organizations across 25+ countries, impacting
+                millions of lives through innovative technology solutions.
               </p>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">{companyInfo.clients}</div>
+                  <div className="text-4xl font-bold mb-2">
+                    {companyInfo.clients}
+                  </div>
                   <div className="text-blue-100">+ Projects Done</div>
                 </div>
                 <div className="text-center">
@@ -253,11 +280,15 @@ const Vision: React.FC = () => {
                   <div className="text-blue-100">+ Happy Clients</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">{companyInfo.countries}</div>
+                  <div className="text-4xl font-bold mb-2">
+                    {companyInfo.countries}
+                  </div>
                   <div className="text-blue-100">+ Experts Staffs</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">{companyInfo.employees}</div>
+                  <div className="text-4xl font-bold mb-2">
+                    {companyInfo.employees}
+                  </div>
                   <div className="text-blue-100">+ Win Awards</div>
                 </div>
               </div>
