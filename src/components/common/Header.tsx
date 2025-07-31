@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Menu, X, ChevronDown, Sparkles } from "lucide-react";
-import logo from "../../../src/components/assets/insource.jpeg";
+import logo from "../../../src/components/assets/insource-removebg.png";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

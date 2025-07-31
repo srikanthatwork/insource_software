@@ -228,7 +228,7 @@ export const products: Product[] = [
       "Comprehensive HR solution for employee lifecycle and payroll  Management and performance",
     icon: "Users",
     bgImage: image2,
-    color: "from-green-500 to-emerald-500",
+    color: "from-cyan-500 to-emerald-500",
     benefits: [
       "Reduce HR administrative time by 60%",
       "Improve employee satisfaction by 45%",
