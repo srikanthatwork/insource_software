@@ -57,7 +57,7 @@ const Header: React.FC = () => {
             >
               <span className="text-white font-bold text-sm">IS</span>
             </motion.div> */}
-            <img src={logo} alt="logo" height={20} width={60}/>
+            <img src={logo} alt="logo" height={20} width={60} />
             {/* <div className="flex flex-col">
               <span className="text-xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
                 Insource
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          {/* <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <div key={item.name} className="relative">
                 {item.hasDropdown ? (
@@ -133,6 +133,82 @@ const Header: React.FC = () => {
               <Link
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500  to-blue-900 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium flex items-center space-x-2 animate-pulse-glow"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>Book Demo</span>
+              </Link>
+            </motion.div>
+          </nav> */}
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {navItems.map((item) => (
+              <div
+                key={item.name}
+                className="relative"
+                onMouseEnter={() => setProductsOpen(true)}
+                onMouseLeave={() => setProductsOpen(false)}
+              >
+                {item.hasDropdown ? (
+                  <>
+                    <button className="flex items-center space-x-1 text-gray-700 hover:text-blue-600 transition-colors font-medium">
+                      <span>{item.name}</span>
+                      <motion.div
+                        animate={{ rotate: productsOpen ? 180 : 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <ChevronDown className="w-4 h-4" />
+                      </motion.div>
+                    </button>
+
+                    {productsOpen && (
+                      <motion.div
+                        initial={{ opacity: 0, y: 10, scale: 0.95 }}
+                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                        exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 py-2 z-50"
+                      >
+                        {item.dropdownItems?.map((dropdownItem, index) => (
+                          <motion.div
+                            key={dropdownItem.name}
+                            initial={{ opacity: 0, x: -10 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ delay: index * 0.05 }}
+                          >
+                            <Link
+                              to={dropdownItem.path}
+                              className="block px-4 py-3 text-sm text-gray-700 hover:bg-gradient-to-r hover:from-blue-50 hover:to-green-50 hover:text-blue-600 transition-all duration-200 rounded-lg mx-2"
+                            >
+                              {dropdownItem.name}
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </motion.div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    to={item.path}
+                    className={`text-gray-700 hover:text-blue-600 transition-colors font-medium relative ${
+                      location.pathname === item.path ? "text-blue-600" : ""
+                    }`}
+                  >
+                    {item.name}
+                    {location.pathname === item.path && (
+                      <motion.div
+                        layoutId="activeTab"
+                        className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-600 to-green-600 rounded-full"
+                      />
+                    )}
+                  </Link>
+                )}
+              </div>
+            ))}
+
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+              <Link
+                to="/contact"
+                className="bg-gradient-to-r from-blue-500 to-blue-900 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium flex items-center space-x-2 animate-pulse-glow"
               >
                 <Sparkles className="w-4 h-4" />
                 <span>Book Demo</span>
