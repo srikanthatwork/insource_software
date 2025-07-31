@@ -132,7 +132,7 @@ const KeyHighlights: React.FC = () => {
                   Ready to Transform Your Healthcare Operations?
                 </h3>
                 <p className="text-xl text-blue-100 mb-6 leading-relaxed">
-                  Join over 1000+ healthcare facilities worldwide who trust Insource for their digital transformation journey.
+                  Join over 100+ healthcare facilities worldwide who trust Insource for their digital transformation journey.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 

@@ -1,57 +1,63 @@
-import React, { useState } from 'react';
-import { useParams, Navigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import * as Icons from 'lucide-react';
-import AnimatedSection from '../components/common/AnimatedSection';
-import Card from '../components/common/Card';
-import Button from '../components/common/Button';
-import { products } from '../data/products';
+import React, { useState } from "react";
+import { useParams, Navigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import * as Icons from "lucide-react";
+import AnimatedSection from "../components/common/AnimatedSection";
+import Card from "../components/common/Card";
+import Button from "../components/common/Button";
+import { products } from "../data/products";
 
 const ProductDetail: React.FC = () => {
   const { productId } = useParams<{ productId: string }>();
-  const [activeTab, setActiveTab] = useState('overview');
-  
-  const product = products.find(p => p.id === productId);
-  
+  const [activeTab, setActiveTab] = useState("overview");
+
+  const product = products.find((p) => p.id === productId);
+
   if (!product) {
     return <Navigate to="/products" replace />;
   }
 
-  const IconComponent = Icons[product.icon as keyof typeof Icons] as React.ComponentType<any>;
+  const IconComponent = Icons[
+    product.icon as keyof typeof Icons
+  ] as React.ComponentType<any>;
 
   const tabs = [
-    { id: 'overview', label: 'Overview' },
-    { id: 'features', label: 'Features' },
-    { id: 'modules', label: 'Modules' }
+    { id: "overview", label: "Overview" },
+    { id: "features", label: "Features" },
+    { id: "modules", label: "Modules" },
   ];
 
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className={`py-20 bg-gradient-to-br ${product.color.replace('from-', 'from-').replace('to-', 'to-')}/10`}>
+      <section
+        className={`py-20 bg-gradient-to-br ${product.color
+          .replace("from-", "from-")
+          .replace("to-", "to-")}/10`}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
-              <div className={`w-20 h-20 bg-gradient-to-r ${product.color} rounded-3xl flex items-center justify-center mb-6`}>
+              <div
+                className={`w-20 h-20 bg-gradient-to-r ${product.color} rounded-3xl flex items-center justify-center mb-6`}
+              >
                 <IconComponent className="w-10 h-10 text-white" />
               </div>
-              
+
               <h1 className="text-5xl font-bold text-gray-900 mb-4">
                 {product.name}
               </h1>
-              
+
               <p className="text-xl text-gray-600 mb-6 font-medium">
                 {product.fullName}
               </p>
-              
+
               <p className="text-lg text-gray-600 leading-relaxed mb-8">
                 {product.description}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg">
-                  Request Demo
-                </Button>
+                <Button size="lg">Request Demo</Button>
                 <Button variant="outline" size="lg">
                   Download Brochure
                 </Button>
@@ -60,12 +66,23 @@ const ProductDetail: React.FC = () => {
 
             <AnimatedSection direction="right">
               <div className="relative">
-                <div className={`w-full h-96 bg-gradient-to-br ${product.color.replace('from-', 'from-').replace('to-', 'to-')}/20 rounded-3xl flex items-center justify-center`}>
+                <div
+                  className={`w-full h-96 bg-gradient-to-br ${product.color
+                    .replace("from-", "from-")
+                    .replace(
+                      "to-",
+                      "to-"
+                    )}/20 rounded-3xl flex items-center justify-center`}
+                >
                   <div className="text-center">
-                    <div className={`w-32 h-32 bg-gradient-to-r ${product.color} rounded-full mx-auto mb-4 flex items-center justify-center`}>
+                    <div
+                      className={`w-32 h-32 bg-gradient-to-r ${product.color} rounded-full mx-auto mb-4 flex items-center justify-center`}
+                    >
                       <IconComponent className="w-16 h-16 text-white" />
                     </div>
-                    <p className="text-gray-600 font-medium">{product.fullName}</p>
+                    <p className="text-gray-600 font-medium">
+                      {product.fullName}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -84,8 +101,8 @@ const ProductDetail: React.FC = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`py-4 px-2 border-b-2 font-medium text-sm transition-colors ${
                   activeTab === tab.id
-                    ? 'border-blue-500 text-blue-600'
-                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                    ? "border-blue-500 text-blue-600"
+                    : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"
                 }`}
               >
                 {tab.label}
@@ -99,55 +116,77 @@ const ProductDetail: React.FC = () => {
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Overview Tab */}
-          {activeTab === 'overview' && (
+          {activeTab === "overview" && (
             <AnimatedSection>
               <div className="prose prose-lg max-w-none">
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">Product Overview</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                  Product Overview
+                </h2>
                 <p className="text-gray-600 leading-relaxed mb-8">
                   {product.description}
                 </p>
-                
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 not-prose">
                   <Card className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Key Benefits</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      Key Benefits
+                    </h3>
                     <ul className="space-y-3">
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
-                        <span className="text-gray-600">Improved operational efficiency</span>
+                        <span className="text-gray-600">
+                          Improved operational efficiency
+                        </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
-                        <span className="text-gray-600">Enhanced patient care quality</span>
+                        <span className="text-gray-600">
+                          Enhanced patient care quality
+                        </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
-                        <span className="text-gray-600">Reduced administrative burden</span>
+                        <span className="text-gray-600">
+                          Reduced administrative burden
+                        </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
-                        <span className="text-gray-600">HIPAA compliant security</span>
+                        <span className="text-gray-600">
+                          HIPAA compliant security
+                        </span>
                       </li>
                     </ul>
                   </Card>
 
                   <Card className="p-6">
-                    <h3 className="text-xl font-bold text-gray-900 mb-4">Technical Specs</h3>
+                    <h3 className="text-xl font-bold text-gray-900 mb-4">
+                      Technical Specs
+                    </h3>
                     <ul className="space-y-3">
                       <li className="flex items-center space-x-3">
                         <Icons.Cloud className="w-5 h-5 text-blue-500" />
-                        <span className="text-gray-600">Cloud-based architecture</span>
+                        <span className="text-gray-600">
+                          Cloud-based architecture
+                        </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Smartphone className="w-5 h-5 text-blue-500" />
-                        <span className="text-gray-600">Mobile responsive design</span>
+                        <span className="text-gray-600">
+                          Mobile responsive design
+                        </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Database className="w-5 h-5 text-blue-500" />
-                        <span className="text-gray-600">Real-time data synchronization</span>
+                        <span className="text-gray-600">
+                          Real-time data synchronization
+                        </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Shield className="w-5 h-5 text-blue-500" />
-                        <span className="text-gray-600">Enterprise-grade security</span>
+                        <span className="text-gray-600">
+                          Enterprise-grade security
+                        </span>
                       </li>
                     </ul>
                   </Card>
@@ -157,12 +196,16 @@ const ProductDetail: React.FC = () => {
           )}
 
           {/* Features Tab */}
-          {activeTab === 'features' && (
+          {activeTab === "features" && (
             <AnimatedSection>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Key Features</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                Key Features
+              </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {product.features.map((feature, index) => {
-                  const FeatureIcon = Icons[feature.icon as keyof typeof Icons] as React.ComponentType<any>;
+                  const FeatureIcon = Icons[
+                    feature.icon as keyof typeof Icons
+                  ] as React.ComponentType<any>;
                   return (
                     <motion.div
                       key={feature.title}
@@ -171,15 +214,23 @@ const ProductDetail: React.FC = () => {
                       transition={{ delay: index * 0.1 }}
                     >
                       <Card className="p-6 h-full">
-                        <div className={`w-12 h-12 bg-gradient-to-r ${product.color} rounded-xl flex items-center justify-center mb-4`}>
+                        <div
+                          className={`w-12 h-12 bg-gradient-to-r ${product.color} rounded-xl flex items-center justify-center mb-4`}
+                        >
                           <FeatureIcon className="w-6 h-6 text-white" />
                         </div>
                         <h3 className="text-xl font-bold text-gray-900 mb-3">
                           {feature.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed ">
                           {feature.description}
-                        </p>
+                        </p>{" "}
+                        <p className="text-gray-600 leading-relaxed">
+                          {feature.desc2}
+                        </p>{" "}
+                        {/* <p className="text-gray-600 leading-relaxed">
+                          {feature.desc3}
+                        </p> */}
                       </Card>
                     </motion.div>
                   );
@@ -189,12 +240,16 @@ const ProductDetail: React.FC = () => {
           )}
 
           {/* Modules Tab */}
-          {activeTab === 'modules' && (
+          {activeTab === "modules" && (
             <AnimatedSection>
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">System Modules</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                System Modules
+              </h2>
               <div className="space-y-8">
                 {product.modules.map((module, index) => {
-                  const ModuleIcon = Icons[module.icon as keyof typeof Icons] as React.ComponentType<any>;
+                  const ModuleIcon = Icons[
+                    module.icon as keyof typeof Icons
+                  ] as React.ComponentType<any>;
                   return (
                     <motion.div
                       key={module.name}
@@ -204,7 +259,9 @@ const ProductDetail: React.FC = () => {
                     >
                       <Card className="p-8">
                         <div className="flex items-start space-x-6">
-                          <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
+                          <div
+                            className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center flex-shrink-0`}
+                          >
                             <ModuleIcon className="w-8 h-8 text-white" />
                           </div>
                           <div className="flex-1">
@@ -216,9 +273,14 @@ const ProductDetail: React.FC = () => {
                             </p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                               {module.features.map((feature) => (
-                                <div key={feature} className="flex items-center space-x-3">
+                                <div
+                                  key={feature}
+                                  className="flex items-center space-x-3"
+                                >
                                   <Icons.CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                                  <span className="text-gray-600">{feature}</span>
+                                  <span className="text-gray-600">
+                                    {feature}
+                                  </span>
                                 </div>
                               ))}
                             </div>
@@ -242,14 +304,15 @@ const ProductDetail: React.FC = () => {
               Ready to Get Started with {product.name}?
             </h2>
             <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto">
-              Contact our team to schedule a personalized demo and see how {product.fullName} can transform your operations.
+              Contact our team to schedule a personalized demo and see how{" "}
+              {product.fullName} can transform your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="secondary" size="lg">
                 Schedule Demo
               </Button>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 size="lg"
                 className="border-white text-white hover:bg-white hover:text-gray-900"
               >

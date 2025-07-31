@@ -33,7 +33,7 @@ const Card: React.FC<CardProps> = ({
         ${hoverClasses}
         ${gradientClasses}
         ${clickableClasses}
-        ${className}
+        ${className} 
       `}
     >
       {children}

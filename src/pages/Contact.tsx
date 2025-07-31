@@ -1,31 +1,35 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from 'lucide-react';
-import AnimatedSection from '../components/common/AnimatedSection';
-import Card from '../components/common/Card';
-import Button from '../components/common/Button';
-import { companyInfo } from '../data/company';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import AnimatedSection from "../components/common/AnimatedSection";
+import Card from "../components/common/Card";
+import Button from "../components/common/Button";
+import { companyInfo } from "../data/company";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    phone: '',
-    subject: '',
-    message: ''
+    name: "",
+    email: "",
+    company: "",
+    phone: "",
+    subject: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleInputChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
     setIsSubmitted(true);
     setTimeout(() => setIsSubmitted(false), 3000);
   };
@@ -33,28 +37,28 @@ const Contact: React.FC = () => {
   const contactInfo = [
     {
       icon: Phone,
-      title: 'Phone',
+      title: "Phone",
       details: companyInfo.contact.phone,
-      description: 'Mon-Fri from 8am to 5pm'
+      description: "Mon-Fri from 8am to 5pm",
     },
     {
       icon: Mail,
-      title: 'Email',
+      title: "Email",
       details: companyInfo.contact.email,
-      description: 'We\'ll respond within 24 hours'
+      description: "We'll respond within 24 hours",
     },
     {
       icon: MapPin,
-      title: 'Office',
+      title: "Office",
       details: companyInfo.contact.address,
-      description: 'Visit us at our headquarters'
+      description: "Visit us at our headquarters",
     },
     {
       icon: Clock,
-      title: 'Business Hours',
-      details: 'Mon-Fri: 8:00 AM - 5:00 PM',
-      description: 'EST (Eastern Standard Time)'
-    }
+      title: "Business Hours",
+      details: "Mon-Fri: 8:00 AM - 5:00 PM",
+      description: "EST (Eastern Standard Time)",
+    },
   ];
 
   return (
@@ -64,10 +68,15 @@ const Contact: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Get in <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Touch</span>
+              Get in{" "}
+              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Touch
+              </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-              Ready to transform your healthcare operations? Contact our team of experts to learn how our solutions can be customized for your specific needs.
+              Ready to transform your healthcare operations? Contact our team of
+              experts to learn how our solutions can be customized for your
+              specific needs.
             </p>
           </AnimatedSection>
         </div>
@@ -89,9 +98,7 @@ const Contact: React.FC = () => {
                   <p className="text-gray-900 font-medium mb-2">
                     {info.details}
                   </p>
-                  <p className="text-sm text-gray-600">
-                    {info.description}
-                  </p>
+                  <p className="text-sm text-gray-600">{info.description}</p>
                 </Card>
               </AnimatedSection>
             ))}
@@ -109,7 +116,7 @@ const Contact: React.FC = () => {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Send us a Message
                 </h2>
-                
+
                 {isSubmitted ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -123,14 +130,18 @@ const Contact: React.FC = () => {
                       Message Sent Successfully!
                     </h3>
                     <p className="text-gray-600">
-                      Thank you for contacting us. We'll get back to you within 24 hours.
+                      Thank you for contacting us. We'll get back to you within
+                      24 hours.
                     </p>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label
+                          htmlFor="name"
+                          className="block text-sm font-medium text-gray-700 mb-2"
+                        >
                           Full Name *
                         </label>
                         <input
@@ -146,7 +157,10 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label
+                          htmlFor="email"
+                          className="block text-sm font-medium text-gray-700 mb-2"
+                        >
                           Email Address *
                         </label>
                         <input
@@ -162,7 +176,10 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div>
-                        <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label
+                          htmlFor="company"
+                          className="block text-sm font-medium text-gray-700 mb-2"
+                        >
                           Company/Organization
                         </label>
                         <input
@@ -177,7 +194,10 @@ const Contact: React.FC = () => {
                       </div>
 
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                        <label
+                          htmlFor="phone"
+                          className="block text-sm font-medium text-gray-700 mb-2"
+                        >
                           Phone Number
                         </label>
                         <input
@@ -193,7 +213,10 @@ const Contact: React.FC = () => {
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label
+                        htmlFor="subject"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
                         Subject *
                       </label>
                       <select
@@ -208,13 +231,18 @@ const Contact: React.FC = () => {
                         <option value="demo">Request a Demo</option>
                         <option value="sales">Sales Inquiry</option>
                         <option value="support">Technical Support</option>
-                        <option value="partnership">Partnership Opportunity</option>
+                        <option value="partnership">
+                          Partnership Opportunity
+                        </option>
                         <option value="other">Other</option>
                       </select>
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-medium text-gray-700 mb-2"
+                      >
                         Message *
                       </label>
                       <textarea
@@ -229,7 +257,13 @@ const Contact: React.FC = () => {
                       />
                     </div>
 
-                    <Button type="submit" size="lg" icon={Send} iconPosition="right" className="w-full">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      icon={Send}
+                      iconPosition="right"
+                      className="w-full"
+                    >
                       Send Message
                     </Button>
                   </form>
@@ -242,11 +276,26 @@ const Contact: React.FC = () => {
               <div className="space-y-8">
                 {/* Map Placeholder */}
                 <Card className="p-0 overflow-hidden">
-                  <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                  {/* <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
                     <div className="text-center">
-                      <MapPin className="w-12 h-12 text-blue-500 mx-auto mb-2" />
-                      <p className="text-gray-600 font-medium">Interactive Map</p>
-                      <p className="text-sm text-gray-500">123 Healthcare Drive, Medical District, NY</p>
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.188067659278!2d78.37644087493584!3d17.434228133461012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93bd18410b0f%3A0x8d7e3fea891858ce!2sT-Hub!5e1!3m2!1sen!2sin!4v1753936962526!5m2!1sen!2sin"
+                        width="600"
+                        height="280"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                      ></iframe>
+                    </div>
+                  </div> */}
+
+                  <div className="h-64 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center">
+                    <div className="text-center w-full h-full">
+                      <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618.188067659278!2d78.37644087493584!3d17.434228133461012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb93bd18410b0f%3A0x8d7e3fea891858ce!2sT-Hub!5e1!3m2!1sen!2sin!4v1753936962526!5m2!1sen!2sin"
+                        className="w-full h-full"
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                      ></iframe>
                     </div>
                   </div>
                 </Card>
@@ -260,15 +309,23 @@ const Contact: React.FC = () => {
                     <div className="flex items-center space-x-3">
                       <Phone className="w-5 h-5 text-blue-500" />
                       <div>
-                        <p className="font-medium text-gray-900">Call us directly</p>
-                        <p className="text-sm text-gray-600">{companyInfo.contact.phone}</p>
+                        <p className="font-medium text-gray-900">
+                          Call us directly
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          {companyInfo.contact.phone}
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-center space-x-3">
                       <Mail className="w-5 h-5 text-blue-500" />
                       <div>
-                        <p className="font-medium text-gray-900">Email support</p>
-                        <p className="text-sm text-gray-600">{companyInfo.contact.email}</p>
+                        <p className="font-medium text-gray-900">
+                          Email support
+                        </p>
+                        <p className="text-sm text-gray-600">
+                          {companyInfo.contact.email}
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -282,11 +339,15 @@ const Contact: React.FC = () => {
                   <div className="space-y-2 text-sm">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Monday - Friday</span>
-                      <span className="font-medium text-gray-900">8:00 AM - 5:00 PM</span>
+                      <span className="font-medium text-gray-900">
+                        8:00 AM - 5:00 PM
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Saturday</span>
-                      <span className="font-medium text-gray-900">9:00 AM - 2:00 PM</span>
+                      <span className="font-medium text-gray-900">
+                        9:00 AM - 2:00 PM
+                      </span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-gray-600">Sunday</span>
