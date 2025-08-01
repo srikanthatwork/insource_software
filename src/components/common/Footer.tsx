@@ -10,7 +10,6 @@ import {
   Facebook,
   Youtube,
   Heart,
-  Sparkles,
 } from "lucide-react";
 import { companyInfo } from "../../data/company";
 import logo from "../../../src/components/assets/insource-removebg.png";
@@ -121,7 +120,7 @@ const Footer: React.FC = () => {
               </p>
 
               <div className="flex items-center space-x-2 text-sm text-gray-400">
-                <Sparkles className="w-4 h-4 text-yellow-400" />
+                {/* <Sparkles className="w-4 h-4 text-yellow-400" /> */}
                 <span>
                   Trusted by {companyInfo.clients} healthcare facilities
                   worldwide

@@ -112,7 +112,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full  text-sm font-medium mb-6 glass"
             >
-              <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
+              {/* <Sparkles className="w-4 h-4 mr-2 animate-pulse" /> */}
               Healthcare Technology Leaders Since {companyInfo.foundedYear}
               <motion.div
                 animate={{ rotate: 360 }}

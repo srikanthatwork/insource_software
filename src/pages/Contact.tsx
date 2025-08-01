@@ -12,7 +12,7 @@ const Contact: React.FC = () => {
     email: "",
     company: "",
     phone: "",
-    subject: "",
+    subject: "demo",
     message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -53,12 +53,12 @@ const Contact: React.FC = () => {
       details: companyInfo.contact.address,
       description: "Visit us at our headquarters",
     },
-    {
-      icon: Clock,
-      title: "Business Hours",
-      details: "Mon-Fri: 8:00 AM - 5:00 PM",
-      description: "EST (Eastern Standard Time)",
-    },
+    // {
+    //   icon: Clock,
+    //   title: "Business Hours",
+    //   details: "Mon-Fri: 8:00 AM - 5:00 PM",
+    //   description: "EST (Eastern Standard Time)",
+    // },
   ];
 
   return (
@@ -79,30 +79,6 @@ const Contact: React.FC = () => {
               specific needs.
             </p>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Contact Info Cards */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {contactInfo.map((info, index) => (
-              <AnimatedSection key={info.title} delay={index * 0.1}>
-                <Card className="p-6 text-center h-full">
-                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <info.icon className="w-6 h-6 text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">
-                    {info.title}
-                  </h3>
-                  <p className="text-gray-900 font-medium mb-2">
-                    {info.details}
-                  </p>
-                  <p className="text-sm text-gray-600">{info.description}</p>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -227,10 +203,10 @@ const Contact: React.FC = () => {
                         onChange={handleInputChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       >
-                        <option value="">Select a subject</option>
+                        {/* <option value="">Select a subject</option> */}
                         <option value="demo">Request a Demo</option>
                         <option value="sales">Sales Inquiry</option>
-                        <option value="support">Technical Support</option>
+                        {/* <option value="support">Technical Support</option> */}
                         <option value="partnership">
                           Partnership Opportunity
                         </option>
@@ -357,6 +333,30 @@ const Contact: React.FC = () => {
                 </Card>
               </div>
             </AnimatedSection>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Info Cards */}
+      <section className="py-20 bg-white  ">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
+          <div className=" gap-8 flex md:flex-row flex-col justify-center items-center">
+            {contactInfo.map((info, index) => (
+              <AnimatedSection key={info.title} delay={index * 0.1}>
+                <Card className="p-6 text-center h-full">
+                  <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <info.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold text-gray-900 mb-2">
+                    {info.title}
+                  </h3>
+                  <p className="text-gray-900 font-medium mb-2">
+                    {info.details}
+                  </p>
+                  <p className="text-sm text-gray-600">{info.description}</p>
+                </Card>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>

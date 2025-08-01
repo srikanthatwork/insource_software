@@ -375,18 +375,18 @@ export const careerOptions = [
     icon: "TrendingUp",
     color: "from-purple-500 to-pink-500",
   },
-  {
-    title: "Data Security",
-    description:
-      "HIPAA compliant with enterprise-grade security measures and end-to-end encryption",
-    icon: "Shield",
-    color: "from-red-500 to-orange-500",
-  },
-  {
-    title: "24/7 Support",
-    description:
-      "Round-the-clock technical support, maintenance, and emergency response services",
-    icon: "Clock",
-    color: "from-cyan-500 to-blue-500",
-  },
+  // {
+  //   title: "Data Security",
+  //   description:
+  //     "HIPAA compliant with enterprise-grade security measures and end-to-end encryption",
+  //   icon: "Shield",
+  //   color: "from-red-500 to-orange-500",
+  // },
+  // {
+  //   title: "24/7 Support",
+  //   description:
+  //     "Round-the-clock technical support, maintenance, and emergency response services",
+  //   icon: "Clock",
+  //   color: "from-cyan-500 to-blue-500",
+  // },
 ];
