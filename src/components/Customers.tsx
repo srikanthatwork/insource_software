@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ClientSlider from "./clientSlider";
 
-const CustomersSections: React.FC = () => {
+const Customers: React.FC = () => {
   return (
     <section className="py-20 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,4 +54,4 @@ const CustomersSections: React.FC = () => {
   );
 };
 
-export default CustomersSections;
+export default Customers;
