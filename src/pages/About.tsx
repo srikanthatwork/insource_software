@@ -1,9 +1,15 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import * as Icons from 'lucide-react';
-import AnimatedSection from '../components/common/AnimatedSection';
-import Card from '../components/common/Card';
-import { companyInfo, whyChooseUs, teamMembers, testimonials } from '../data/company';
+import React from "react";
+import { motion } from "framer-motion";
+import * as Icons from "lucide-react";
+import AnimatedSection from "../components/common/AnimatedSection";
+import Card from "../components/common/Card";
+import {
+  companyInfo,
+  whyChooseUs,
+  // teamMembers,
+  testimonials,
+} from "../data/company";
+import CustomersSections from "../components/customers";
 
 const About: React.FC = () => {
   return (
@@ -32,12 +38,14 @@ const About: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full text-sm font-medium mb-6"
             >
-              <Icons.Sparkles className="w-4 h-4 mr-2" />
+              {/* <Icons.Sparkles className="w-4 h-4 mr-2" /> */}
               About Us
             </motion.div>
 
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              We Provide Best <span className="animate-gradient-text">Business Solutions</span> For You
+              We Provide Best{" "}
+              <span className="animate-gradient-text">Business Solutions</span>{" "}
+              For You
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {companyInfo.description}
@@ -56,13 +64,28 @@ const About: React.FC = () => {
               </h2>
               <div className="space-y-6 text-gray-600 leading-relaxed">
                 <p>
-                  Founded in {companyInfo.foundedYear} with a vision to transform healthcare through technology, Insource Software has been at the forefront of healthcare digitization for over a decade. We understand the unique challenges faced by healthcare organizations and have developed comprehensive solutions that address these pain points.
+                  Founded in {companyInfo.foundedYear} with a vision to
+                  transform healthcare through technology, Insource Software has
+                  been at the forefront of healthcare digitization for over a
+                  decade. We understand the unique challenges faced by
+                  healthcare organizations and have developed comprehensive
+                  solutions that address these pain points.
                 </p>
                 <p>
-                  Our team of healthcare technology experts, software engineers, and industry specialists work together to create solutions that not only meet current needs but anticipate future requirements. We believe in building long-term partnerships with our clients, supporting them through every step of their digital transformation journey.
+                  Our team of healthcare technology experts, software engineers,
+                  and industry specialists work together to create solutions
+                  that not only meet current needs but anticipate future
+                  requirements. We believe in building long-term partnerships
+                  with our clients, supporting them through every step of their
+                  digital transformation journey.
                 </p>
                 <p>
-                  Today, we serve over {companyInfo.clients} healthcare facilities worldwide, from small clinics to large hospital networks, helping them improve patient outcomes while reducing operational costs and complexity. Our solutions have processed millions of patient records and facilitated countless healthcare interactions.
+                  Today, we serve over {companyInfo.clients} healthcare
+                  facilities worldwide, from small clinics to large hospital
+                  networks, helping them improve patient outcomes while reducing
+                  operational costs and complexity. Our solutions have processed
+                  millions of patient records and facilitated countless
+                  healthcare interactions.
                 </p>
               </div>
 
@@ -125,12 +148,18 @@ const About: React.FC = () => {
                   <div className="text-center relative z-10">
                     <motion.div
                       animate={{ rotate: 360 }}
-                      transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                      transition={{
+                        duration: 20,
+                        repeat: Infinity,
+                        ease: "linear",
+                      }}
                       className="w-32 h-32 bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 rounded-full mx-auto mb-4 flex items-center justify-center"
                     >
                       <Icons.Heart className="w-16 h-16 text-white animate-pulse" />
                     </motion.div>
-                    <p className="text-gray-600 font-medium">Healthcare Innovation</p>
+                    <p className="text-gray-600 font-medium">
+                      Healthcare Innovation
+                    </p>
                   </div>
                 </div>
               </div>
@@ -144,17 +173,21 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Why Choose <span className="animate-gradient-text">Insource?</span>
+              Why Choose{" "}
+              <span className="animate-gradient-text">Insource?</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine deep healthcare industry knowledge with cutting-edge technology to deliver solutions that truly make a difference
+              We combine deep healthcare industry knowledge with cutting-edge
+              technology to deliver solutions that truly make a difference
             </p>
           </AnimatedSection>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {whyChooseUs.map((item, index) => {
-              const IconComponent = Icons[item.icon as keyof typeof Icons] as React.ComponentType<any>;
-              
+              const IconComponent = Icons[
+                item.icon as keyof typeof Icons
+              ] as React.ComponentType<any>;
+
               return (
                 <AnimatedSection key={item.title} delay={index * 0.1}>
                   <Card className="p-8 text-center h-full hover-lift">
@@ -164,11 +197,11 @@ const About: React.FC = () => {
                     >
                       <IconComponent className="w-8 h-8 text-white" />
                     </motion.div>
-                    
+
                     <h3 className="text-xl font-bold text-gray-900 mb-4">
                       {item.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 leading-relaxed">
                       {item.description}
                     </p>
@@ -231,7 +264,8 @@ const About: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What Our <span className="animate-gradient-text">Clients Say</span>
+              What Our{" "}
+              <span className="animate-gradient-text">Clients Say</span>
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Trusted by healthcare professionals worldwide
@@ -244,14 +278,17 @@ const About: React.FC = () => {
                 <Card className="p-8 h-full">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Icons.Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                      <Icons.Star
+                        key={i}
+                        className="w-5 h-5 text-yellow-400 fill-current"
+                      />
                     ))}
                   </div>
-                  
+
                   <blockquote className="text-gray-600 mb-6 leading-relaxed">
                     "{testimonial.quote}"
                   </blockquote>
-                  
+
                   <div className="flex items-center">
                     {/* <img
                       src={testimonial.image}
@@ -259,7 +296,9 @@ const About: React.FC = () => {
                       className="w-12 h-12 rounded-full object-cover mr-4"
                     /> */}
                     <div>
-                      <div className="font-semibold text-gray-900">{testimonial.name}</div>
+                      <div className="font-semibold text-gray-900">
+                        {testimonial.name}
+                      </div>
                       {/* <div className="text-sm text-gray-600">{testimonial.position}</div>
                       <div className="text-sm text-blue-600">{testimonial.company}</div> */}
                     </div>
@@ -280,9 +319,15 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
                   <Icons.Target className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Our Mission
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  To revolutionize healthcare delivery through innovative digital solutions that empower healthcare professionals, improve patient outcomes, and create more efficient healthcare systems worldwide. We strive to make healthcare technology accessible, intuitive, and impactful.
+                  To revolutionize healthcare delivery through innovative
+                  digital solutions that empower healthcare professionals,
+                  improve patient outcomes, and create more efficient healthcare
+                  systems worldwide. We strive to make healthcare technology
+                  accessible, intuitive, and impactful.
                 </p>
               </Card>
             </AnimatedSection>
@@ -292,14 +337,23 @@ const About: React.FC = () => {
                 <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
                   <Icons.Eye className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Our Vision
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  {companyInfo.vision}. We envision a future where technology seamlessly integrates with healthcare to create better experiences for both providers and patients, ultimately leading to improved health outcomes for communities worldwide.
+                  {companyInfo.vision}. We envision a future where technology
+                  seamlessly integrates with healthcare to create better
+                  experiences for both providers and patients, ultimately
+                  leading to improved health outcomes for communities worldwide.
                 </p>
               </Card>
             </AnimatedSection>
           </div>
         </div>
+      </section>
+
+      <section>
+        <CustomersSections />
       </section>
     </div>
   );

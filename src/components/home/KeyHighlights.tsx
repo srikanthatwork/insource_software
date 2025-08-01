@@ -27,7 +27,7 @@ const KeyHighlights: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full text-sm font-medium mb-6"
           >
-            <Icons.Sparkles className="w-4 h-4 mr-2" />
+            {/* <Icons.Sparkles className="w-4 h-4 mr-2" /> */}
             Our Core Solutions
           </motion.div>
           

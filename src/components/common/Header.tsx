@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
-import { Menu, X, ChevronDown, Sparkles } from "lucide-react";
+import { Menu, X, ChevronDown, Stars } from "lucide-react";
 import logo from "../../../src/components/assets/insource-removebg.png";
 
 const Header: React.FC = () => {
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
                         initial={{ opacity: 0, y: 10, scale: 0.95 }}
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                        className="absolute top-full left-0 mt-2 w-64 bg-white rounded-xl shadow-xl border border-gray-200 py-2 "
+                        className="absolute top-full left-0  w-64 bg-white rounded-xl shadow-xl border border-gray-200 py-2 "
                       >
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           <motion.div
@@ -98,6 +98,7 @@ const Header: React.FC = () => {
                             initial={{ opacity: 0, x: -10 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: index * 0.05 }}
+                            // onMouseLeave={() => setProductsOpen(false)}
                           >
                             <Link
                               to={dropdownItem.path}
@@ -134,7 +135,7 @@ const Header: React.FC = () => {
                 to="/contact"
                 className="bg-gradient-to-r from-blue-500  to-blue-900 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium flex items-center space-x-2 animate-pulse-glow"
               >
-                <Sparkles className="w-4 h-4" />
+                <Stars className="w-4 h-4" />
                 <span>Book Demo</span>
               </Link>
             </motion.div>

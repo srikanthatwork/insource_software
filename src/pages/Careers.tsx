@@ -77,9 +77,9 @@ const Careers: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
             {careerOptions.map((item, index) => {
-              const IconComponent = Icons[
-                item.icon as keyof typeof Icons
-              ] as React.ComponentType<any>;
+              // const IconComponent = Icons[
+              //   item.icon as keyof typeof Icons
+              // ] as React.ComponentType<any>;
 
               return (
                 <AnimatedSection key={index} delay={index * 0.1}>

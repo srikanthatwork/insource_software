@@ -50,7 +50,7 @@ export const products: Product[] = [
     shortDescription:
       "Complete hospital management solution for enhanced patient care and operational efficiency",
     icon: "Building2",
-    color: "from-blue-500 to-cyan-500",
+    color: "from-blue-400 to-cyan-500",
     bgImage: image1,
     benefits: [
       "Reduce administrative costs by up to 40%",
