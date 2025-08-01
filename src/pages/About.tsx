@@ -9,7 +9,7 @@ import {
   // teamMembers,
   testimonials,
 } from "../data/company";
-import CustomersSections from "../components/customers";
+import Customers from "../components/Customers";
 
 const About: React.FC = () => {
   return (
@@ -352,9 +352,9 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section>
-        <CustomersSections />
-      </section>
+      {/* <section> */}
+        <Customers />
+      {/* </section> */}
     </div>
   );
 };
