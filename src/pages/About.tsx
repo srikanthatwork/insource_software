@@ -352,9 +352,9 @@ const About: React.FC = () => {
         </div>
       </section>
 
-      <section>
+      {/* <section> */}
         <CustomersSections />
-      </section>
+      {/* </section> */}
     </div>
   );
 };
