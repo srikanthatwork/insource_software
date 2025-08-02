@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { MessageCircle, X, Send, Phone } from "lucide-react";
+import { MessageCircle, X, Send } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 const FloatingActions: React.FC = () => {
   const [isChatOpen, setIsChatOpen] = useState(false);
@@ -65,9 +66,9 @@ const FloatingActions: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={handleWhatsAppClick}
-          className="w-14 h-14 bg-gradient-to-r from-green-500 to-green-600 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-300 neon-green"
+          className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-300 neon-green"
         >
-          <Phone className="w-6 h-6" />
+          <SiWhatsapp className="w-6 h-6" />
         </motion.button>
 
         {/* Chatbot Button */}
@@ -75,7 +76,7 @@ const FloatingActions: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           onClick={() => setIsChatOpen(!isChatOpen)}
-          className="w-14 h-14 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-300 neon-blue"
+          className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full shadow-lg flex items-center justify-center text-white hover:shadow-xl transition-all duration-300 neon-blue"
         >
           {isChatOpen ? (
             <X className="w-6 h-6" />

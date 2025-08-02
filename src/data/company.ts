@@ -9,7 +9,7 @@ export const companyInfo = {
   clients: "500",
   countries: "1500",
   contact: {
-    phone: "+91 7708 999 980",
+    phone: "+91 7569690353",
     email: "info@insourcesoftware.in",
     address: "Hitech City, Hyderabad",
     hours: "Mon-Fri: 8:00 AM - 6:00 PM EST",

@@ -223,7 +223,7 @@ export const products: Product[] = [
     name: "HRMS",
     fullName: "Human Resources Management Software",
     description:
-      "At Insource, we provide a smart and scalable Human Resource Management System (HRMS) designed to streamline HR operations and empower your workforce. From recruitment to payroll, attendance, and performance – our solution automates every step, ensuring efficiency, compliance, and employee satisfaction.",
+      "Transform your HR operations with our comprehensive Human Resources Management Software—an all-in-one, paperless platform designed to digitize every stage of the employee lifecycle. Experience seamless management of attendance, leave, payroll, onboarding, recruitment, employee engagement, rewards, and exit—all integrated in a fully digital workflow.",
     shortDescription:
       "Comprehensive HR solution for employee lifecycle and payroll  Management and performance",
     icon: "Users",
@@ -391,7 +391,7 @@ export const products: Product[] = [
     name: "LIMS",
     fullName: "Lab Information Management Software",
     description:
-      "Advanced laboratory management platform that ensures accurate sample tracking, efficient workflow management, and comprehensive reporting for all laboratory operations with AI-powered quality control and automated instrument integration.",
+      "Insource LIMS solution is a cloud-based, fully configurable platform that centralizes and automates lab workflows across diverse scientific and testing environments. It supports the entire sample lifecycle—from sample registration, collection, preparation, and analysis, to reporting, invoicing, and regulatory compliance.",
     shortDescription:
       "Advanced laboratory management platform for accurate sample tracking and reporting",
     icon: "FlaskConical",

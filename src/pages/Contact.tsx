@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle } from "lucide-react";
+import { MapPin, Phone, Mail, Send, CheckCircle } from "lucide-react";
 import AnimatedSection from "../components/common/AnimatedSection";
 import Card from "../components/common/Card";
 import Button from "../components/common/Button";
 import { companyInfo } from "../data/company";
+import ContactForm from "../components/ContactForm";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -243,6 +244,8 @@ const Contact: React.FC = () => {
                       Send Message
                     </Button>
                   </form>
+
+                  // <ContactForm />
                 )}
               </Card>
             </AnimatedSection>
