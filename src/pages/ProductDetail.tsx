@@ -314,7 +314,7 @@ const ProductDetail: React.FC = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-gray-900"
+                className="border-white text-white  hover:text-gray-900"
               >
                 Contact Sales
               </Button>
