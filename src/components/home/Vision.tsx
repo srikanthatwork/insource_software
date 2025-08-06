@@ -211,7 +211,7 @@ const Vision: React.FC = () => {
         </div>
 
         {/* Awards Section */}
-        <AnimatedSection>
+        {/* <AnimatedSection>
           <div className="text-center mb-12">
             <h3 className="text-3xl font-bold text-gray-900 mb-4">
               Recognition &{" "}
@@ -243,14 +243,14 @@ const Vision: React.FC = () => {
                   <p className="text-gray-600 text-sm mb-2">
                     {award.description}
                   </p>
-                  {/* <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
+                  <span className="inline-block px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">
                     {award.year}
-                  </span> */}
+                  </span>
                 </Card>
               </motion.div>
             ))}
           </div>
-        </AnimatedSection>
+        </AnimatedSection> */}
 
         {/* Global Reach */}
         <AnimatedSection>

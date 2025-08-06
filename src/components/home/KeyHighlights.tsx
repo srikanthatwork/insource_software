@@ -146,7 +146,7 @@ const KeyHighlights: React.FC = () => {
                   <Button 
                     variant="outline" 
                     size="lg"
-                    className="border-white text-white hover:bg-white hover:text-blue-600"
+                    className="border-white text-white hover:bg-white hover:text-blue-500"
                     onClick={() => navigate('/products')}
                   >
                     View All Products

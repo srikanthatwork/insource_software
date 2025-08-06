@@ -5,7 +5,6 @@ import AnimatedSection from "../components/common/AnimatedSection";
 import Card from "../components/common/Card";
 import Button from "../components/common/Button";
 import { companyInfo } from "../data/company";
-import ContactForm from "../components/ContactForm";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -63,18 +62,18 @@ const Contact: React.FC = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <section className="py-14 bg-gradient-to-br from-blue-50 to-purple-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <AnimatedSection className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-3xl font-bold text-gray-900 mb-2">
               Get in{" "}
               <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 Touch
               </span>
             </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-md text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Ready to transform your healthcare operations? Contact our team of
               experts to learn how our solutions can be customized for your
               specific needs.
@@ -84,7 +83,7 @@ const Contact: React.FC = () => {
       </section>
 
       {/* Contact Form & Map */}
-      <section className="py-20 bg-gray-50">
+      <section className=" bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}

@@ -4,8 +4,8 @@ import ClientSlider from "./clientSlider";
 
 const Customers: React.FC = () => {
   return (
-    <section className="py-20 ">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-20">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -28,24 +28,7 @@ const Customers: React.FC = () => {
         </motion.div>
 
         <div className="overflow-hidden">
-          <div className="flex space-x-16 w-max">
-            {/* {[...partners, ...partners].map((partner, index) => (
-              <motion.div
-                key={`${partner.name}-${index}`}
-                className="flex-shrink-0 w-32 h-16 bg-white rounded-lg shadow-md flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300 border border-gray-100 hover:border-blue-200"
-                whileHover={{ 
-                  scale: 1.1, 
-                  y: -4,
-                  transition: { type: "spring", stiffness: 400, damping: 10 }
-                }}
-              >
-                <img
-                  src={partner.logo}
-                  alt={partner.name}
-                  className="max-w-full max-h-full object-contain"
-                />
-              </motion.div>
-            ))} */}
+          <div className="flex space-x-16 w-max ">
             <ClientSlider />
           </div>
         </div>

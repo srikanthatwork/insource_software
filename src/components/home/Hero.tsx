@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, Play, Sparkles, Zap, Heart, Shield } from 'lucide-react';
+import { ArrowRight, Play,  Zap, Heart, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../common/Button';
 import { companyInfo, companyStats } from '../../data/company';
