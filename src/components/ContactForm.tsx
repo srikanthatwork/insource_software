@@ -135,7 +135,7 @@ const ContactForm = () => {
 
   return (
     <section className="flex justify-center px-4 py-12 sm:px-6 lg:px-8 bg-gray-50 min-h-screen">
-      <div className="w-full max-w-3xl bg-white shadow-lg rounded-lg p-8 sm:p-10">
+      <div className="w-full max-w-3xl bg-white  rounded-lg p-8 sm:p-10">
         <h2 className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-6 text-center">
           Contact Us
         </h2>

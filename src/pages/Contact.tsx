@@ -387,7 +387,7 @@ const Contact: React.FC = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <AnimatedSection>
-              <Card className=" border">
+              <Card className="">
                 {/* <h2 className="text-3xl font-bold text-gray-900 mb-6">
                   Send us a Message
                 </h2> */}
@@ -396,9 +396,9 @@ const Contact: React.FC = () => {
                   <motion.div
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    className="text-center py-12"
+                    className="text-center py-12 "
                   >
-                    <div className="w-16 h-16  rounded-full flex items-center justify-center mx-auto mb-4">
+                    <div className="w-16 h-16   rounded-full flex items-center justify-center mx-auto mb-4">
                       <CheckCircle className="w-8 h-8 text-green-600" />
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-2">
