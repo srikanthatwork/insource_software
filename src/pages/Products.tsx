@@ -1,5 +1,4 @@
 import React from "react";
-import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import * as Icons from "lucide-react";
 import AnimatedSection from "../components/common/AnimatedSection";

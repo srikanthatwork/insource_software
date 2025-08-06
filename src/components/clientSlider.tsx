@@ -14,12 +14,11 @@ const logos = [
   logo4,
   logo5,
   logo6,
-
 ];
 
 export default function ClientSlider() {
   return (
-    <div className="overflow-hidden w-full  py-8">
+    <div className="overflow-hidden w-full  py-8 ">
       <motion.div
         className="flex w-max gap-6 "
         animate={{ x: ["0%", "-100%"] }}
@@ -34,7 +33,7 @@ export default function ClientSlider() {
             key={i}
             src={logo}
             alt={`client-logo-${i}`}
-            className="h-20 w-auto object-contain "
+            className=" h-20 md:h-40 w-auto object-contain "
           />
         ))}
       </motion.div>
