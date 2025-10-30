@@ -11,6 +11,8 @@ import {
 } from "../data/company";
 
 import Customers from "../components/Customers";
+import IndustriesServed from "../components/home/IndustriesServed";
+import GlobalImpact from "../components/home/GlobalInnovation";
 
 
 const About: React.FC = () => {
@@ -45,9 +47,9 @@ const About: React.FC = () => {
             </motion.div>
 
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              We Provide Best{" "}
-              <span className="animate-gradient-text">Business Solutions</span>{" "}
-              For You
+            {" "}
+              <span className="animate-gradient-text"> Global Innovation</span>{" "}
+             Local Impact
             </h1>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               {companyInfo.description}
@@ -261,6 +263,9 @@ const About: React.FC = () => {
         </div>
       </section> */}
 
+   
+
+
       {/* Testimonials */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -353,6 +358,11 @@ const About: React.FC = () => {
           </div>
         </div>
       </section>
+       {/* Industries Served */}
+<IndustriesServed/>
+
+{/* GlobalImpact */}
+<GlobalImpact/>
 
       {/* <section> */}
         <Customers />

@@ -2,13 +2,22 @@ import React from 'react';
 import Hero from '../components/home/Hero';
 import KeyHighlights from '../components/home/KeyHighlights';
 import Vision from '../components/home/Vision';
+import IndustriesServed from '../components/home/IndustriesServed';
+import Features from '../components/home/Features';
+import ImagerySuggestions from '../components/home/ImagerySuggestions';
+import KeyBenefits from '../components/home/KeyBenefits';
 
 const Home: React.FC = () => {
   return (
     <div className="pt-16">
       <Hero />
+        <KeyBenefits/>
       <KeyHighlights />
-      <Vision />
+      {/* <IndustriesServed/> */}
+      {/* <Features/> */}
+        <ImagerySuggestions />
+       <Vision />
+
     </div>
   );
 };

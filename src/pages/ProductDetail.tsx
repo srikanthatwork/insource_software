@@ -135,25 +135,25 @@ const ProductDetail: React.FC = () => {
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
                         <span className="text-gray-600">
-                          Improved operational efficiency
+                          Improved hiring
                         </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
                         <span className="text-gray-600">
-                          Enhanced patient care quality
+                          Engagement Retention 
                         </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
                         <span className="text-gray-600">
-                          Reduced administrative burden
+                          Administrative Efficiency
                         </span>
                       </li>
                       <li className="flex items-center space-x-3">
                         <Icons.Check className="w-5 h-5 text-green-500" />
                         <span className="text-gray-600">
-                          HIPAA compliant security
+                         Global Compliance  
                         </span>
                       </li>
                     </ul>

@@ -39,7 +39,7 @@ const KeyHighlights: React.FC = () => {
           </p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
           {keyHighlights.map((highlight, index) => {
             const IconComponent = Icons[highlight.icon as keyof typeof Icons] as React.ComponentType<any>;
             

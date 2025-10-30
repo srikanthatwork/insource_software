@@ -21,9 +21,10 @@ const Footer: React.FC = () => {
     {
       title: "Products",
       links: [
-        { name: "HIMS - Hospital Management", path: "/products/hims" },
-        { name: "HRMS - Human Resources", path: "/products/hrms" },
-        { name: "LIMS - Laboratory Management", path: "/products/lims" },
+        { name: "HMSEHR  - Healthcare Management Electronic Health Records", path: "/products/hmsehr" },
+        { name: "HCM - Human Capital Management", path: "/products/hrms" },
+        { name: "IDM - Inventory Distribution Management", path: "/products/lims" },
+        { name: "FFA - Field Force Application", path: "/products/ffa" },
         { name: "All Products", path: "/products" },
       ],
     },

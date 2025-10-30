@@ -133,9 +133,9 @@ const Hero: React.FC = () => {
               <span className="animate-gradient-text block mb-2 md:text-md text-sm uppercase">
                 Transforming Healthcare
               </span>
-              <span className="text-gray-800  mb-2 md:text-6xl">Digitally Powered Solutions</span>
+              <span className="text-gray-800  mb-2 md:text-6xl">Empowering Organizations </span>
               <span className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent md:text-6xl">
-                Next-Gen Solutions
+            Globally With Intelligent Digital Solutions
               </span>
             </motion.h1>
 
@@ -146,7 +146,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.6, duration: 0.6 }}
               className="text-lg md:text-1xl text-gray-600 mb-8 leading-relaxed max-w-2xl"
             >
-              {companyInfo.vision}. We provide comprehensive digital solutions that streamline healthcare operations and enhance patient care with cutting-edge AI technology.
+              {companyInfo.vision}
             </motion.p>
 
             {/* CTA Buttons */}

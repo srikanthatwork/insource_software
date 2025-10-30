@@ -1,9 +1,9 @@
 export const companyInfo = {
   name: "Insource Software",
-  tagline: "Transforming Healthcare – Digitally Powered Next-Gen Solutions",
-  vision: "Re-imagining human potential in healthcare",
+  tagline: "Empowering Organizations Globally With Intelligent Digital Solutions",
+  vision: "Insource Software is redefining enterprise automation for healthcare, workforce, inventory, and field operations. We deliver unified, AI-empowered platforms for multi-sector organizations, ensuring compliance, efficiency, and deep user satisfaction across regions.",
   description:
-    "We deliver tailored business solutions designed to meet your unique goals and challenges. With innovative technology and expert support, we help your business grow smarter and faster.",
+    "  Empowering organizations worldwide through intelligent solutions that adapt to local needs, drive innovation, and foster meaningful impact.",
   foundedYear: 2020,
   employees: "50",
   clients: "500",
@@ -69,31 +69,39 @@ export const whyChooseUs = [
 
 export const keyHighlights = [
   {
-    title: "HIMS",
-    subtitle: "Hospital Information Management",
+    title: "HMSEHR ",
+    subtitle: "Healthcare Management Electronic Health Records",
     description:
-      "Comprehensive software solution designed to streamline hospital operations.",
+      "A digital system for managing and storing patients' electronic health records efficiently.",
     icon: "Building2",
     color: "from-blue-500 to-cyan-500",
     stats: { users: "50K+", hospitals: "200+", uptime: "99.9%" },
   },
   {
-    title: "HRMS",
-    subtitle: "Human Resources Management",
-    description:
-      "Complete HR and payroll management system with advanced workforce analytics and automation",
+    title: "HCM",
+    subtitle: "Human Capital Management ",
+    description:"Empowering employees and enhancing productivity through data-driven HR solutions.",
     icon: "Users",
     color: "from-green-500 to-emerald-500",
     stats: { employees: "100K+", companies: "500+", efficiency: "85%" },
   },
   {
-    title: "LIMS",
-    subtitle: "Lab Information Management",
+    title: "IDM",
+    subtitle: "Inventory Distribution Management",
     description:
-      "LIMS that streamlines laboratory operations by managing samples, test results, workflows, and compliance.",
-    icon: "FlaskConical",
+      "Simplifies logistics by optimizing inventory movement and supply Management",
+    icon: "Boxes",
     color: "from-orange-500 to-red-500",
     stats: { labs: "300+", samples: "1M+", accuracy: "99.8%" },
+  },
+  {
+    title: "FFA",
+    subtitle: "Field  Force Application (FFA)",
+    description:
+      "Simplify field operations with real-time tracking, task management, and performance insights.",
+    icon: "Smartphone",
+    color: "from-green-500 to-emerald-500",
+    stats: { employees: "100K+", companies: "500+", efficiency: "85%" },
   },
 ];
 

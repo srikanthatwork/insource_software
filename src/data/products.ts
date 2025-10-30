@@ -42,13 +42,12 @@ export interface ProductModule {
 
 export const products: Product[] = [
   {
-    id: "hims",
-    name: "HIMS",
-    fullName: "Hospital Information Management Software",
+    id: "hmsehr",
+    name: "HMSEHR",
+    fullName: "Healthcare Management Electronic Health Records",
     description:
-      "The system provides compliant templates for meticulous patient data capture, covering demographics, complaints, diagnoses, prescriptions, and more. It ensures 24/7 global record access, prioritizes security and efficiency, and offers valuable analytics and reporting for healthcare insights.",
-    shortDescription:
-      "Complete hospital management solution for enhanced patient care and operational efficiency",
+"Insource HMSEHR reimagines clinical workflows, patient engagement, and compliance. Built for clinicians, hospital admins, and IT teams, it offers AI-accelerated charting, predictive analytics, and deeply integrated telehealth.",   shortDescription:
+      "Advanced Healthcare Platform for Tomorrows Providers",
     icon: "Building2",
     color: "from-blue-400 to-cyan-500",
     bgImage: image1,
@@ -78,51 +77,50 @@ export const products: Product[] = [
     },
     features: [
       {
-        title: "End-to-End Billing & Revenue Cycle Management",
+        title: "Unified Patient Records ",
         description:
-          "•Automated billing for all services with accurate, real-time invoice generation",
+          "• Centralizes patient history, demographics, labs, and prescriptions in one secure, interoperable platform. Real-time, multilingual access enhances provider decision-making and lowers risk of medical errors. ",
         desc2:
-          "•	Seamless integration with insurance and TPA workflows for claim management.",
+          "•	Competitors often struggle with deep interoperability—Insource excels with dynamic AI validation and global compliance.",
         desc3:
-          "• Advanced reporting for settlements, receivables, and financial analytics.",
+          "",
         icon: "UserPlus",
       },
       {
-        title: "Supply Chain & Inventory Management",
+        title: "AI-Powered Clinical Decision Support",
         description:
-          "•	Live tracking of all medical supplies, pharmaceuticals, equipment, and consumables.",
+          "•	Leverages advanced machine learning on historical data to predict diagnoses, recommend treatments, and anticipate complications. Tailors protocols to local and multinational standards.",
         desc2:
-          "•	Immediate alerts for shortages, automated reorder, and cost optimization.",
-        desc3:
-          "Secure, comprehensive digital health records with easy access and advanced search capabilities",
+          "",
+        desc3:"",      
         icon: "FileText",
       },
       {
-        title: "Laboratory Information System (LIS)",
+        title: "	Seamless Integration",
         description:
-          "•	Digital order management, sample tracking, and result reporting.",
+          "• Connects instantly with radiology, labs, and specialty networks using HL7/FHIR APIs, eliminating manual work and errors.",
         desc2:
-          "•	Quality control management, flagging abnormal results, and integration with physician workflows.",
+          "",
         desc3: "",
         icon: "CreditCard",
       },
       {
-        title: "Radiology Information System (RIS)",
+        title: "Personalized Engagement",
         description:
-          "•	Digital scheduling, image acquisition, and storage for all radiology modalities.",
+          "• Multilingual portals and apps empower patients to interact with providers, access education, and schedule appointments—driving satisfaction and reducing missed visits.",
         desc2:
-          "•	Secure image sharing with referring doctors and native integration with EMR.",
+          "",
         desc3: "",
         icon: "Package",
       },
       {
-        title: "Outpatient (OPD) & Inpatient (IPD) EMR",
+        title: "Population Health Analytics",
         description:
-          "•	Complete Electronic Medical Records for both outpatient and inpatient services.",
+          "• Aggregates cohort data for proactive asset management, risk stratification, and compliance reporting.",
         desc2:
-          "•	Workflow automation for registration, admission, transfers, and discharges.",
+          "",
         desc3:
-          "AI-powered clinical decision support with evidence-based recommendations",
+          "",
         icon: "Brain",
       },
       {
@@ -130,15 +128,15 @@ export const products: Product[] = [
         description:
           "•	Digital central medical records management, accessible hospital-wide.",
         desc2:
-          "•	Secure, role-based access and robust audit trails ensure regulatory compliance.",
+          "",
         desc3:
-          "Comprehensive quality metrics and reporting for continuous improvement",
+          "",
         icon: "BarChart3",
       },
     ],
     modules: [
       {
-        name: "Patient Registration",
+        name: "Healthcare teams using tablets",
         description:
           "Streamlined patient admission and registration process with digital forms",
         icon: "UserPlus",
@@ -154,7 +152,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Clinical Management",
+        name: "Dashboards with AI health graphs",
         description:
           "Comprehensive clinical workflow management with AI assistance",
         icon: "Stethoscope",
@@ -170,7 +168,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Radiology",
+        name: "Happy patients",
         description:
           "Complete radiology department management with DICOM integration",
         icon: "Scan",
@@ -186,7 +184,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Pharmacy",
+        name: "Global Clinics",
         description:
           "Integrated pharmacy management system with automated dispensing",
         icon: "Pill",
@@ -219,13 +217,13 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "hrms",
-    name: "HRMS",
-    fullName: "Human Resources Management Software",
+    id: "hcm",
+    name: "HCM",
+    fullName: "Human Capital Management ",
     description:
-      "Transform your HR operations with our comprehensive Human Resources Management Software—an all-in-one, paperless platform designed to digitize every stage of the employee lifecycle. Experience seamless management of attendance, leave, payroll, onboarding, recruitment, employee engagement, rewards, and exit—all integrated in a fully digital workflow.",
+    "Insource HCM empowers HR leaders and employees with unified payroll, onboarding, talent management, compliance, and advanced engagement analytics, with a remote-first philosophy.",
     shortDescription:
-      "Comprehensive HR solution for employee lifecycle and payroll  Management and performance",
+      "Global HR Transformation for Modern Workforces",
     icon: "Users",
     bgImage: image2,
     color: "from-cyan-500 to-emerald-500",
@@ -255,49 +253,49 @@ export const products: Product[] = [
     },
     features: [
       {
-        title: "Employee Management",
+        title: "Centralized Profile Management & Onboarding",
         description:
-          "Complete employee lifecycle management and record keeping with digital onboarding",
+          "• Digital forms, automated workflows, multi-country regulatory modules, and self-service portals for employees. Onboarding experience is globally localized, robustly compliant, and analytics-driven.",
         icon: "User",
         desc3: "",
         desc2: "",
       },
       {
-        title: "Payroll Processing",
+        title: "Automated Payroll & Benefits Administration",
         description:
-          "Automated payroll calculation with tax compliance and multi-country support",
+          "• AI algorithms support payroll across jurisdictions, minimizing errors and compliance risks. Seamless integrations for multinational businesses set Insource apart from regional competitors.",
         icon: "Calculator",
         desc3: "",
         desc2: "",
       },
       {
-        title: "Attendance Tracking",
+        title: "Remote Attendance Logging & Geo-Location/Geo-Fencing",
         description:
-          "Biometric and digital attendance management system with mobile check-in",
+          "• Employees log attendance remotely via GPS-enabled mobile apps. Geo-fencing restricts check-in/out to authorized boundaries (office, client site, remote work radius). Real-time location mapping and photo/selfie attendance options ensure accountability, prevent fraud, and simplify HR audits.",
         icon: "Clock",
         desc3: "",
         desc2: "",
       },
       {
-        title: "Performance Management",
+        title: "AI-Driven Performance Analytics",
         description:
-          "Goal setting, performance reviews, and career development planning",
+          " • Combines feedback, goal setting, predictive retention and attrition insights, custom KPIs, and actionable reporting for managers.",
         icon: "Target",
         desc3: "",
         desc2: "",
       },
       {
-        title: "Learning Management",
+        title: "	Predictive Engagement & Retention",
         description:
-          "Employee training and development with certification tracking",
+          "• AI scans surveys, activities, and signals to flag at-risk staff and recommend tailored interventions before disengagement occurs.",
         icon: "GraduationCap",
         desc3: "",
         desc2: "",
       },
       {
-        title: "Analytics Dashboard",
+        title: "	Self-Service & Compliance",
         description:
-          "HR analytics and insights with predictive workforce planning",
+          " • Employees update data, view stubs, access policies, and enroll in company programs from any device. Automatic compliance tracker supports global regulations.",
         icon: "BarChart3",
         desc3: "",
         desc2: "",
@@ -305,7 +303,7 @@ export const products: Product[] = [
     ],
     modules: [
       {
-        name: "Employee Records",
+        name: "	Animated career roadmaps",
         description:
           "Centralized employee information management with document storage",
         icon: "User",
@@ -321,7 +319,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Attendance Management",
+        name: "Multicultural team meetings",
         description:
           "Comprehensive attendance and time tracking with mobile support",
         icon: "Clock",
@@ -337,7 +335,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Payroll System",
+        name: "	Location check-ins on mobile maps",
         description:
           "Advanced payroll processing and management with compliance",
         icon: "Calculator",
@@ -353,7 +351,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Recruitment",
+        name: "	Dashboards showing geo-fenced attendance clusters ",
         description:
           "End-to-end recruitment process management with AI matching",
         icon: "UserPlus",
@@ -369,7 +367,7 @@ export const products: Product[] = [
         ],
       },
       {
-        name: "Performance Management",
+        name: "Compliance Alerts",
         description:
           "Comprehensive performance evaluation and development system",
         icon: "Target",
@@ -387,14 +385,14 @@ export const products: Product[] = [
     ],
   },
   {
-    id: "lims",
-    name: "LIMS",
-    fullName: "Lab Information Management Software",
+    id: "idm",
+    name: "IDM",
+    fullName: "Inventory Distribution Management",
     description:
-      "Insource LIMS solution is a cloud-based, fully configurable platform that centralizes and automates lab workflows across diverse scientific and testing environments. It supports the entire sample lifecycle—from sample registration, collection, preparation, and analysis, to reporting, invoicing, and regulatory compliance.",
+    "Optimize procurement, warehousing, and delivery with AI-powered forecasting, smart restocking, and deep analytics. Designed for supply chain managers, distributors, finance teams, and vendors.",
     shortDescription:
-      "Advanced laboratory management platform for accurate sample tracking and reporting",
-    icon: "FlaskConical",
+      "Smart Inventory Control for Distributors Worldwide",
+    icon: "Boxes",
     bgImage: image3,
     color: "from-orange-500 to-red-500",
     benefits: [
@@ -423,23 +421,23 @@ export const products: Product[] = [
     },
     features: [
       {
-        title: "Sample Management",
+        title: "End-to-End Visibility",
         description:
-          "Complete sample lifecycle tracking from collection to disposal with barcode integration",
+          "Custom dashboards track every product, order, and shipment in real time—across regions and warehouses. Data analytics help prevent stockouts and minimize overstock.",
         icon: "TestTube",
         desc3: "",
         desc2: "",
       },
       {
-        title: "Quality Control",
+        title: "	Advanced Stock Tracking",
         description:
-          "Comprehensive quality assurance and control processes with automated validation",
+          "IoT sensors and barcode/RFID scanning assure precise inventory movement. Mobile-first design reduces error rates and manual entry.",
         icon: "CheckCircle",
         desc3: "",
         desc2: "",
       },
       {
-        title: "Reporting & Analytics",
+        title: "	AI Forecasting & Reorder Alerts",
         description:
           "Advanced reporting with data analytics and insights for laboratory optimization",
         icon: "BarChart3",
@@ -447,7 +445,7 @@ export const products: Product[] = [
         desc2: "",
       },
       {
-        title: "Instrument Integration",
+        title: "	Distribution Scheduling & Route Planning",
         description:
           "Seamless integration with laboratory instruments and equipment with bidirectional data flow",
         icon: "Settings",
@@ -554,6 +552,183 @@ export const products: Product[] = [
       },
     ],
   },
+  {
+    id: "ffa",
+    name: "FFA",
+    fullName: "	Field Force Application",
+    description:
+"Unite managers, agents, and reps with a mobile-first platform providing real-time updates, assignment, geo-tracking, and offline capability for truly global field operations.",
+    shortDescription:
+      "Empowering Remote Sales & Service Teams for Maximum Impact",
+    icon: "Building2",
+    color: "from-blue-400 to-cyan-500",
+    bgImage: image1,
+    benefits: [
+      "Reduce administrative costs by up to 40%",
+      "Improve patient satisfaction scores by 35%",
+      "Decrease medication errors by 60%",
+      "Streamline discharge process by 50%",
+      "Enhance staff productivity by 45%",
+    ],
+    integrations: [
+      "Epic",
+      "Cerner",
+      "Allscripts",
+      "MEDITECH",
+      "NextGen",
+      "Laboratory Systems",
+      "Radiology PACS",
+      "Pharmacy Systems",
+      "Insurance Providers",
+      "Government Health Databases",
+    ],
+    pricing: {
+      starter: "$299/month",
+      professional: "$599/month",
+      enterprise: "Custom pricing",
+    },
+    features: [
+      {
+        title: "Mobile Coordination & Geo-Fencing:",
+        description:
+          " • Teams get instant assignment updates on any device. Geo-fencing ensures attendance and task logging only within approved zones—verify with GPS, geotagging, and selfie options.",
+        desc2:
+          "",
+        desc3:
+          "",
+        icon: "UserPlus",
+      },
+      {
+        title: "Remote Attendance Logging",
+        description:
+          "• Field staff mark attendance from any client site or remote location; geo-tagged, time-stamped, and supported by offline sync.	",
+        desc2:
+          "",
+        desc3:
+          "",
+        icon: "FileText",
+      },
+      {
+        title: "AI-Powered Lead Prioritization & Route Planning",
+        description:
+          "•	Smart lead scoring and optimal route planning using maps, live traffic, and client priority maximize conversions and minimize travel.",
+        desc2:
+          "",
+        desc3: "",
+        icon: "CreditCard",
+      },
+      {
+        title: "	Task Scheduling & Work Automation",
+        description:
+          "• Digitized, automated job assignment, feedback loops, reporting, and workforce tracking. Designed for frontline mobile staff.",
+        desc2:
+          "",
+        desc3: "",
+        icon: "Package",
+      },
+      {
+        title: "Customer Feedback, Reporting, and Sync",
+        description:
+          "•	Real-time feedback and reporting, even in low-connectivity regions. Data syncs automatically when connection is available.",
+        desc2:
+          "",
+        desc3:
+          "",
+        icon: "Brain",
+      },
+      {
+        title: "Performance Analytics",
+        description:
+          "•	Digital central medical records management, accessible hospital-wide.",
+        desc2:
+          "•	Secure, role-based access and robust audit trails ensure regulatory compliance.",
+        desc3:
+          "Dashboards for productivity, customer engagement, visit coverage, and efficiency.",
+        icon: "BarChart3",
+      },
+    ],
+    modules: [
+      {
+        name: "Field reps on devices",
+        description:
+          "Streamlined patient admission and registration process with digital forms",
+        icon: "UserPlus",
+        image:
+          "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Quick patient registration with barcode scanning",
+          "Insurance verification and pre-authorization",
+          "Appointment scheduling with automated reminders",
+          "Patient demographics management and updates",
+          "Emergency contact management",
+          "Medical history import and validation",
+        ],
+      },
+      {
+        name: "	Geo-mapped routes",
+        description:
+          "Comprehensive clinical workflow management with AI assistance",
+        icon: "Stethoscope",
+        image:
+          "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Electronic prescriptions with drug interaction alerts",
+          "Lab test ordering and result management",
+          "Clinical notes with voice-to-text capability",
+          "Treatment planning and care coordination",
+          "Vital signs monitoring and trending",
+          "Clinical decision support algorithms",
+        ],
+      },
+      {
+        name: "Mobile dashboards with check-in animations, feedback forms",
+        description:
+          "Complete radiology department management with DICOM integration",
+        icon: "Scan",
+        image:
+          "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "DICOM image management and viewing",
+          "Radiology reporting with templates",
+          "Equipment scheduling and maintenance",
+          "Image archiving and retrieval system",
+          "3D image reconstruction capabilities",
+          "Teleradiology support for remote reading",
+        ],
+      },
+      {
+        name: "Pharmacy",
+        description:
+          "Integrated pharmacy management system with automated dispensing",
+        icon: "Pill",
+        image:
+          "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Drug inventory management with expiry tracking",
+          "Prescription processing and verification",
+          "Drug interaction and allergy alerts",
+          "Automated dispensing unit integration",
+          "Controlled substance tracking",
+          "Pharmacy billing and insurance processing",
+        ],
+      },
+      {
+        name: "Emergency Department",
+        description: "Specialized emergency department workflow optimization",
+        icon: "Ambulance",
+        image:
+          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Triage management with severity scoring",
+          "Bed management and patient tracking",
+          "Emergency protocols and checklists",
+          "Trauma team activation workflows",
+          "Discharge planning and follow-up",
+          "Emergency department analytics",
+        ],
+      },
+    ],
+  }
 ];
 
 export const productComparisons = {
