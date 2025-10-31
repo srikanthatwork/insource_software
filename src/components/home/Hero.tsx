@@ -163,7 +163,7 @@ const Hero: React.FC = () => {
                   iconPosition="right"
                   className="bg-gradient-to-r from-blue-400  to-blue-600 hover:from-blue-700 hover:via-green-700 hover:to-blue-700 animate-pulse-glow"
                 >
-                  Book a Demo
+                  Request Demo
                 </Button>
               </Link>
               <Button 

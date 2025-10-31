@@ -243,7 +243,7 @@ const ProductDetail: React.FC = () => {
           {activeTab === "modules" && (
             <AnimatedSection>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                System Modules
+                 Modules
               </h2>
               <div className="space-y-8">
                 {product.modules.map((module, index) => {

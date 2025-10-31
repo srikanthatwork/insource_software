@@ -20,20 +20,23 @@ const Header: React.FC = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
     {
-      name: "Products",
+      name: "Solutions",
       path: "/products",
       hasDropdown: true,
       dropdownItems: [
-        { name: "All Products", path: "/products" },
+        // { name: "All solutions", path: "/products" },
         { name: " HMSEHR  - Healthcare Management Electronic Health Records", path: "/products/hmsehr" },
         { name: "HCM - Human Capital Management", path: "/products/hcm" },
         { name: "IDM - Inventory Distribution Management", path: "/products/idm" },
         { name: "Field Force Application", path: "/products/ffa" }
 
       ],
-    },
+
+    },   
+   
+    {  name: "Industries ", path: "/marketsShowcase" },
+     { name: "About Us", path: "/about" },
     { name: "Careers", path: "/careers" },
     { name: "Contact", path: "/contact" },
   ];
@@ -138,7 +141,7 @@ const Header: React.FC = () => {
                 className="bg-gradient-to-r from-blue-500  to-blue-900 text-white px-6 py-2 rounded-full hover:shadow-lg transition-all duration-300 font-medium flex items-center space-x-2 animate-pulse-glow"
               >
                 <Stars className="w-4 h-4" />
-                <span>Book Demo</span>
+                <span>Request  Demo</span>
               </Link>
             </motion.div>
           </nav>

@@ -25,36 +25,45 @@ const Footer: React.FC = () => {
         { name: "HCM - Human Capital Management", path: "/products/hrms" },
         { name: "IDM - Inventory Distribution Management", path: "/products/lims" },
         { name: "FFA - Field Force Application", path: "/products/ffa" },
-        { name: "All Products", path: "/products" },
+        // { name: "All Products", path: "/products" },
       ],
     },
     {
       title: "Company",
       links: [
         { name: "About Us", path: "/about" },
-        { name: "Our Team", path: "/about#team" },
         { name: "Careers", path: "/careers" },
-        { name: "News & Updates", path: "#" },
+        { name: "Sustainability & Diversity", path: "#" },
+        { name: "Community Initiatives", path: "#" },
+        { name: "Partners", path: "#" },
+
       ],
     },
     {
-      title: "Support",
+      title: "Resources",
       links: [
-        { name: "Contact Us", path: "/contact" },
+        { name: "Events", path: "#" },
         { name: "Documentation", path: "#" },
-        { name: "Help Center", path: "#" },
-        { name: "Training", path: "#" },
+        { name: "FAQs", path: "#" },
+        { name: "Whitepapers", path: "#" },
+        { name: "Blog / Insights", path: "#" },
+        { name: "API Developer Portal", path: "#" },
+
+
       ],
     },
     {
-      title: "Legal",
+      title: "Support & Legal ",
       links: [
+        { name: "Support & Help Center", path: "#" },
+        { name: "Contact Us", path: "/contact" },
         { name: "Privacy Policy", path: "#" },
         { name: "Terms of Service", path: "#" },
-        { name: "HIPAA Compliance", path: "#" },
         { name: "Security", path: "#" },
+
       ],
     },
+   
   ];
 
   const socialLinks = [

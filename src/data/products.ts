@@ -143,12 +143,9 @@ export const products: Product[] = [
         image:
           "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Quick patient registration with barcode scanning",
-          "Insurance verification and pre-authorization",
-          "Appointment scheduling with automated reminders",
-          "Patient demographics management and updates",
-          "Emergency contact management",
-          "Medical history import and validation",
+           "Instant patient data access during consultations",
+           "Streamlined communication between medical departments",
+           " Interactive patient education at bedside",
         ],
       },
       {
@@ -159,13 +156,10 @@ export const products: Product[] = [
         image:
           "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Electronic prescriptions with drug interaction alerts",
-          "Lab test ordering and result management",
-          "Clinical notes with voice-to-text capability",
-          "Treatment planning and care coordination",
-          "Vital signs monitoring and trending",
-          "Clinical decision support algorithms",
-        ],
+      " Predictive analytics for early risk detection",
+    "Real-time vital monitoring with visual trends",
+    " Automated clinical insights from patient dat"      
+    ],
       },
       {
         name: "Happy patients",
@@ -175,12 +169,9 @@ export const products: Product[] = [
         image:
           "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "DICOM image management and viewing",
-          "Radiology reporting with templates",
-          "Equipment scheduling and maintenance",
-          "Image archiving and retrieval system",
-          "3D image reconstruction capabilities",
-          "Teleradiology support for remote reading",
+    "      Consistent quality care across all locations",
+"Multilingual services for diverse populations",
+"Seamless international health records transfer",
         ],
       },
       {
@@ -191,12 +182,9 @@ export const products: Product[] = [
         image:
           "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Drug inventory management with expiry tracking",
-          "Prescription processing and verification",
-          "Drug interaction and allergy alerts",
-          "Automated dispensing unit integration",
-          "Controlled substance tracking",
-          "Pharmacy billing and insurance processing",
+        " Telemedicine integration for remote care",
+"Mobile apps for continuous patient monitoring",
+"Data-driven personalized treatment optimization"
         ],
       },
       {

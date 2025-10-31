@@ -51,6 +51,8 @@ import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NoPageFound from "./pages/NoPageFound";
 import { ReactNode } from "react";
+import IndustriesServed from "./pages/IndustriesServed";
+import MarketsShowcase from "./components/home/MarketsShowcase";
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -100,6 +102,20 @@ function App() {
           element={
             <MainLayout>
               <ProductDetail />
+            </MainLayout>
+          }
+        />
+         <Route
+          path="/marketsShowcase"
+          element={
+            <MainLayout>
+              {/* <IndustriesServed /> */}
+               <div className="App">
+      <MarketsShowcase
+        autoPlay={true} 
+        interval={4000} 
+      />
+    </div>
             </MainLayout>
           }
         />

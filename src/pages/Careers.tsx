@@ -6,7 +6,47 @@ import Card from "../components/common/Card";
 // import Button from "../components/common/Button";
 import { careerOptions, careerQuote, whyChooseUs } from "../data/company";
 import * as Icons from "lucide-react";
+import ContentShowcase from "../components/home/ContentShowcase";
+import Resources from "../components/home/Resource/Resources";
+import CareerHero from "../components/home/CareerHero";
+import { CareerSection } from '../components/AnimatedSection/CareerSection';
+import { CareerOption } from '../data/career';
+
 const Careers: React.FC = () => {
+  const careerQuote = "Join us in building the future of technology. At Insource, we don't just offer jobs - we offer careers that make a difference.";
+
+  const careerOptions: CareerOption[] = [
+    {
+      title: "Software Development",
+      description: "Work with cutting-edge technologies and build scalable solutions that impact millions of users worldwide.",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      title: "Data Science",
+      description: "Transform data into insights and drive business decisions with advanced analytics and machine learning.",
+      color: "from-green-500 to-teal-500"
+    },
+    {
+      title: "Product Management",
+      description: "Lead product strategy and collaborate with cross-functional teams to deliver exceptional user experiences.",
+      color: "from-purple-500 to-pink-500"
+    },
+    {
+      title: "UX/UI Design",
+      description: "Create beautiful, intuitive interfaces that solve real user problems and enhance digital experiences.",
+      color: "from-orange-500 to-red-500"
+    },
+    {
+      title: "DevOps Engineering",
+      description: "Build and maintain robust infrastructure that ensures reliability, scalability, and security.",
+      color: "from-indigo-500 to-blue-500"
+    },
+    {
+      title: "Quality Assurance",
+      description: "Ensure product excellence through comprehensive testing strategies and quality processes.",
+      color: "from-yellow-500 to-orange-500"
+    }
+  ];
   // const [selectedJob, setSelectedJob] = useState<number | null>(null);
   // const [formData, setFormData] = useState({
   //   name: "",
@@ -40,73 +80,16 @@ const Careers: React.FC = () => {
 
   return (
     <div className="pt-16">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              With Us{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Why Join
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8">
-              Be part of a team that's revolutionizing healthcare through
-              innovative technology solutions.
-            </p>
-          </AnimatedSection>
-        </div>
-      </section>
+      <CareerHero/>
+      <Resources/>
+      <ContentShowcase/>
+     {/* <CareerSection 
+        careerQuote={careerQuote}
+        careerOptions={careerOptions}
+      /> */}
+      
 
-      {/* Quote Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection>
-            <Card className="p-12 text-center bg-gradient-to-br from-blue-50 to-purple-50">
-              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                <span className="text-white text-2xl">"</span>
-              </div>
-              <blockquote className="text-2xl font-medium text-gray-900 mb-6 leading-relaxed">
-                {careerQuote}
-              </blockquote>
-              <cite className="text-gray-600 font-medium">
-                - Insource Leadership Team
-              </cite>
-            </Card>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
-            {careerOptions.map((item, index) => {
-              // const IconComponent = Icons[
-              //   item.icon as keyof typeof Icons
-              // ] as React.ComponentType<any>;
-
-              return (
-                <AnimatedSection key={index} delay={index * 0.1}>
-                  <Card className="p-8 text-center h-full hover-lift">
-                    {/* <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      className={`w-16 h-16 bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
-                    >
-                      <IconComponent className="w-8 h-8 text-white" />
-                    </motion.div> */}
-
-                    <h3
-                      className={`text-xl  bg-gradient-to-r ${item.color} rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg`}
-                    >
-                      {item.title}
-                    </h3>
-                    {/* className="text-xl font-bold text-gray-900 mb-4"  */}
-                    <p className="text-gray-600 leading-relaxed">
-                      {item.description}
-                    </p>
-                  </Card>
-                </AnimatedSection>
-              );
-            })}
-          </div>
-        </div>
-      </section>
+    
 
       {/* Job Openings */}
       {/* <section className="py-20 bg-gray-50">
@@ -312,6 +295,9 @@ const Careers: React.FC = () => {
           </AnimatedSection>
         </div>
       </section> */}
+
+      {/* events */}
+     
     </div>
   );
 };

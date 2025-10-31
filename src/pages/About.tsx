@@ -11,8 +11,11 @@ import {
 } from "../data/company";
 
 import Customers from "../components/Customers";
-import IndustriesServed from "../components/home/IndustriesServed";
+import IndustriesServed from "./IndustriesServed";
 import GlobalImpact from "../components/home/GlobalInnovation";
+import Events from "../components/home/Events";
+import CustomerSuccess from "../components/home/CustomerSuccess";
+import InsourceSoftware from "../components/home/InsourceSoftware";
 
 
 const About: React.FC = () => {
@@ -266,6 +269,62 @@ const About: React.FC = () => {
    
 
 
+
+
+      {/* Mission & Vision */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <AnimatedSection>
+              <Card className="p-8 h-full bg-gradient-to-br from-blue-50 to-cyan-50 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
+                  <Icons.Target className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Our Mission
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  To revolutionize healthcare delivery through innovative
+                  digital solutions that empower healthcare professionals,
+                  improve patient outcomes, and create more efficient healthcare
+                  systems worldwide. We strive to make healthcare technology
+                  accessible, intuitive, and impactful.
+                </p>
+              </Card>
+            </AnimatedSection>
+
+            <AnimatedSection delay={0.2}>
+              <Card className="p-8 h-full bg-gradient-to-br from-green-50 to-emerald-50 hover-lift">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
+                  <Icons.Eye className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  Our Vision
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  {companyInfo.vision}. We envision a future where technology
+                  seamlessly integrates with healthcare to create better
+                  experiences for both providers and patients, ultimately
+                  leading to improved health outcomes for communities worldwide.
+                </p>
+              </Card>
+            </AnimatedSection>
+          </div>
+        </div>
+      </section>
+         {/* InsourceSoftware */}
+        <InsourceSoftware/>
+
+{/* GlobalImpact */}
+{/* <GlobalImpact/> */}
+{/* Events */}
+ <Events/>
+
+     
+
+{/* CustomerSuccess */}
+<CustomerSuccess/>
+
       {/* Testimonials */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -315,58 +374,10 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-      </section>
-
-      {/* Mission & Vision */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <AnimatedSection>
-              <Card className="p-8 h-full bg-gradient-to-br from-blue-50 to-cyan-50 hover-lift">
-                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6">
-                  <Icons.Target className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Our Mission
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  To revolutionize healthcare delivery through innovative
-                  digital solutions that empower healthcare professionals,
-                  improve patient outcomes, and create more efficient healthcare
-                  systems worldwide. We strive to make healthcare technology
-                  accessible, intuitive, and impactful.
-                </p>
-              </Card>
-            </AnimatedSection>
-
-            <AnimatedSection delay={0.2}>
-              <Card className="p-8 h-full bg-gradient-to-br from-green-50 to-emerald-50 hover-lift">
-                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-2xl flex items-center justify-center mb-6">
-                  <Icons.Eye className="w-8 h-8 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Our Vision
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {companyInfo.vision}. We envision a future where technology
-                  seamlessly integrates with healthcare to create better
-                  experiences for both providers and patients, ultimately
-                  leading to improved health outcomes for communities worldwide.
-                </p>
-              </Card>
-            </AnimatedSection>
-          </div>
-        </div>
-      </section>
-       {/* Industries Served */}
-<IndustriesServed/>
-
-{/* GlobalImpact */}
-<GlobalImpact/>
-
-      {/* <section> */}
+         {/* <section> */}
         <Customers />
-
+      
+      </section>
     </div>
   );
 };
