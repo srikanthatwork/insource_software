@@ -51,8 +51,8 @@ import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import NoPageFound from "./pages/NoPageFound";
 import { ReactNode } from "react";
-import IndustriesServed from "./pages/IndustriesServed";
 import MarketsShowcase from "./components/home/MarketsShowcase";
+import InsourcePlatform from "./pages/InsourcePlatform";
 
 type MainLayoutProps = {
   children: ReactNode;
@@ -135,7 +135,7 @@ function App() {
             </MainLayout>
           }
         />
-
+      
         {/* Invalid route shows NoPageFound only — no layout */}
         <Route path="*" element={<NoPageFound />} />
       </Routes>

@@ -11,6 +11,7 @@ import Resources from "../components/home/Resource/Resources";
 import CareerHero from "../components/home/CareerHero";
 import { CareerSection } from '../components/AnimatedSection/CareerSection';
 import { CareerOption } from '../data/career';
+import CSRInitiatives from "../components/home/CSRInitiatives";
 
 const Careers: React.FC = () => {
   const careerQuote = "Join us in building the future of technology. At Insource, we don't just offer jobs - we offer careers that make a difference.";
@@ -82,7 +83,9 @@ const Careers: React.FC = () => {
     <div className="pt-16">
       <CareerHero/>
       <Resources/>
-      <ContentShowcase/>
+      <ContentShowcase/>  
+      {/* <CSRInitiatives/> */}
+
      {/* <CareerSection 
         careerQuote={careerQuote}
         careerOptions={careerOptions}

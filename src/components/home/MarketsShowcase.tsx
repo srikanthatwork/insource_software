@@ -450,8 +450,8 @@ const MarketsShowcase: React.FC<MarketsShowcaseProps> = ({
                           {item}
                         </h4>
                         <p className="text-sm text-gray-600 mt-1">
-                          {activeMarket.title} 
-                           {getImageryTitle()}
+                          {activeMarket.title} <br />
+                           {/* {getImageryTitle()} */}
                         </p>
                       </div>
                     </div>

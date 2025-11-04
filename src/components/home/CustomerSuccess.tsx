@@ -26,10 +26,14 @@ const CustomerSuccess: React.FC = () => {
           <h1 className="text-5xl font-bold text-gray-900 mb-4">
             Customer Success Stories
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Discover how our international deployments have transformed businesses worldwide
-          </p>
+          {/* <h2 className='text-2xl font-bold text-gray-900 mb-4'>
+           Transforming Healthcare Through <br />Digital Innovation
+          </h2> */}
+           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+Transforming Healthcare Through <br />Digital Innovation    
+   </p>
         </div>
+        
 
         {/* Case Studies Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
@@ -94,7 +98,7 @@ const CustomerSuccess: React.FC = () => {
                       <p className="text-gray-600">{testimonial.position}</p>
                       <div className="flex items-center justify-center lg:justify-start mt-2">
                         <span className="text-2xl mr-2">{testimonial.companyLogo}</span>
-                        <span className="text-gray-700 font-medium">{testimonial.company}</span>
+                        <span className="text-gray-700 font-medium">{testimonial.company} </span>
                       </div>
                     </div>
 

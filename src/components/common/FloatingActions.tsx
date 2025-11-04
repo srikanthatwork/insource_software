@@ -51,7 +51,7 @@ const FloatingActions: React.FC = () => {
   };
 
   const quickReplies = [
-    "Tell me about HIMS",
+    "Tell me about HMSEHR",
     "Pricing information",
     "Schedule a demo",
     "Contact sales team",

@@ -135,8 +135,7 @@ const ImagerySuggestions: React.FC = () => {
       <div className="max-w-7xl mx-auto text-center">
         {/* Title */}
         <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 bg-clip-text text-transparent">
-          Imagery Suggestions
-        </h2>
+Smarter Care for a Global Community        </h2>
 
         {/* Subtitle */}
         <p className="text-gray-600 mb-12 text-lg max-w-3xl mx-auto">

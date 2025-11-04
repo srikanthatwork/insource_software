@@ -3,8 +3,8 @@ import { Testimonial, CaseStudy } from './types';
 export const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "CTO",
+    name: "Lorem ipsum",
+    position: "Lorem ipsum",
     company: "TechCorp Global",
     companyLogo: "🏢",
     image: "👩‍💼",
@@ -18,8 +18,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Michael Chen",
-    position: "Operations Director",
+    name: "Lorem ipsum",
+    position: "Lorem ipsum",
     company: "Global Retail Inc",
     companyLogo: "🛒",
     image: "👨‍💼",
@@ -32,8 +32,8 @@ export const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Emma Rodriguez",
-    position: "VP of Technology",
+    name: "Lorem ipsum",
+    position: "Lorem ipsum",
     company: "FinTech Solutions",
     companyLogo: "💳",
     image: "👩‍💻",
@@ -49,32 +49,60 @@ export const testimonials: Testimonial[] = [
 export const caseStudies: CaseStudy[] = [
   {
     id: 1,
-    title: "Global E-commerce Platform Deployment",
-    description: "Seamless integration across 12 countries with localized solutions",
-    client: "Global Retail Inc",
-    clientLogo: "🛒",
+    title: "Global Medical Systems Inc",
+    description: "Seamless EHR implementation across 50+ hospitals with customized integration",
+    client: "",
+    clientLogo: "🏥",
     results: [
-      "45% increase in conversion rates",
-      "60% reduction in loading times",
-      "Unified platform across regions"
+      "98% patient data accuracy achieved through automated systems",
+      "70% faster patient record access for medical staff",
+      "Unified health platform across multiple specialties"
     ],
-    duration: "6 months",
+    duration: "8 months",
     location: "Multiple countries"
   },
   {
     id: 2,
-    title: "Enterprise SaaS Implementation",
-    description: "Multi-national deployment with custom integration",
-    client: "TechCorp Global",
-    clientLogo: "🏢",
+    title: "Pharmaceutical Supply Chain Optimization MediPharm Global",
+    description: "End-to-end inventory management system for critical medications.",
+    client: "",
+    clientLogo: "💊",
     results: [
-      "78% improvement in team productivity",
-      "95% user adoption rate",
-      "24/7 global support coverage"
+      "45% reduction in drug shortages through predictive analytics",
+      "60% faster medication distribution to partner clinics",
+      "Real-time temperature monitoring for vaccine storage"
     ],
-    duration: "4 months",
+    duration: "5 months",
     location: "Worldwide"
-  }
+  },
+   {
+    id: 3,
+    title: "Telemedicine Platform Deployment HealthConnect Worldwide",
+    description: "Scalable virtual care solution for rural healthcare access",
+    client: "",
+    clientLogo: "🩺",
+    results: [
+      "300% increase in patient consultations in remote areas",
+      "85% patient satisfaction rate with virtual visits",
+      "Integrated diagnostic device connectivity"
+    ],
+    duration: "3 months",
+    location: "Rural healthcare networks across 8 countries"
+  },
+   {
+    id: 4,
+    title: "Medical Research Cloud Implementation BioResearch Consortium",
+    description: "Secure data collaboration platform for clinical trial management",
+    client: "",
+    clientLogo: "🔬",
+    results: [
+      "90% faster clinical data processing for research teams",
+      "100% regulatory compliance across international standards",
+      "Multi-center trial coordination in real-time"
+    ],
+    duration: "7 months",
+    location: "Research institutions across 12 countries"
+  },
 ];
 
 import { OfficeLocation, LeadershipMember, Milestone, ProductLaunch } from './types';

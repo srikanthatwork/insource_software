@@ -43,10 +43,11 @@ export interface ProductModule {
 export const products: Product[] = [
   {
     id: "hmsehr",
-    name: "HMSEHR",
-    fullName: "Healthcare Management Electronic Health Records",
+    name: "Hospital Plus",
+    fullName: "Hospital Management Electronic Health Records",
     description:
-"Insource HMSEHR reimagines clinical workflows, patient engagement, and compliance. Built for clinicians, hospital admins, and IT teams, it offers AI-accelerated charting, predictive analytics, and deeply integrated telehealth.",   shortDescription:
+"Insource HMSEHR transforms healthcare operations with a unified, cloud-based solution for hospitals, clinics, and diagnostic centers.It seamlessly integrates clinical, administrative, and financial modules under one intelligent system — designed with HL7/FHIR standards and enhanced with AI-driven analytics for better patient outcomes and compliance.",   
+shortDescription:
       "Advanced Healthcare Platform for Tomorrows Providers",
     icon: "Building2",
     color: "from-blue-400 to-cyan-500",
@@ -136,80 +137,113 @@ export const products: Product[] = [
     ],
     modules: [
       {
-        name: "Healthcare teams using tablets",
+        name: "Patient Administration System (PAS) ",
         description:
-          "Streamlined patient admission and registration process with digital forms",
+          "Centralized management for registration, admission, discharge, and transfer.",
         icon: "UserPlus",
         image:
           "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-           "Instant patient data access during consultations",
-           "Streamlined communication between medical departments",
-           " Interactive patient education at bedside",
+           "Minimizes manual data entry and improves operational transparency.",
+     
         ],
       },
       {
-        name: "Dashboards with AI health graphs",
+        name: "Electronic Medical Records (EMR)",
         description:
-          "Comprehensive clinical workflow management with AI assistance",
+          "Comprehensive digital records for every patient encounter.",
         icon: "Stethoscope",
         image:
           "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-      " Predictive analytics for early risk detection",
-    "Real-time vital monitoring with visual trends",
-    " Automated clinical insights from patient dat"      
+      " Provides 360° visibility into medical history and real-time updates.",
+       
     ],
       },
       {
-        name: "Happy patients",
+        name: "Laboratory Information System (LIS)",
         description:
-          "Complete radiology department management with DICOM integration",
+          "Fully automated lab workflow integrated with analyzers.",
         icon: "Scan",
         image:
           "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-    "      Consistent quality care across all locations",
-"Multilingual services for diverse populations",
-"Seamless international health records transfer",
+    "  Improves accuracy, reduces delays, and ensures lab compliance.",
+
         ],
       },
       {
-        name: "Global Clinics",
+        name: "Radiology Information System (RIS) + PACS",
         description:
-          "Integrated pharmacy management system with automated dispensing",
+          "Image archiving and reporting in one platform.",
         icon: "Pill",
         image:
           "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-        " Telemedicine integration for remote care",
-"Mobile apps for continuous patient monitoring",
-"Data-driven personalized treatment optimization"
+        "  Enables instant image access and paperless reporting for radiologists.",
         ],
       },
       {
-        name: "Emergency Department",
-        description: "Specialized emergency department workflow optimization",
+        name: "Pharmacy & Inventory",
+        description: "SManages drug inventory, dispensing, and reordering.",
         icon: "Ambulance",
         image:
           "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Triage management with severity scoring",
-          "Bed management and patient tracking",
-          "Emergency protocols and checklists",
-          "Trauma team activation workflows",
-          "Discharge planning and follow-up",
-          "Emergency department analytics",
+          "Tracks stock in real-time and reduces expiry-based losses.",
+          
         ],
       },
+        {
+        name: "Billing & Financial Management",
+        description: "Supports multi-department, package, and insurance billing.",
+        icon: "Ambulance",
+        image:
+          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Simplifies complex billing workflows with real-time reconciliation.",
+          
+        ],
+      },
+        {
+        name: "Doctor & Nursing Module",
+        description: "Digital prescription, order management, and clinical notes.",
+        icon: "Ambulance",
+        image:
+          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Reduces errors, automates record-keeping, and boosts efficiency.",
+        ],
+      },
+        {
+        name: "Telemedicine & Patient Portal",
+        description: "Video consultation, chat, and reports access from anywhere.",
+        icon: "Ambulance",
+        image:
+          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Connects doctors and patients virtually, expanding reach and convenience.",
+          
+        ],
+      },
+        {
+        name: "Analytics Dashboard",
+        description: "Visualize revenue, utilization, and patient trends.",
+        icon: "Ambulance",
+        image:
+          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Enables data-driven hospital management.",
+        ],
+      }
     ],
   },
   {
     id: "hcm",
-    name: "HCM",
+    name: "Talent Plus",
     fullName: "Human Capital Management ",
     description:
-    "Insource HCM empowers HR leaders and employees with unified payroll, onboarding, talent management, compliance, and advanced engagement analytics, with a remote-first philosophy.",
+    "Insource HCM simplifies HR processes through automation, analytics, and AI-powered insights.It helps organizations streamline hiring, payroll, attendance, and performance in one centralized platform — optimized for global, multi-location teams.",
     shortDescription:
       "Global HR Transformation for Modern Workforces",
     icon: "Users",
@@ -291,93 +325,97 @@ export const products: Product[] = [
     ],
     modules: [
       {
-        name: "	Animated career roadmaps",
+        name: "Recruitment & Onboarding",
         description:
-          "Centralized employee information management with document storage",
+          "Smart hiring workflow with resume parsing and automated offer management.",
         icon: "User",
         image:
           "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Personal information management with photo ID",
-          "Document storage and version control",
-          "Employment history and career progression",
-          "Skills and certifications tracking",
-          "Emergency contact management",
-          "Organizational chart visualization",
+         "Speeds up recruitment and ensures a seamless onboarding experience.",
+         
         ],
       },
       {
-        name: "Multicultural team meetings",
+        name: "Time & Attendance Management",
         description:
-          "Comprehensive attendance and time tracking with mobile support",
+          "Biometric and GPS-enabled attendance tracking.",
         icon: "Clock",
         image:
           "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Biometric integration (fingerprint, face recognition)",
-          "Shift management and scheduling",
-          "Leave management with approval workflows",
-          "Overtime calculation and approval",
-          "Mobile attendance with GPS tracking",
-          "Attendance analytics and reporting",
+          "Eliminates timesheet errors and ensures accuracy.",
+          
         ],
       },
       {
-        name: "	Location check-ins on mobile maps",
+        name: "Leave & Shift Scheduling",
         description:
-          "Advanced payroll processing and management with compliance",
+          "Dynamic scheduling and automated leave balance tracking.",
         icon: "Calculator",
         image:
           "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Automated salary calculation with variables",
-          "Tax deductions and compliance management",
-          "Bonus and incentive management",
-          "Payslip generation and distribution",
-          "Bank integration for direct deposits",
-          "Payroll analytics and cost center reporting",
-        ],
+          "Reduces conflicts and improves team productivity.",  
+        ]
+        
       },
       {
-        name: "	Dashboards showing geo-fenced attendance clusters ",
+        name: "Payroll & Statutory Compliance",
         description:
-          "End-to-end recruitment process management with AI matching",
+          "Handles payroll, tax deductions, and statutory filings (PF, ESI, TDS).",
         icon: "UserPlus",
         image:
           "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Job posting management across platforms",
-          "Candidate tracking and scoring",
-          "Interview scheduling and feedback",
-          "Offer management and negotiation",
-          "Background verification integration",
-          "Recruitment analytics and sourcing metrics",
+           "Ensures compliance across multiple regions.",
         ],
       },
       {
-        name: "Compliance Alerts",
+        name: "Performance Management",
         description:
-          "Comprehensive performance evaluation and development system",
+          "Goal tracking, appraisal cycles, and 360° feedback.",
         icon: "Target",
         image:
           "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Goal setting and OKR management",
-          "360-degree feedback collection",
-          "Performance review cycles and templates",
-          "Career development planning",
-          "Succession planning and talent mapping",
-          "Performance analytics and insights",
+          "Encourages data-backed performance reviews.",
+        
         ],
       },
+      {
+        name: "LMS – Learning & Development",
+        description:
+          "Personalized learning paths with certifications and tracking.",
+        icon: "Target",
+        image:
+          "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Enhances employee growth and retention.",
+        
+        ],
+      },
+      {
+        name: "Analytics Dashboard",
+        description:
+          "Real-time workforce insights and retention analysis.",
+        icon: "Target",
+        image:
+          "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Empowers management with strategic HR decisions.",
+        
+        ],
+      },
+      
     ],
   },
   {
     id: "idm",
-    name: "IDM",
+    name: "Inventory Plus",
     fullName: "Inventory Distribution Management",
     description:
-    "Optimize procurement, warehousing, and delivery with AI-powered forecasting, smart restocking, and deep analytics. Designed for supply chain managers, distributors, finance teams, and vendors.",
+    "Insource IDM enables intelligent management of supply chains, warehouses, and distribution networks.It combines AI-driven forecasting, vendor management, and IoT-based tracking for complete control over logistics and inventory lifecycles.",
     shortDescription:
       "Smart Inventory Control for Distributors Worldwide",
     icon: "Boxes",
@@ -459,93 +497,82 @@ export const products: Product[] = [
     ],
     modules: [
       {
-        name: "Sample Tracking",
+        name: "Procurement Management",
         description:
-          "Complete sample lifecycle management with chain of custody",
+          "Auto vendor selection, purchase requests, and approvals.",
         icon: "TestTube",
         image:
           "https://images.pexels.com/photos/3825527/pexels-photo-3825527.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Barcode sample tracking and labeling",
-          "Chain of custody documentation",
-          "Sample storage management with location tracking",
-          "Disposal tracking and environmental compliance",
-          "Sample aliquoting and derivative tracking",
-          "Temperature monitoring and alerts",
-        ],
+          "Improves purchasing efficiency and reduces cost leakage.",
+      
+   ],
       },
       {
-        name: "Test Management",
+        name: "Warehouse & Stock Control",
         description:
-          "Comprehensive test ordering and processing with automation",
+          "Barcode-enabled storage and movement tracking.",
         icon: "FlaskConical",
         image:
           "https://images.pexels.com/photos/3825529/pexels-photo-3825529.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Test catalog management with protocols",
-          "Automated workflows and task routing",
-          "Result entry and validation with ranges",
-          "Reference ranges and critical values",
-          "Method validation and verification",
-          "Proficiency testing management",
+         "Reduces shrinkage and improves order accuracy.",
         ],
       },
       {
-        name: "Quality Assurance",
+        name: "Demand Forecasting",
         description:
-          "Quality control and compliance management with automation",
+          "AI models predict stock needs based on historical data.",
         icon: "Shield",
         image:
           "https://images.pexels.com/photos/3825540/pexels-photo-3825540.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "QC sample management and scheduling",
-          "Statistical quality control with Levey-Jennings charts",
-          "Proficiency testing and external QA",
-          "Audit trails and electronic signatures",
-          "Compliance reporting and documentation",
-          "Corrective action tracking and management",
+           "Minimizes overstock and stock-outs.",
         ],
       },
       {
-        name: "Reporting",
+        name: "Vendor & Supplier Management",
         description:
-          "Advanced reporting and analytics platform with customization",
+          "End-to-end tracking of supplier performance.",
         icon: "BarChart3",
         image:
           "https://images.pexels.com/photos/3825546/pexels-photo-3825546.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Custom report builder with templates",
-          "Automated report delivery and scheduling",
-          "Data visualization and dashboards",
-          "Statistical analysis and trending",
-          "Regulatory reporting and submissions",
-          "Business intelligence and KPI tracking",
+         "Ensures reliable sourcing and quality control.",  
         ],
       },
       {
-        name: "Instrument Integration",
+        name: "Distribution & Logistics Tracking",
         description:
-          "Seamless laboratory instrument connectivity and data management",
+          "Route planning and delivery monitoring using IoT.",
         icon: "Settings",
         image:
           "https://images.pexels.com/photos/3825569/pexels-photo-3825569.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Bidirectional instrument communication",
-          "Automated result import and validation",
-          "Instrument maintenance scheduling",
-          "Calibration management and tracking",
-          "Error handling and troubleshooting",
-          "Multi-vendor instrument support",
+          "Cuts delivery time and improves transparency.",
+        
+        ],
+      },
+       {
+        name: "Inventory Finance & Reconciliation",
+        description:
+          "Integrated accounting and payment modules.",
+        icon: "Settings",
+        image:
+          "https://images.pexels.com/photos/3825569/pexels-photo-3825569.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Ensures end-to-end traceability and accountability.",
+        
         ],
       },
     ],
   },
   {
     id: "ffa",
-    name: "FFA",
+    name: "Fieldera",
     fullName: "	Field Force Application",
     description:
-"Unite managers, agents, and reps with a mobile-first platform providing real-time updates, assignment, geo-tracking, and offline capability for truly global field operations.",
+"Insource FFA connects your on-ground workforce with real-time updates, mobile accessibility, and powerful analytics.From field service agents to sales executives, it ensures accountability, optimized routing, and faster customer resolutions through AI-enabled workflows.",
     shortDescription:
       "Empowering Remote Sales & Service Teams for Maximum Impact",
     icon: "Building2",
@@ -637,86 +664,85 @@ export const products: Product[] = [
     ],
     modules: [
       {
-        name: "Field reps on devices",
+        name: "Task Assignment & Monitoring",
         description:
-          "Streamlined patient admission and registration process with digital forms",
+          "Assign, prioritize, and track tasks live.",
         icon: "UserPlus",
         image:
           "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Quick patient registration with barcode scanning",
-          "Insurance verification and pre-authorization",
-          "Appointment scheduling with automated reminders",
-          "Patient demographics management and updates",
-          "Emergency contact management",
-          "Medical history import and validation",
+          "Improves productivity and SLA compliance.",
         ],
       },
       {
-        name: "	Geo-mapped routes",
+        name: "Geo-Attendance & Tracking",
         description:
-          "Comprehensive clinical workflow management with AI assistance",
+          "GPS-based employee location tracking and attendance.",
         icon: "Stethoscope",
         image:
           "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Electronic prescriptions with drug interaction alerts",
-          "Lab test ordering and result management",
-          "Clinical notes with voice-to-text capability",
-          "Treatment planning and care coordination",
-          "Vital signs monitoring and trending",
-          "Clinical decision support algorithms",
+          "Prevents proxy attendance and enhances reliability.",
         ],
       },
       {
-        name: "Mobile dashboards with check-in animations, feedback forms",
+        name: "Route Optimization",
         description:
-          "Complete radiology department management with DICOM integration",
+          "AI-driven route recommendations for field visits.",
         icon: "Scan",
         image:
           "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "DICOM image management and viewing",
-          "Radiology reporting with templates",
-          "Equipment scheduling and maintenance",
-          "Image archiving and retrieval system",
-          "3D image reconstruction capabilities",
-          "Teleradiology support for remote reading",
+          "Reduces fuel costs and maximizes coverage.",
+         
         ],
       },
       {
-        name: "Pharmacy",
+        name: "Visit Management & CRM",
         description:
-          "Integrated pharmacy management system with automated dispensing",
+          "End-to-end customer visit tracking and follow-up reminders.",
         icon: "Pill",
         image:
           "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Drug inventory management with expiry tracking",
-          "Prescription processing and verification",
-          "Drug interaction and allergy alerts",
-          "Automated dispensing unit integration",
-          "Controlled substance tracking",
-          "Pharmacy billing and insurance processing",
+          "Boosts customer satisfaction and conversion rates.",
         ],
       },
       {
-        name: "Emergency Department",
-        description: "Specialized emergency department workflow optimization",
+        name: "Expense & Claim Automation",
+        description: "Mobile-based claim submission and approvals.",
         icon: "Ambulance",
         image:
           "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
         features: [
-          "Triage management with severity scoring",
-          "Bed management and patient tracking",
-          "Emergency protocols and checklists",
-          "Trauma team activation workflows",
-          "Discharge planning and follow-up",
-          "Emergency department analytics",
+          "Accelerates reimbursement and ensures accuracy.",
+        
+        ],
+      },
+       {
+        name: "Offline Access Mode",
+        description: "Continue operations without internet and sync later.",
+        icon: "Ambulance",
+        image:
+          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Ideal for remote or low-network regions.",
+        
+        ],
+      },
+       {
+        name: "Field Analytics Dashboard",
+        description: "Monitor performance metrics in real-time.",
+        icon: "Ambulance",
+        image:
+          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+        features: [
+          "Helps leadership identify trends and bottlenecks.",
         ],
       },
     ],
-  }
+  },
+ 
 ];
 
 export const productComparisons = {
