@@ -136,7 +136,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         
         <div className="flex space-x-3">
           <a
-            href={learnMoreLink}
+            href="#"
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm text-center flex items-center justify-center"
           >
             Learn More
@@ -211,8 +211,7 @@ const InsourcePlatform: React.FC = () => {
       ],
       color: "border-red-500",
       learnMoreLink: "/products/hmsehr",
-      updateLink: "/updates/hmsehr",
-      latestVersion: "v3.2.1"
+     
     },
     {
       icon: "👥",
@@ -227,8 +226,7 @@ const InsourcePlatform: React.FC = () => {
       ],
       color: "border-blue-500",
       learnMoreLink: "/products/hcm",
-      updateLink: "/updates/hcm",
-      latestVersion: "v2.8.4"
+     
     },
     {
       icon: "📦",
@@ -243,8 +241,7 @@ const InsourcePlatform: React.FC = () => {
       ],
       color: "border-green-500",
       learnMoreLink: "/products/idm",
-      updateLink: "/updates/idm",
-      latestVersion: "v4.1.2"
+     
     },
     {
       icon: "🌍",
@@ -259,8 +256,7 @@ const InsourcePlatform: React.FC = () => {
       ],
       color: "border-purple-500",
       learnMoreLink: "/products/ffa",
-      updateLink: "/updates/ffa",
-      latestVersion: "v2.5.3"
+   
     }
   ];
 
