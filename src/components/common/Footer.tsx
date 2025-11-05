@@ -21,10 +21,12 @@ const Footer: React.FC = () => {
     {
       title: "Products",
       links: [
-        { name: "HMSEHR  - Healthcare Management Electronic Health Records", path: "/products/hmsehr" },
-        { name: "HCM - Human Capital Management", path: "/products/hrms" },
-        { name: "IDM - Inventory Distribution Management", path: "/products/lims" },
-        { name: "FFA - Field Force Application", path: "/products/ffa" },
+        { name: "Health Plus", path: "/products/hmsehr" },
+        { name: "Talent Plus", path: "/products/hcm" },
+        { name: "Inventory Plus", path: "/products/idm" },
+        { name: "Fieldera", path: "/products/ffa" },
+        { name: "Insource Connected EcoSystem -(ICE)", path: "/products/insourceplatfrom" }
+
         // { name: "All Products", path: "/products" },
       ],
     },
@@ -33,8 +35,8 @@ const Footer: React.FC = () => {
       links: [
         { name: "About Us", path: "/about" },
         { name: "Careers", path: "/careers" },
-        { name: "Sustainability & Diversity", path: "#" },
-        { name: "Community Initiatives", path: "#" },
+        // { name: "Sustainability & Diversity", path: "#" },
+        // { name: "Community Initiatives", path: "#" },
         { name: "Partners", path: "#" },
 
       ],
@@ -43,11 +45,11 @@ const Footer: React.FC = () => {
       title: "Resources",
       links: [
         { name: "Events", path: "#" },
-        { name: "Documentation", path: "#" },
-        { name: "FAQs", path: "#" },
-        { name: "Whitepapers", path: "#" },
-        { name: "Blog / Insights", path: "#" },
-        { name: "API Developer Portal", path: "#" },
+        // { name: "Documentation", path: "#" },
+        // { name: "FAQs", path: "#" },
+        // { name: "Whitepapers", path: "#" },
+        // { name: "Blog / Insights", path: "#" },
+        // { name: "API Developer Portal", path: "#" },
 
 
       ],
@@ -131,10 +133,10 @@ const Footer: React.FC = () => {
 
               <div className="flex items-center space-x-2 text-sm text-gray-400">
                 {/* <Sparkles className="w-4 h-4 text-yellow-400" /> */}
-                <span>
-                  Trusted by {companyInfo.clients} healthcare facilities
-                  worldwide
-                </span>
+                    {/* <span>
+                      Trusted by {companyInfo.clients} client customers
+                      worldwide
+                    </span> */}
               </div>
 
               <div className="flex space-x-4">
@@ -223,7 +225,7 @@ const Footer: React.FC = () => {
               </div>
               <div>
                 <div className="text-sm text-gray-400">Visit us</div>
-                <div className="text-white font-medium">Hitech City , Hyderabad</div>
+                <div className="text-white font-medium">T-Hub, Knowledge City, Serilingampally, Hyderabad, Telangana 500081.</div>
               </div>
             </div>
           </div>

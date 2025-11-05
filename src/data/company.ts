@@ -7,12 +7,12 @@ export const companyInfo = {
     "  Empowering organizations worldwide through intelligent solutions that adapt to local needs, drive innovation, and foster meaningful impact.",
   foundedYear: 2020,
   employees: "50",
-  clients: "500",
+  clients: "50+",
   countries: "1500",
   contact: {
     phone: "+91 7569690353",
     email: "info@insourcesoftware.in",
-    address: "Hitech City, Hyderabad",
+    address: "T-Hub, Knowledge City, Serilingampally, Hyderabad, Telangana 500081.",
     hours: "Mon-Fri: 8:00 AM - 6:00 PM EST",
   },
   social: {

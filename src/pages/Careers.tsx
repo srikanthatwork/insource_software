@@ -82,8 +82,8 @@ const Careers: React.FC = () => {
   return (
     <div className="pt-16">
       <CareerHero/>
-      <Resources/>
-      <ContentShowcase/>  
+      {/* <Resources/> */}
+      {/* <ContentShowcase/>   */}
       {/* <CSRInitiatives/> */}
 
      {/* <CareerSection 

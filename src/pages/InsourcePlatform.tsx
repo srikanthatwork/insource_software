@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import InsourceIntelligenceEngine from "../components/home/InsourceIntelligenceEngine";
 
 // Animation variants
 const containerVariants = {
@@ -136,7 +137,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
         
         <div className="flex space-x-3">
           <a
-            href="#"
+            href={learnMoreLink}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors font-medium text-sm text-center flex items-center justify-center"
           >
             Learn More
@@ -471,6 +472,9 @@ const InsourcePlatform: React.FC = () => {
         </div>
       </motion.section> */}
 
+{/* Insource Intelligence Engine */}
+      <InsourceIntelligenceEngine/>
+
       {/* CTA Section */}
       <motion.section
         initial={{ opacity: 0, y: 50 }}
@@ -504,7 +508,10 @@ const InsourcePlatform: React.FC = () => {
           </div>
         </div>
       </motion.section>
+ 
     </div>
+   
+
   );
 };
 

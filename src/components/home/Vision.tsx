@@ -68,147 +68,7 @@ const Vision: React.FC = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
-          {/* Content */}
-          <AnimatedSection>
-            <div className="space-y-8">
-              <div>
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6 }}
-                  className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-100 to-green-100 text-blue-800 rounded-full text-sm font-medium mb-6"
-                >
-                  <Target className="w-4 h-4 mr-2" />
-                  Our Vision & Mission
-                </motion.div>
-
-                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                  <span className="animate-gradient-text block mb-2">
-                    Re-imagining
-                  </span>
-                  <span className="text-gray-800">
-                    Human Potential in Healthcare
-                  </span>
-                </h2>
-                <p className="text-xl text-gray-600 leading-relaxed">
-                  {companyInfo.vision}. We believe technology should empower
-                  healthcare professionals to focus on what matters most -
-                  patient care. Our solutions are designed to eliminate
-                  administrative burden and enhance clinical decision-making.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {visionPoints.map((point, index) => (
-                  <motion.div
-                    key={point.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1, duration: 0.6 }}
-                    whileHover={{ scale: 1.05 }}
-                    className="flex items-start space-x-4 p-4 rounded-xl hover:bg-white/50 transition-all duration-300"
-                  >
-                    <div
-                      className={`w-12 h-12 bg-gradient-to-r ${point.color} rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg`}
-                    >
-                      <point.icon className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900 mb-2">
-                        {point.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {point.description}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </AnimatedSection>
-
-          {/* Visual Element */}
-          <AnimatedSection direction="right">
-            <div className="relative">
-              <div className="relative w-full h-96 bg-gradient-to-br from-blue-100 via-green-100 to-orange-100 rounded-3xl overflow-hidden glass">
-                {/* Animated background pattern */}
-                <div className="absolute inset-0">
-                  {[...Array(30)].map((_, i) => (
-                    <motion.div
-                      key={i}
-                      className="absolute w-2 h-2 rounded-full"
-                      style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        background: `hsl(${Math.random() * 360}, 70%, 60%)`,
-                      }}
-                      animate={{
-                        scale: [1, 1.5, 1],
-                        opacity: [0.3, 0.8, 0.3],
-                      }}
-                      transition={{
-                        duration: 2 + Math.random() * 2,
-                        repeat: Infinity,
-                        delay: Math.random() * 2,
-                      }}
-                    />
-                  ))}
-                </div>
-
-                {/* Central element */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{
-                      duration: 20,
-                      repeat: Infinity,
-                      ease: "linear",
-                    }}
-                    className="w-40 h-40 border-4 border-blue-300 rounded-full flex items-center justify-center"
-                  >
-                    <motion.div
-                      animate={{ rotate: -360 }}
-                      transition={{
-                        duration: 15,
-                        repeat: Infinity,
-                        ease: "linear",
-                      }}
-                      className="w-24 h-24 bg-gradient-to-r from-blue-500 via-green-500 to-orange-500 rounded-full flex items-center justify-center"
-                    >
-                      <Target className="w-12 h-12 text-white" />
-                    </motion.div>
-                  </motion.div>
-                </div>
-              </div>
-
-              {/* Floating cards */}
-              <motion.div
-                animate={{ y: [-10, 10, -10] }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="absolute -top-4 -right-4 w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center glass"
-              >
-                <Users className="w-8 h-8 text-blue-500" />
-              </motion.div>
-
-              <motion.div
-                animate={{ y: [10, -10, 10] }}
-                transition={{ duration: 3, repeat: Infinity }}
-                className="absolute -bottom-4 -left-4 w-24 h-24 bg-white rounded-2xl shadow-lg flex items-center justify-center glass"
-              >
-                <Zap className="w-8 h-8 text-orange-500" />
-              </motion.div>
-
-              <motion.div
-                animate={{ x: [-5, 5, -5] }}
-                transition={{ duration: 5, repeat: Infinity }}
-                className="absolute top-1/2 -left-6 w-20 h-20 bg-white rounded-full shadow-lg flex items-center justify-center glass"
-              >
-                <Shield className="w-6 h-6 text-green-500" />
-              </motion.div>
-            </div>
-          </AnimatedSection>
-        </div>
+      
 
         {/* Awards Section */}
         {/* <AnimatedSection>
@@ -260,13 +120,10 @@ const Vision: React.FC = () => {
             </div>
 
             <div className="relative z-10 text-center">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                Global Healthcare Transformation
-              </h3>
-              <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-                Serving healthcare organizations across 25+ countries, impacting
-                millions of lives through innovative technology solutions.
-              </p>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
+                Serving 25+ healthcare organizations globally through <br /> innovative technology solutions.
+              </h2>
+             
 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                 <div className="text-center">

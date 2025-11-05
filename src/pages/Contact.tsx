@@ -354,10 +354,7 @@ import AnimatedSection from "../components/common/AnimatedSection";
 import Card from "../components/common/Card";
 import ContactForm from "../components/ContactForm";
 import { companyInfo } from "../data/company";
-import ContactSection from "../components/home/ContactSection";
-import IndustriesServed from "../components/home/IndustriesServed";
-import InsourcePlatform from "./InsourcePlatform";
-import RequestDemoForm from "../components/common/RequestDemoForm";
+
 const Contact: React.FC = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 

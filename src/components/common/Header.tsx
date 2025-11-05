@@ -319,11 +319,11 @@ const Header: React.FC = () => {
       path: "/products",
       hasDropdown: true,
       dropdownItems: [
-        { name: "Hospital Plus", path: "/products/hmsehr" },
+        { name: "Health Plus", path: "/products/hmsehr" },
         { name: "Talent Plus", path: "/products/hcm" },
         { name: "Inventory Plus", path: "/products/idm" },
         { name: "Fieldera", path: "/products/ffa" },
-        { name: "ICE-(Insource Connected EcoSystem)", path: "/products/insourceplatfrom" }
+        { name: "Insource Connected EcoSystem -(ICE)", path: "/products/insourceplatfrom" }
       ],
     },   
     { name: "Industries", path: "/marketsShowcase" },
