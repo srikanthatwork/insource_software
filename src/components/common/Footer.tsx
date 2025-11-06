@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
         { name: "Talent Plus", path: "/products/hcm" },
         { name: "Inventory Plus", path: "/products/idm" },
         { name: "Fieldera", path: "/products/ffa" },
-        { name: "Insource Connected EcoSystem -(ICE)", path: "/products/insourceplatfrom" }
+        { name: "Insource Connected Ecosystem(ICE)", path: "/products/insourceplatfrom" }
 
         // { name: "All Products", path: "/products" },
       ],
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
       title: "Support & Legal ",
       links: [
         { name: "Support & Help Center", path: "#" },
-        { name: "Contact Us", path: "/contact" },
+        // { name: "Contact Us", path: "/contact" },
         { name: "Privacy Policy", path: "#" },
         { name: "Terms of Service", path: "#" },
         { name: "Security", path: "#" },
@@ -260,12 +260,12 @@ const Footer: React.FC = () => {
             >
               Privacy Policy
             </Link>
-            <Link
+            {/* <Link
               to="#"
               className="text-gray-400 hover:text-white text-sm transition-colors"
             >
               HIPAA Compliance
-            </Link>
+            </Link> */}
           </div>
         </motion.div>
 

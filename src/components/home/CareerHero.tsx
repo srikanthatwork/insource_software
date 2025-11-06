@@ -190,7 +190,7 @@ const CareerHero: React.FC = () => {
               className="flex justify-center items-center gap-12 mt-12 text-gray-600"
               variants={itemVariants}
             >
-              <div className="text-center">
+              {/* <div className="text-center">
                 <motion.div 
                   className="text-3xl font-bold text-gray-900 mb-2"
                   initial={{ scale: 0 }}
@@ -200,7 +200,7 @@ const CareerHero: React.FC = () => {
                   50+
                 </motion.div>
                 <div className="text-sm">Countries</div>
-              </div>
+              </div> */}
               <div className="text-center">
                 <motion.div 
                   className="text-3xl font-bold text-gray-900 mb-2"
@@ -208,7 +208,7 @@ const CareerHero: React.FC = () => {
                   animate={{ scale: 1 }}
                   transition={{ delay: 1.2, type: "spring" }}
                 >
-                  1000+
+                  50+
                 </motion.div>
                 <div className="text-sm">Team Members</div>
               </div>

@@ -121,19 +121,21 @@ const Vision: React.FC = () => {
 
             <div className="relative z-10 text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-4 ">
-                Serving 25+ healthcare organizations globally through <br /> innovative technology solutions.
+                Serving  organizations globally through <br /> innovative technology solutions
               </h2>
              
 
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">
-                    {companyInfo.clients}
+                    {/* {companyInfo.clients} */}
+                    <div className="text-4xl font-bold mb-2">10000</div>
+
                   </div>
-                  <div className="text-blue-100">+ Projects Done</div>
+                  <div className="text-blue-100">+ Beds</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">500</div>
+                  <div className="text-4xl font-bold mb-2">50</div>
                   <div className="text-blue-100">+ Happy Clients</div>
                 </div>
                 <div className="text-center">
@@ -142,12 +144,7 @@ const Vision: React.FC = () => {
                   </div>
                   <div className="text-blue-100">+ Experts Staffs</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">
-                    {companyInfo.employees}
-                  </div>
-                  <div className="text-blue-100">+ Win Awards</div>
-                </div>
+               
               </div>
             </div>
           </div>

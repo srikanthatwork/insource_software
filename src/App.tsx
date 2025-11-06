@@ -115,7 +115,7 @@ function App() {
         autoPlay={true} 
         interval={4000} 
       />
-    </div>
+       </div>
             </MainLayout>
           }
         />
@@ -136,8 +136,15 @@ function App() {
           }
         />
       
-        {/* Invalid route shows NoPageFound only — no layout */}
-        <Route path="*" element={<NoPageFound />} />
+          <Route
+          path="/products/insourceplatform"
+          element={
+            <MainLayout>
+              <InsourcePlatform />
+            </MainLayout>
+          }
+          />       
+          <Route path="*" element={<NoPageFound />} />
       </Routes>
     </Router>
   );

@@ -154,7 +154,7 @@
 
 
 import React from "react";
-import InsourcePlatform from "./InsourcePlatform";
+import InsourcePlatform from "../pages/InsourcePlatform";
 const Products: React.FC = () => {
  
   return (

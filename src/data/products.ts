@@ -828,7 +828,7 @@ export const products: Product[] = [
     name: "Health Plus",
     fullName: "Hospital Management Electronic Health Records",
     description:
-"Insource HMSEHR transforms healthcare operations with a unified, cloud-based solution for hospitals, clinics, and diagnostic centers.It seamlessly integrates clinical, administrative, and financial modules under one intelligent system — designed with HL7/FHIR standards and enhanced with AI-driven analytics for better patient outcomes and compliance.",   
+"Insource Healthcare  Management transforms healthcare operations with a unified, cloud-based solution for hospitals, clinics, and diagnostic centers.It seamlessly integrates clinical, administrative, and financial modules under one intelligent system — designed with HL7/FHIR standards and enhanced with AI-driven analytics for better patient outcomes and compliance.",   
 shortDescription:
       "Advanced Healthcare Platform for Tomorrows Providers",
     icon: "Heart",
@@ -1041,7 +1041,7 @@ shortDescription:
     name: "Talent Plus",
     fullName: "Human Capital Management ",
     description:
-    "Insource HCM simplifies HR processes through automation, analytics, and AI-powered insights.It helps organizations streamline hiring, payroll, attendance, and performance in one centralized platform — optimized for global, multi-location teams.",
+    "Insource Talent Plus simplifies HR processes through automation, analytics, and AI-powered insights.It helps organizations streamline hiring, payroll, attendance, and performance in one centralized platform — optimized for global, multi-location teams.",
     shortDescription:
       "Global HR Transformation for Modern Workforces",
     icon: "Users",
@@ -1228,7 +1228,7 @@ shortDescription:
     name: "Inventory Plus",
     fullName: "Inventory Distribution Management",
     description:
-    "Insource IDM enables intelligent management of supply chains, warehouses, and distribution networks.It combines AI-driven forecasting, vendor management, and IoT-based tracking for complete control over logistics and inventory lifecycles.",
+    "Insource Inventory Plus enables intelligent management of supply chains, warehouses, and distribution networks.It combines AI-driven forecasting, vendor management, and IoT-based tracking for complete control over logistics and inventory lifecycles.",
     shortDescription:
       "Smart Inventory Control for Distributors Worldwide",
     icon: "Package",

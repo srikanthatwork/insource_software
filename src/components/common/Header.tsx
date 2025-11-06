@@ -323,7 +323,7 @@ const Header: React.FC = () => {
         { name: "Talent Plus", path: "/products/hcm" },
         { name: "Inventory Plus", path: "/products/idm" },
         { name: "Fieldera", path: "/products/ffa" },
-        { name: "Insource Connected EcoSystem -(ICE)", path: "/products/insourceplatfrom" }
+        { name: "Insource Connected Ecosystem(ICE)", path: "/products/insourceplatform" }
       ],
     },   
     { name: "Industries", path: "/marketsShowcase" },

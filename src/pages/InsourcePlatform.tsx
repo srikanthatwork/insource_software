@@ -201,13 +201,13 @@ const InsourcePlatform: React.FC = () => {
   const products = [
     {
       icon: "🏥",
-      title: "HMSEHR",
-      subtitle: "Healthcare Management & EHR",
+      title: "Health Plus",
+      subtitle: "Hospital Management",
       description: "Acts as the core healthcare data hub, managing patients, doctors, diagnostics, and billing.",
       features: [
-        "Automatically syncs data with HCM for staff allocation",
-        "Integrates with IDM for pharmacy & medical supply tracking",
-        "Connects with FFA for lab sample collection and home-care",
+        "Automatically syncs data with talent plus for staff allocation",
+        "Integrates with inventory plus for pharmacy & medical supply tracking",
+        "Connects with fieldera for lab sample collection and home-care",
         "Real-time billing and diagnostic management"
       ],
       color: "border-red-500",
@@ -216,13 +216,13 @@ const InsourcePlatform: React.FC = () => {
     },
     {
       icon: "👥",
-      title: "HCM",
+      title: "Talent Plus",
       subtitle: "Human Capital Management",
       description: "Centralized HR & workforce module for comprehensive staff management.",
       features: [
-        "Provides attendance data to HMSEHR for clinical resource mapping",
-        "Sends field workforce schedules to FFA",
-        "Syncs with IDM for warehouse staff productivity",
+        "Provides attendance data to health plus for clinical resource mapping",
+        "Sends field workforce schedules to fieldera",
+        "Syncs with inventory plus for warehouse staff productivity",
         "Payroll and compliance integration"
       ],
       color: "border-blue-500",
@@ -231,12 +231,12 @@ const InsourcePlatform: React.FC = () => {
     },
     {
       icon: "📦",
-      title: "IDM",
+      title: "Inventory Plus",
       subtitle: "Inventory Distribution Management",
       description: "The logistical backbone connecting procurement, warehouse, and distribution.",
       features: [
-        "Pulls medicine & equipment demand from HMSEHR automatically",
-        "Tracks dispatch and delivery via FFA integration",
+        "Pulls medicine & equipment demand from health plus automatically",
+        "Tracks dispatch and delivery via fieldera integration",
         "AI-based forecasting linked to patient trends",
         "Real-time stock and vendor management"
       ],
@@ -246,13 +246,13 @@ const InsourcePlatform: React.FC = () => {
     },
     {
       icon: "🌍",
-      title: "FFA",
+      title: "Fieldera",
       subtitle: "Field Force Application",
       description: "The on-ground operations connector for mobility and data synchronization.",
       features: [
-        "Captures field updates and syncs with IDM",
-        "Integrates with HCM for attendance and productivity",
-        "Enables home-care and patient visits from HMSEHR",
+        "Captures field updates and syncs with inventory plus",
+        "Integrates with Talent plus for attendance and productivity",
+        "Enables home-care and patient visits from health plus",
         "Provides leadership dashboards across all systems"
       ],
       color: "border-purple-500",
@@ -263,23 +263,23 @@ const InsourcePlatform: React.FC = () => {
 
   const integrations = [
     {
-      from: "HMSEHR",
-      to: "HCM",
+      from: "Health Plus",
+      to: "Talent Plus",
       description: "Patient data syncs for staff allocation and shift management"
     },
     {
-      from: "HMSEHR",
-      to: "IDM",
+      from: "Health Plus",
+      to: "Inventory Plus",
       description: "Automated medicine and equipment demand forecasting"
     },
     {
-      from: "HCM",
-      to: "FFA",
+      from: "Talent Plus",
+      to: "Fieldera",
       description: "Field workforce schedules for automatic task assignment"
     },
     {
-      from: "IDM",
-      to: "FFA",
+      from: "Inventory Plus",
+      to: "Fieldera",
       description: "Real-time delivery tracking and dispatch management"
     }
   ];
@@ -343,7 +343,7 @@ const InsourcePlatform: React.FC = () => {
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-blue-100">
                 <h3 className="text-xl font-semibold text-blue-800 mb-4">Cross-Platform Integration</h3>
                 <p className="text-gray-700">
-                  All products (HMSEHR, HCM, IDM, FFA) communicate through secure APIs, ensuring complete visibility and data consistency across every business function.
+                  All products (Health Plus, Talent Plus, Inventory Plus, Fieldera) communicate through secure APIs, ensuring complete visibility and data consistency across every business function.
                 </p>
               </div>
               <div className="bg-white rounded-2xl p-6 shadow-lg border border-green-100">

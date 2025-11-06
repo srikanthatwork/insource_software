@@ -8,7 +8,7 @@ export const companyInfo = {
   foundedYear: 2020,
   employees: "50",
   clients: "50+",
-  countries: "1500",
+  countries: "100000",
   contact: {
     phone: "+91 7569690353",
     email: "info@insourcesoftware.in",

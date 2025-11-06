@@ -274,11 +274,11 @@ const ImagerySuggestions: React.FC = () => {
                   alt={item.title}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
-                <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-80 group-hover:opacity-70 transition-opacity duration-500`}></div>
+                {/* <div className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-80 group-hover:opacity-70 transition-opacity duration-500`}></div>
                 <div
                   className="absolute inset-0 opacity-40"
                   style={{ background: item.bgPattern }}
-                ></div>
+                ></div> */}
               </div>
 
               {/* Animated border effect */}
@@ -289,7 +289,7 @@ const ImagerySuggestions: React.FC = () => {
               {/* Content */}
               <div className="relative h-full flex flex-col justify-center items-center text-center p-8 z-10">
                 {/* Icon with floating animation */}
-                <div
+                {/* <div
                   className={`p-5 rounded-full bg-white bg-opacity-20 backdrop-blur-sm text-white mb-6 transition-all duration-500 ${
                     hoveredIndex === index ? 'transform -translate-y-2 scale-110' : ''
                   }`}
@@ -298,15 +298,15 @@ const ImagerySuggestions: React.FC = () => {
                   }}
                 >
                   {item.icon}
-                </div>
+                </div> */}
 
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-white mb-3 transition-all duration-500 group-hover:scale-105">
+                {/* <h3 className="text-2xl font-bold text-white mb-3 transition-all duration-500 group-hover:scale-105">
                   {item.title}
-                </h3>
+                </h3> */}
 
                 {/* Description with slide-up effect */}
-                <p
+                {/* <p
                   className={`text-white text-sm leading-relaxed px-4 transition-all duration-500 ${
                     hoveredIndex === index
                       ? 'opacity-100 translate-y-0'
@@ -314,7 +314,7 @@ const ImagerySuggestions: React.FC = () => {
                   }`}
                 >
                   {item.description}
-                </p>
+                </p> */}
 
                 {/* Decorative elements */}
                 <div className={`absolute top-4 right-4 w-20 h-20 rounded-full bg-white opacity-10 transition-all duration-700 ${

@@ -97,7 +97,7 @@ const About: React.FC = () => {
               </div>
 
               {/* Company Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 mt-8">
                 <div className="text-center">
                   <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                     {companyInfo.foundedYear}
@@ -112,16 +112,11 @@ const About: React.FC = () => {
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-                    {companyInfo.countries}
+                    {companyInfo.employees} +
                   </div>
-                  <div className="text-sm text-gray-600">+ Experts Staffs</div>
+                  <div className="text-sm text-gray-600">Team Members</div>
                 </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-                    {companyInfo.employees}
-                  </div>
-                  <div className="text-sm text-gray-600">+ Win Awards</div>
-                </div>
+                
               </div>
             </AnimatedSection>
 
