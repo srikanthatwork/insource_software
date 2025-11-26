@@ -2,7 +2,7 @@ export const companyInfo = {
   name: "Insource Software",
   tagline: " Transforming Healthcare Empowering Enterprises",
   subheading:"Redefining enterprise automation through intelligent, cloud-based platforms built for hospitals, HR teams, and global organizations.",
-  vision: "we deliver next-generation healthcare and enterprise solutions that bring people, data, and processes together.Our integrated ecosystem connects hospitals, clinics, HR teams, and distributors through ",
+  vision: "we delivers next-generation healthcare and enterprise solutions that bring people, data, and processes together.Our integrated ecosystem connects hospitals, clinics, HR teams, and distributors through ",
   description:
     "  Empowering organizations worldwide through intelligent solutions that adapt to local needs, drive innovation, and foster meaningful impact.",
   foundedYear: 2020,

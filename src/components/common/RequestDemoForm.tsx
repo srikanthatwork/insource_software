@@ -305,7 +305,7 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({ isOpen, onClose }) =>
   const [notificationMessage, setNotificationMessage] = useState('');
 
   const products = [
-    { value: 'Hospital Plus', label: 'Hospital Plus (Healthcare Management EHR)' },
+    { value: 'Hospital Plus', label: 'Hospital Plus (Healthcare Management )' },
     { value: 'Talent Plus', label: 'Talent Plus (Human Capital Management)' },
     { value: 'Inventory Plus', label: 'Inventory Plus (Distribution Management)' },
     { value: 'Fieldera', label: 'Fieldera (Field Force Application)' }
@@ -829,3 +829,4 @@ const RequestDemoForm: React.FC<RequestDemoFormProps> = ({ isOpen, onClose }) =>
 };
 
 export default RequestDemoForm;
+

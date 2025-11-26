@@ -495,7 +495,7 @@ const Contact: React.FC = () => {
                       <div className="flex justify-between">
                         <span className="text-gray-600">Saturday</span>
                         <span className="font-medium text-gray-900">
-                          9:00 AM - 2:00 PM
+                          9:00 AM - 1:00 PM
                         </span>
                       </div>
                       <div className="flex justify-between">
@@ -538,6 +538,7 @@ const Contact: React.FC = () => {
       </section>
         {/* <ContactSection/> */}
       {/* <IndustriesServed/> */}
+      
     </div>
   );
 };

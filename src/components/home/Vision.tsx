@@ -129,20 +129,20 @@ const Vision: React.FC = () => {
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">
                     {/* {companyInfo.clients} */}
-                    <div className="text-4xl font-bold mb-2">10000</div>
+                    <div className="text-4xl font-bold mb-2">10000 +</div>
 
                   </div>
-                  <div className="text-blue-100">+ Beds</div>
+                  <div className="text-blue-100"> Beds</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-4xl font-bold mb-2">50</div>
-                  <div className="text-blue-100">+ Happy Clients</div>
+                  <div className="text-4xl font-bold mb-2">50 +</div>
+                  <div className="text-blue-100"> Happy Clients</div>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl font-bold mb-2">
-                    {companyInfo.countries}
+                    {companyInfo.countries} +
                   </div>
-                  <div className="text-blue-100">+ Experts Staffs</div>
+                  <div className="text-blue-100">Users</div>
                 </div>
                
               </div>

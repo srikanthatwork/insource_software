@@ -782,6 +782,7 @@ import image3 from "../components/assets/hims.jpg";
 
 export interface Product {
   bgImage: any;
+  benefits2:string[]
   id: string;
   name: string;
   fullName: string;
@@ -824,218 +825,198 @@ export interface ProductModule {
 
 export const products: Product[] = [
   {
-    id: "hmsehr",
-    name: "Health Plus",
-    fullName: "Hospital Management Electronic Health Records",
-    description:
-"Insource Healthcare  Management transforms healthcare operations with a unified, cloud-based solution for hospitals, clinics, and diagnostic centers.It seamlessly integrates clinical, administrative, and financial modules under one intelligent system — designed with HL7/FHIR standards and enhanced with AI-driven analytics for better patient outcomes and compliance.",   
-shortDescription:
-      "Advanced Healthcare Platform for Tomorrows Providers",
-    icon: "Heart",
-    color: "from-blue-400 to-cyan-500",
-    bgImage: image1,
-    overview: {
-      benefits: [
-        "100% Paperless Operations",
-        "Automated Clinical Workflows", 
-        "Real-Time Patient Data Access",
-        "Improved Compliance & Accuracy",
-        "Enhanced Doctor–Patient Communication",
-        "Reduce administrative costs by up to 40%",
-        "Improve patient satisfaction scores by 35%",
-        "Decrease medication errors by 60%",
-        "Streamline discharge process by 50%",
-        "Enhance staff productivity by 45%",
-      ],
-      technicalSpecs: [
-        "Cloud-based scalable architecture",
-        "Mobile-first responsive design", 
-        "Real-time data synchronization",
-        "Enterprise-grade security protocols",
-        "HL7/FHIR interoperability standards",
-        "AI-powered clinical decision support"
-      ]
-    },
+  id: "hmsehr",
+  name: "Health Plus",
+  fullName: "Hospital Management Electronic Health Records",
+  description: "Insource Healthcare Management transforms healthcare operations with a unified, cloud-based solution for hospitals, clinics, and diagnostic centers. It seamlessly integrates clinical, administrative, and financial modules under one intelligent system — designed with HL7/FHIR standards and enhanced with AI-driven analytics for better patient outcomes and compliance.",
+  shortDescription: "Advanced Healthcare Platform for Tomorrows Providers",
+  icon: "Heart",
+  color: "from-blue-400 to-cyan-500",
+  bgImage: image1,
+  overview: {
     benefits: [
-      "Reduce administrative costs by up to 40%",
-      "Improve patient satisfaction scores by 35%",
-      "Decrease medication errors by 60%",
-      "Streamline discharge process by 50%",
-      "Enhance staff productivity by 45%",
+      "100% Paperless Operations",
+      "Automated Clinical Workflows", 
+      "Real-Time Patient Data Access",
+      "Improved Compliance & Accuracy",
+      "Enhanced Doctor–Patient Communication",
     ],
-    integrations: [
-      "Epic",
-      "Cerner",
-      "Allscripts",
-      "MEDITECH",
-      "NextGen",
-      "Laboratory Systems",
-      "Radiology PACS",
-      "Pharmacy Systems",
-      "Insurance Providers",
-      "Government Health Databases",
-    ],
-    pricing: {
-      starter: "$299/month",
-      professional: "$599/month",
-      enterprise: "Custom pricing",
-    },
-    features: [
+    benefits2: [
       {
-        title: "Unified Patient Records ",
-        description:
-          "• Centralizes patient history, demographics, labs, and prescriptions in one secure, interoperable platform. Real-time, multilingual access enhances provider decision-making and lowers risk of medical errors. ",
-        desc2:
-          "•	Competitors often struggle with deep interoperability—Insource excels with dynamic AI validation and global compliance.",
-        desc3:
-          "",
-        icon: "FileText",
+        text: "Reduce administrative costs",
+        initialValue: 40,
+        icon: "ArrowDown",
+        color: "from-green-500 to-emerald-500"
       },
       {
-        title: "AI-Powered Clinical Decision Support",
-        description:
-          "•	Leverages advanced machine learning on historical data to predict diagnoses, recommend treatments, and anticipate complications. Tailors protocols to local and multinational standards.",
-        desc2:
-          "",
-        desc3:"",      
-        icon: "Brain",
+        text: "Improve patient satisfaction",
+        initialValue: 35,
+        icon: "ArrowUp", 
+        color: "from-blue-500 to-cyan-500"
       },
       {
-        title: "	Seamless Integration",
-        description:
-          "• Connects instantly with radiology, labs, and specialty networks using HL7/FHIR APIs, eliminating manual work and errors.",
-        desc2:
-          "",
-        desc3: "",
-        icon: "Link",
+        text: "Decrease medication errors",
+        initialValue: 60,
+        icon: "ArrowDown",
+        color: "from-red-500 to-pink-500"
       },
       {
-        title: "Personalized Engagement",
-        description:
-          "• Multilingual portals and apps empower patients to interact with providers, access education, and schedule appointments—driving satisfaction and reducing missed visits.",
-        desc2:
-          "",
-        desc3: "",
-        icon: "Users",
+        text: "Streamline discharge process",
+        initialValue: 50,
+        icon: "ArrowUp",
+        color: "from-purple-500 to-indigo-500"
       },
       {
-        title: "Population Health Analytics",
-        description:
-          "• Aggregates cohort data for proactive asset management, risk stratification, and compliance reporting.",
-        desc2:
-          "",
-        desc3:
-          "",
-        icon: "BarChart3",
-      },
-      {
-        title: "Fully Paperless Across All Departments",
-        description:
-          "•	Digital central medical records management, accessible hospital-wide.",
-        desc2:
-          "",
-        desc3:
-          "",
-        icon: "FileCheck",
-      },
-    ],
-    modules: [
-      {
-        name: "Patient Administration System (PAS) ",
-        description:
-          "Centralized management for registration, admission, discharge, and transfer.",
-        icon: "UserCheck",
-        image:
-          "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-           "Minimizes manual data entry and improves operational transparency.",
-        ],
-      },
-      {
-        name: "Electronic Medical Records (EMR)",
-        description:
-          "Comprehensive digital records for every patient encounter.",
-        icon: "FileText",
-        image:
-          "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Provides 360° visibility into medical history and real-time updates.",
-        ],
-      },
-      {
-        name: "Laboratory Information System (LIS)",
-        description:
-          "Fully automated lab workflow integrated with analyzers.",
-        icon: "FlaskConical",
-        image:
-          "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Improves accuracy, reduces delays, and ensures lab compliance.",
-        ],
-      },
-      {
-        name: "Radiology Information System (RIS) + PACS",
-        description:
-          "Image archiving and reporting in one platform.",
-        icon: "Scan",
-        image:
-          "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Enables instant image access and paperless reporting for radiologists.",
-        ],
-      },
-      {
-        name: "Pharmacy & Inventory",
-        description: "Manages drug inventory, dispensing, and reordering.",
-        icon: "Pill",
-        image:
-          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Tracks stock in real-time and reduces expiry-based losses.",
-        ],
-      },
-      {
-        name: "Billing & Financial Management",
-        description: "Supports multi-department, package, and insurance billing.",
-        icon: "CreditCard",
-        image:
-          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Simplifies complex billing workflows with real-time reconciliation.",
-        ],
-      },
-      {
-        name: "Doctor & Nursing Module",
-        description: "Digital prescription, order management, and clinical notes.",
-        icon: "Stethoscope",
-        image:
-          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Reduces errors, automates record-keeping, and boosts efficiency.",
-        ],
-      },
-      {
-        name: "Telemedicine & Patient Portal",
-        description: "Video consultation, chat, and reports access from anywhere.",
-        icon: "Video",
-        image:
-          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Connects doctors and patients virtually, expanding reach and convenience.",
-        ],
-      },
-      {
-        name: "Analytics Dashboard",
-        description: "Visualize revenue, utilization, and patient trends.",
-        icon: "BarChart3",
-        image:
-          "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
-        features: [
-          "Enables data-driven hospital management.",
-        ],
+        text: "Enhance staff productivity",
+        initialValue: 45,
+        icon: "ArrowUp",
+        color: "from-orange-500 to-amber-500"
       }
     ],
+    technicalSpecs: [
+      "Cloud-based scalable architecture",
+      "Mobile-first responsive design", 
+      "Real-time data synchronization",
+      "Enterprise-grade security protocols",
+      "HL7/FHIR interoperability standards",
+      "AI-powered clinical decision support"
+    ]
   },
+  benefits: [
+    "Reduce administrative costs by up to 40%",
+    "Improve patient satisfaction scores by 35%",
+    "Decrease medication errors by 60%",
+    "Streamline discharge process by 50%",
+    "Enhance staff productivity by 45%",
+  ],
+  integrations: [
+    "Epic",
+    "Cerner",
+    "Allscripts",
+    "MEDITECH",
+    "NextGen",
+    "Laboratory Systems",
+    "Radiology PACS",
+    "Pharmacy Systems",
+    "Insurance Providers",
+    "Government Health Databases",
+  ],
+  pricing: {
+    starter: "$299/month",
+    professional: "$599/month",
+    enterprise: "Custom pricing",
+  },
+  features: [
+    {
+      title: "Personalized Engagement",
+      description: "• Multilingual portals and apps empower patients to interact with providers, access education, and schedule appointments—driving satisfaction and reducing missed visits.",
+      desc2: "",
+      desc3: "",
+      icon: "Users",
+    },
+    {
+      title: "Unified Patient Records",
+      description: "• Centralizes patient history, demographics, labs, and prescriptions in one secure, interoperable platform. Real-time, multilingual access enhances provider decision-making and lowers risk of medical errors.",
+      desc2: "",
+      desc3: "",
+      icon: "FileText",
+    },
+    {
+      title: "AI-Powered Clinical Decision Support",
+      description: "• Leverages advanced machine learning on historical data to predict diagnoses, recommend treatments, and anticipate complications. Tailors protocols to local and multinational standards.",
+      desc2: "",
+      desc3: "",      
+      icon: "Brain",
+    },
+    {
+      title: "Seamless Integration",
+      description: "• Connects instantly with radiology, labs, and specialty networks using HL7/FHIR APIs, eliminating manual work and errors.",
+      desc2: "",
+      desc3: "",
+      icon: "Link",
+    },
+    
+    {
+      title: "Population Health Analytics",
+      description: "• Aggregates cohort data for proactive asset management, risk stratification, and compliance reporting.",
+      desc2: "",
+      desc3: "",
+      icon: "BarChart3",
+    },
+    {
+      title: "Fully Paperless Across All Departments",
+      description: "• Digital central medical records management, accessible hospital-wide.",
+      desc2: "",
+      desc3: "",
+      icon: "FileCheck",
+    },
+  ],
+  modules: [
+    {
+      name: "Patient Administration System (PAS)",
+      description: "Centralized management for registration, admission, discharge, and transfer.",
+      icon: "UserCheck",
+      image: "https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Minimizes manual data entry and improves operational transparency."],
+    },
+    {
+      name: "Electronic Medical Records (EMR)",
+      description: "Comprehensive digital records for every patient encounter.",
+      icon: "FileText",
+      image: "https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Provides 360° visibility into medical history and real-time updates."],
+    },
+    {
+      name: "Laboratory Information System (LIS)",
+      description: "Fully automated lab workflow integrated with analyzers.",
+      icon: "FlaskConical",
+      image: "https://images.pexels.com/photos/4386370/pexels-photo-4386370.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Improves accuracy, reduces delays, and ensures lab compliance."],
+    },
+    {
+      name: "Radiology Information System (RIS) + PACS",
+      description: "Image archiving and reporting in one platform.",
+      icon: "Scan",
+      image: "https://images.pexels.com/photos/4386431/pexels-photo-4386431.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Enables instant image access and paperless reporting for radiologists."],
+    },
+    {
+      name: "Pharmacy & Inventory",
+      description: "Manages drug inventory, dispensing, and reordering.",
+      icon: "Pill",
+      image: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Tracks stock in real-time and reduces expiry-based losses."],
+    },
+    {
+      name: "Billing & Financial Management",
+      description: "Supports multi-department, package, and insurance billing.",
+      icon: "CreditCard",
+      image: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Simplifies complex billing workflows with real-time reconciliation."],
+    },
+    {
+      name: "Doctor & Nursing Module",
+      description: "Digital prescription, order management, and clinical notes.",
+      icon: "Stethoscope",
+      image: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Reduces errors, automates record-keeping, and boosts efficiency."],
+    },
+    {
+      name: "Telemedicine & Patient Portal",
+      description: "Video consultation, chat, and reports access from anywhere.",
+      icon: "Video",
+      image: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Connects doctors and patients virtually, expanding reach and convenience."],
+    },
+    {
+      name: "Analytics Dashboard",
+      description: "Visualize revenue, utilization, and patient trends.",
+      icon: "BarChart3",
+      image: "https://images.pexels.com/photos/4386464/pexels-photo-4386464.jpeg?auto=compress&cs=tinysrgb&w=800",
+      features: ["Enables data-driven hospital management."],
+    }
+  ],
+},
   {
     id: "hcm",
     name: "Talent Plus",
@@ -1054,12 +1035,40 @@ shortDescription:
         "24/7 accessibility through mobile app", 
         "Statutory & labor law compliance",
         "Seamless payroll integration",
-        "Reduce HR administrative time by 60%",
-        "Improve employee satisfaction by 45%", 
-        "Decrease payroll processing time by 70%",
-        "Enhance recruitment efficiency by 50%",
-        "Increase performance management effectiveness by 40%",
+        
       ],
+    benefits2: [
+  {
+    text: "Reduce HR administrative time",
+    initialValue: 60,
+    icon: "ArrowDown",
+    color: "from-green-500 to-emerald-500"
+  },
+  {
+    text: "Improve employee satisfaction",
+    initialValue: 45,
+    icon: "ArrowUp", 
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    text: "Decrease payroll processing time",
+    initialValue: 70,
+    icon: "ArrowDown",
+    color: "from-red-500 to-pink-500"
+  },
+  {
+    text: "Enhance recruitment efficiency",
+    initialValue: 50,
+    icon: "ArrowUp",
+    color: "from-purple-500 to-indigo-500"
+  },
+  {
+    text: "Increase performance management effectiveness",
+    initialValue: 40,
+    icon: "ArrowUp",
+    color: "from-orange-500 to-amber-500"
+  }
+],
       technicalSpecs: [
         "Cloud-native microservices architecture",
         "Mobile-first responsive platform",
@@ -1241,12 +1250,41 @@ shortDescription:
         "Transparent supply chain",
         "Faster procurement cycle",
         "Real-time stock valuation",
-        "Reduce stockouts by 80% with AI forecasting",
-        "Improve inventory accuracy to 99.8%",
-        "Decrease carrying costs by 35%",
-        "Enhance order fulfillment speed by 60%",
-        "Increase supplier performance by 45%",
+        
       ],
+   benefits2: [
+ 
+  {
+    text: "Reduce stockouts with AI forecasting",
+    initialValue: 80,
+    icon: "ArrowDown",
+    color: "from-teal-500 to-green-500"
+  },
+  {
+    text: "Improve inventory accuracy",
+    initialValue: 99.8,
+    icon: "ArrowUp",
+    color: "from-indigo-500 to-purple-500"
+  },
+  {
+    text: "Decrease carrying costs",
+    initialValue: 35,
+    icon: "ArrowDown",
+    color: "from-rose-500 to-pink-500"
+  },
+  {
+    text: "Enhance order fulfillment speed",
+    initialValue: 60,
+    icon: "ArrowUp",
+    color: "from-yellow-500 to-orange-500"
+  },
+  {
+    text: "Increase supplier performance",
+    initialValue: 45,
+    icon: "ArrowUp",
+    color: "from-cyan-500 to-blue-500"
+  }
+],
       technicalSpecs: [
         "IoT-enabled real-time tracking system",
         "AI-powered demand forecasting engine",
@@ -1416,12 +1454,40 @@ shortDescription:
         "Seamless communication between field & HQ",
         "30% improvement in task turnaround time",
         "Smart insights for resource allocation",
-        "Increase field team productivity by 55%",
-        "Reduce travel time and costs by 40%",
-        "Improve customer visit completion rate by 65%",
-        "Enhance real-time reporting accuracy by 80%",
-        "Decrease administrative overhead by 50%",
+        
       ],
+   benefits2: [
+  {
+    text: "Increase field team productivity",
+    initialValue: 55,
+    icon: "ArrowUp",
+    // color: "from-green-500 to-emerald-500"
+  },
+  {
+    text: "Reduce travel time and costs",
+    initialValue: 40,
+    icon: "ArrowDown", 
+    color: "from-blue-500 to-cyan-500"
+  },
+  {
+    text: "Improve customer visit completion rate",
+    initialValue: 65,
+    icon: "ArrowUp",
+    color: "from-purple-500 to-indigo-500"
+  },
+  {
+    text: "Enhance real-time reporting accuracy",
+    initialValue: 80,
+    icon: "ArrowUp",
+    color: "from-orange-500 to-amber-500"
+  },
+  {
+    text: "Decrease administrative overhead",
+    initialValue: 50,
+    icon: "ArrowDown",
+    color: "from-red-500 to-pink-500"
+  }
+],
       technicalSpecs: [
         "GPS-enabled mobile field applications",
         "AI-powered route optimization engine",

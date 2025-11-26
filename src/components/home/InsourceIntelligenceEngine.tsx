@@ -454,35 +454,39 @@ const InsourceIntelligenceEngine: React.FC = () => {
               <div className={`absolute inset-0 bg-gradient-to-r ${feature.color} rounded-2xl blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500`}></div>
               
               {/* Card */}
-              <div className="relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 h-full hover:border-slate-600 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
-                {/* Icon Container */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} mb-4 transform group-hover:rotate-12 transition-transform duration-300`}>
-                  <div className="text-white">
-                    {feature.icon}
+                  <div className="group relative bg-slate-800/50 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 h-full transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden">
+                {/* Background Overlay - Only on Hover */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}></div>
+                  
+                  {/* Icon Container */}
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-xl bg-gradient-to-r ${feature.color} mb-4 transform group-hover:rotate-12 transition-transform duration-300 relative z-10`}>
+                    <div className="text-white">
+                      {feature.icon}
+                    </div>
                   </div>
-                </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 transition-all duration-300">
-                  {feature.title}
-                </h3>
+                  {/* Title */}
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-400 group-hover:to-purple-400 transition-all duration-300 relative z-10">
+                    {feature.title}
+                  </h3>
 
-                {/* Description */}
-                <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                  {feature.description}
-                </p>
+                  {/* Description */}
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300 relative z-10">
+                    {feature.description}
+                  </p>
 
-                {/* Animated Border */}
-                <div className={`absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${feature.color} opacity-20 animate-pulse`}></div>
-                </div>
+                  {/* Animated Border - Only on Hover */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-white/20 transition-all duration-500"></div>
+                  
+                  {/* Animated Gradient Border */}
+                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-30 transition-opacity duration-500 -z-10`}></div>
 
-                {/* Corner Accent */}
-                <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/5 to-transparent rounded-bl-3xl rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            </div>
-          ))}
-        </div>
+                  {/* Corner Accent */}
+                  <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-white/5 to-transparent rounded-bl-3xl rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                          </div>
+                      </div>
+                    ))}
+                  </div>
 
         {/* Bottom Stats Bar */}
         <div className={`mt-16 bg-slate-800/30 backdrop-blur-xl border border-slate-700/50 rounded-2xl p-6 transition-all duration-1000 transform ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`} style={{ transitionDelay: '600ms' }}>

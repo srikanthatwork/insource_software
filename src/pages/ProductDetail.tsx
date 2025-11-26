@@ -325,7 +325,7 @@
 // export default ProductDetail;
 
 import React, { useState, useRef, useEffect } from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams, Navigate, useNavigate } from "react-router-dom"; // Added useNavigate import
 import { motion, useScroll, useTransform } from "framer-motion";
 import * as Icons from "lucide-react";
 import AnimatedSection from "../components/common/AnimatedSection";
@@ -339,6 +339,8 @@ const ProductDetail: React.FC = () => {
   const [isDemoFormOpen, setIsDemoFormOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("overview");
   
+  const navigate = useNavigate(); 
+
   const overviewRef = useRef<HTMLDivElement>(null);
   const featuresRef = useRef<HTMLDivElement>(null);
   const modulesRef = useRef<HTMLDivElement>(null);
@@ -386,7 +388,7 @@ const ProductDetail: React.FC = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [sections]); // Added sections dependency
 
   const scrollToSection = (sectionId: string) => {
     const section = sections.find(s => s.id === sectionId);
@@ -401,6 +403,18 @@ const ProductDetail: React.FC = () => {
   const handleRequestDemo = () => {
     setIsDemoFormOpen(true);
   };
+
+  const handleContactSales = () => {
+    navigate('/contact');
+  };
+
+  // Add type safety for overview benefits
+  const overviewBenefits = product.overview?.benefits || [
+    "Improved hiring efficiency and quality",
+    "Enhanced employee engagement and retention", 
+    "Streamlined administrative processes",
+    "Global compliance and risk management"
+  ];
 
   return (
     <div className="pt-16">
@@ -468,7 +482,7 @@ const ProductDetail: React.FC = () => {
         </div>
       </section>
 
-      {/* Sticky Navigation */}
+      {/* Sticky Navigation - Uncomment if needed */}
       {/* <motion.div 
         className="sticky top-16 bg-white/80 backdrop-blur-md border-b border-gray-200 z-40"
         style={{ opacity, scale }}
@@ -496,229 +510,215 @@ const ProductDetail: React.FC = () => {
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20">
           
+             {/* Modules Section */}
+            <section id="modules" ref={modulesRef} className="scroll-mt-20">
+              <AnimatedSection>
+                <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
+              Product Overview
+
+                </h2>
+                <p className="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
+                  Discover what makes our product unique and powerful.
+
+
+
+                </p>
+                
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {product.modules.map((module, index) => {
+                    const ModuleIcon = Icons[
+                      module.icon as keyof typeof Icons
+                    ] as React.ComponentType<any>;
+                    return (
+                      <motion.div
+                        key={module.name}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: index * 0.15 }}
+                        whileHover={{ y: -5, scale: 1.02 }}
+                        className="h-full flex"
+                      >
+                      <Card className="p-4 h-full hover:shadow-lg transition-all duration-300 border border-gray-100 flex flex-col group w-full">
+                        {/* Icon and Title */}
+                        <div className="flex items-center space-x-3 mb-2">
+                          <div className={`w-10 h-10 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                            <ModuleIcon className="w-5 h-5 text-white" />
+                          </div>
+                          <h3 className="text-base font-bold text-gray-900 line-clamp-2 leading-tight">
+                            {module.name}
+                          </h3>
+                        </div>
+
+                          {/* Description */}
+                          <p className="text-sm text-gray-600 mb-3 leading-relaxed line-clamp-2">
+                            {module.description}
+                          </p>
+
+                          {/* Features */}
+                          <div className="space-y-2">
+                            {module.features.map((feature, featureIndex) => (
+                              <div
+                                key={feature}
+                                className="flex items-start space-x-2 py-1"
+                              >
+                                <Icons.CheckCircle className="w-3 h-3 text-green-500 flex-shrink-0 mt-0.5" />
+                                <span className="text-gray-700 text-xs leading-relaxed flex-1">
+                                  {feature}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        </Card>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </AnimatedSection>
+            </section>
+
           {/* Overview Section */}
-          {/* <section id="overview" ref={overviewRef} className="scroll-mt-20">
+          <section id="overview" ref={overviewRef} className="scroll-mt-20">
             <AnimatedSection>
               <div className="prose prose-lg max-w-none">
-                <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-                  Product Overview
+                <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+                Key Benefits
                 </h2>
+                
                 <p className="text-xl text-gray-600 leading-relaxed mb-12 text-center max-w-4xl mx-auto">
-                  {product.description}
+                Discover the powerful benefits that make Health Plus the ultimate solution for your needs
+
                 </p>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 not-prose">
-                  <Card className="p-8 hover:shadow-xl transition-all duration-300">
-                    <div className="text-center mb-6">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                        <Icons.Target className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                        Key Benefits
-                      </h3>
-                    </div>
-                    <ul className="space-y-4">
-                      {[
-                        "Improved hiring efficiency and quality",
-                        "Enhanced employee engagement and retention",
-                        "Streamlined administrative processes",
-                        "Global compliance and risk management"
-                      ].map((benefit, index) => (
-                        <motion.li 
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        >
-                          <Icons.CheckCircle className="w-6 h-6 text-green-500 flex-shrink-0" />
-                          <span className="text-lg text-gray-700">{benefit}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </Card>
-
-                  <Card className="p-8 hover:shadow-xl transition-all duration-300">
-                    <div className="text-center mb-6">
-                      <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                        <Icons.Settings className="w-8 h-8 text-white" />
-                      </div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                        Technical Specifications
-                      </h3>
-                    </div>
-                <ul className="space-y-4" style={{ listStyle: 'none', padding: 0 }}>
-                      {[
-                        "Cloud-based scalable architecture",
-                        "Mobile-first responsive design",
-                        "Real-time data synchronization",
-                        "Enterprise-grade security protocols"
-                      ].map((spec, index) => (
-                        <motion.li 
-                          key={index}
-                          initial={{ opacity: 0, x: -20 }}
-                          whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.1 }}
-                          className="flex items-center space-x-4 p-3 rounded-lg hover:bg-gray-50 transition-colors"
-                        >
-                          <Icons.Zap className="w-6 h-6 text-blue-500 flex-shrink-0" />
-                          <span className="text-lg text-gray-700">{spec}</span>
-                        </motion.li>
-                      ))}
-                    </ul>
-                  </Card>
+                {/* Key Benefits Grid */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {overviewBenefits.map((benefits, index) => (
+                    <motion.div
+                      key={index}
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ y: -5, scale: 1.02 }}
+                    >
+                      <Card className="p-6 h-full hover:shadow-lg transition-all duration-300 text-center">
+                        <div className={`w-8 h-8 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                          <Icons.CheckCircle className="w-4 h-4 text-white" />
+                        </div>
+                        <p className="text-gray-600 leading-relaxed">
+                          {benefits}
+                        </p>
+                      </Card>
+                    </motion.div>
+                  ))}
                 </div>
-              </div>
-            </AnimatedSection>
-          </section> */}
-        <section id="overview" ref={overviewRef} className="scroll-mt-20">
-  <AnimatedSection>
-    <div className="prose prose-lg max-w-none">
-      <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
-        Product Overview
-      </h2>
-      
-      <p className="text-xl text-gray-600 leading-relaxed mb-12 text-center max-w-4xl mx-auto">
-       Discover what makes our product unique and powerful.
-      </p>
 
-      {/* Key Benefits Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {product.overview.benefits.map((benefit, index) => (
-          <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: index * 0.1 }}
-            whileHover={{ y: -5, scale: 1.02 }}
-          >
-            <Card className="p-6 h-full hover:shadow-lg transition-all duration-300 text-center">
-              <div className={`w-8 h-8 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
-                <Icons.CheckCircle className="w-4 h-4 text-white" />
+
+              
               </div>
-              {/* <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Benefit {index + 1}
-              </h3> */}
-              <p className="text-gray-600 leading-relaxed">
-                {benefit}
-              </p>
-            </Card>
-          </motion.div>
-        ))}
-      </div>
-    </div>
-  </AnimatedSection>
-</section>
+              </AnimatedSection>
+              </section>
+
+
+              {/* key Features */}
+               <section id="overview" ref={overviewRef} className="scroll-mt-20">
+            <AnimatedSection>
+              <div className="prose prose-lg max-w-none">
+                <h2 className="text-4xl font-bold text-gray-900 mb-8 text-center">
+                Key Features
+                </h2>
+                
+                <p className="text-xl text-gray-600 leading-relaxed mb-12 text-center max-w-4xl mx-auto">
+                Discover the powerful features that make Health Plus the ultimate solution for your needs
+
+                </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-20">
+
+                    {product.features.map((feature, index) => {
+                                const FeatureIcon = Icons[
+                                  feature.icon as keyof typeof Icons
+                                ] as React.ComponentType<any>;
+                                return (
+                                  <motion.div
+                                    key={feature.title}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ delay: index * 0.1 }}
+                                    whileHover={{ y: -8, scale: 1.03 }}
+                                    className="h-full"
+                                  >
+                            <Card className="p-4 h-full hover:shadow-lg transition-all duration-300 border border-gray-100 flex flex-col min-h-[200px] w-full">
+                              {/* Icon Section */}
+                              <div
+                                className={`w-10 h-10 bg-gradient-to-r ${product.color} rounded-lg flex items-center justify-center mb-3 flex-shrink-0`}
+                              >
+                                <FeatureIcon className="w-5 h-5 text-white" />
+                              </div>
+
+                              {/* Content Section */}
+                              <div className="flex flex-col flex-1">
+                                <h3 className="text-base font-bold text-gray-900 mb-2 line-clamp-2">
+                                  {feature.title}
+                                </h3>
+                                
+                                <div className="space-y-1.5 flex-1">
+                                  <p className="text-gray-600 text-xs leading-relaxed line-clamp-3">
+                                    {feature.description}
+                                  </p>
+                                  {feature.desc2 && (
+                                    <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
+                                      {feature.desc2}
+                                    </p>
+                                  )}
+                                  {feature.desc3 && (
+                                    <p className="text-gray-600 text-xs leading-relaxed line-clamp-2">
+                                      {feature.desc3}
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                            </Card>
+                                  </motion.div>
+                                );
+                              })}
+              </div>
+           </div>
+              </AnimatedSection>
+              </section>
 
           {/* Features Section */}
-         <section id="features" ref={featuresRef} className="scroll-mt-20">
-          <AnimatedSection>
-          <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-            Key Features
-          </h2>
-          <p className="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
-            Discover the powerful features that make {product.name} the ultimate solution for your needs
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {product.features.map((feature, index) => {
-              const FeatureIcon = Icons[
-                feature.icon as keyof typeof Icons
-              ] as React.ComponentType<any>;
-              return (
-                <motion.div
-                  key={feature.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  whileHover={{ y: -8, scale: 1.03 }}
-                  className="h-full"
-                >
-                  <Card className="p-6 h-full hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col min-h-[320px] max-w-md mx-auto w-full">
-                    {/* Icon Section */}
-                    <div
-                      className={`w-12 h-12 bg-gradient-to-r ${product.color} rounded-xl flex items-center justify-center mb-4 flex-shrink-0`}
-                    >
-                      <FeatureIcon className="w-6 h-6 text-white" />
-                    </div>
-
-                    {/* Content Section */}
-                    <div className="flex flex-col flex-1">
-                      <h3 className="text-lg font-bold text-gray-900 mb-3 line-clamp-2">
-                        {feature.title}
-                      </h3>
-                      
-                      <div className="space-y-2 flex-1">
-                        <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                          {feature.description}
-                        </p>
-                        {feature.desc2 && (
-                          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                            {feature.desc2}
-                          </p>
-                        )}
-                        {feature.desc3 && (
-                          <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
-                            {feature.desc3}
-                          </p>
-                        )}
-                      </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              );
-            })}
-          </div>
-        </AnimatedSection>
-          </section>
-
-          {/* Modules Section */}
-          <section id="modules" ref={modulesRef} className="scroll-mt-20">
+          <section id="features" ref={featuresRef} className="scroll-mt-20">
             <AnimatedSection>
               <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
                 Comprehensive Modules
               </h2>
               <p className="text-xl text-gray-600 mb-12 text-center max-w-2xl mx-auto">
                 Explore our integrated modules designed to work seamlessly together
+
               </p>
-              <div className="space-y-8">
-                {product.modules.map((module, index) => {
-                  const ModuleIcon = Icons[
-                    module.icon as keyof typeof Icons
-                  ] as React.ComponentType<any>;
+                  {/* Key Benefits Grid */}
+               <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 lg:grid-cols-5 gap-3 mb-20">
+                {product.overview.benefits2.map((benefit, index) => {
+                  const BenefitIcon = Icons[benefit.icon as keyof typeof Icons] as React.ComponentType<any>;
                   return (
                     <motion.div
-                      key={module.name}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      transition={{ delay: index * 0.2 }}
+                      key={index}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ y: -2, scale: 1.02 }}
+                      className="min-w-0" // Prevent overflow
                     >
-                      <Card className="p-8 hover:shadow-xl transition-all duration-300 border border-gray-100">
-                        <div className="flex items-start space-x-6">
-                          {/* <div className={`w-16 h-16 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center flex-shrink-0`}>
-                            <ModuleIcon className="w-8 h-8 text-white" />
-                          </div> */}
-                          <div className="flex-1">
-                            <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                              {module.name}
-                            </h3>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                              {module.description}
-                            </p>
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                              {module.features.map((feature, featureIndex) => (
-                                <motion.div
-                                  key={feature}
-                                  initial={{ opacity: 0, y: 10 }}
-                                  whileInView={{ opacity: 1, y: 0 }}
-                                  transition={{ delay: featureIndex * 0.1 }}
-                                  className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-50 transition-colors"
-                                >
-                                  <Icons.CheckCircle className="w-5 h-5 text-green-500 flex-shrink-0" />
-                                  <span className="text-gray-700">{feature}</span>
-                                </motion.div>
-                              ))}
+                      <Card className="p-2 h-full hover:shadow-sm transition-all duration-300 border border-gray-200">
+                        <div className="text-center">
+                          <div className="flex flex-row items-center justify-center mb-1 gap-1">
+                            <div className="text-lg font-bold text-gray-900 truncate">
+                              {benefit.initialValue}%
                             </div>
+                            <BenefitIcon className="w-5 h-5 text-black flex-shrink-0" />
                           </div>
+                          <p className="text-gray-600 text-[10px] xs:text-xs leading-tight line-clamp-2 min-h-[2rem] flex items-center justify-center">
+                            {benefit.text}
+                          </p>
                         </div>
                       </Card>
                     </motion.div>
@@ -727,6 +727,8 @@ const ProductDetail: React.FC = () => {
               </div>
             </AnimatedSection>
           </section>
+
+         
         </div>
       </div>
 
@@ -747,12 +749,13 @@ const ProductDetail: React.FC = () => {
                 size="lg"
                 onClick={handleRequestDemo}
               >
-                Schedule Demo
+                Request a Demo
               </Button>
               <Button
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-gray-900 transition-colors"
+                className="border-white text-white hover:text-gray-900 transition-colors"
+                onClick={handleContactSales}
               >
                 Contact Sales
               </Button>

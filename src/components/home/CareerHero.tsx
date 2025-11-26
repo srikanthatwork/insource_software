@@ -9,6 +9,7 @@ import {
   TrendingUp,
   Building
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; // Add this import
 
 interface CareerFeature {
   icon: React.ReactNode;
@@ -65,6 +66,8 @@ const CareerHero: React.FC = () => {
       ease: "easeInOut"
     }
   };
+
+  const navigate = useNavigate(); // Add this line
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
@@ -175,6 +178,7 @@ const CareerHero: React.FC = () => {
               className="group bg-gradient-to-r from-blue-600 to-purple-600 text-white px-12 py-4 rounded-2xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300 inline-flex items-center gap-3"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/#')} 
             >
               Start Your Journey
               <motion.div
@@ -190,17 +194,6 @@ const CareerHero: React.FC = () => {
               className="flex justify-center items-center gap-12 mt-12 text-gray-600"
               variants={itemVariants}
             >
-              {/* <div className="text-center">
-                <motion.div 
-                  className="text-3xl font-bold text-gray-900 mb-2"
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 1, type: "spring" }}
-                >
-                  50+
-                </motion.div>
-                <div className="text-sm">Countries</div>
-              </div> */}
               <div className="text-center">
                 <motion.div 
                   className="text-3xl font-bold text-gray-900 mb-2"

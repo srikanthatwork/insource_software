@@ -464,7 +464,7 @@ const Hero: React.FC = () => {
           lineHeight: "1.2",
           minHeight: "1.0em"
                }}>
-                Transforming Healthcare Empowering Enterprises
+               Empowering Enterprises
               </span>
             </motion.h1>
 
@@ -507,7 +507,7 @@ const Hero: React.FC = () => {
                 </Button>
               </div>
               
-              <Button 
+              {/* <Button 
                 variant="outline" 
                 size="lg" 
                 icon={Play} 
@@ -515,7 +515,7 @@ const Hero: React.FC = () => {
                 className="border-2 border-gray-300 hover:border-blue-500 hover:bg-blue-50 glass"
               >
                 Watch Video
-              </Button>
+              </Button> */}
             </motion.div>
 
             {/* Animated Stats */}

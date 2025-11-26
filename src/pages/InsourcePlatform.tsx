@@ -495,7 +495,7 @@ const InsourcePlatform: React.FC = () => {
               whileTap={{ scale: 0.95 }}
               className="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold text-lg shadow-2xl hover:shadow-3xl transition-all duration-300"
             >
-              Schedule a Demo
+             Request a Demo
             </motion.a>
             <motion.a
               href="/contact"

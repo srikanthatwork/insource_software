@@ -108,7 +108,7 @@ const About: React.FC = () => {
                   <div className="text-3xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
                     {companyInfo.clients}
                   </div>
-                  <div className="text-sm text-gray-600">+ Happy Clients</div>
+                  <div className="text-sm text-gray-600"> Happy Clients</div>
                 </div>
                 <div className="text-center">
                   <div className="text-3xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
@@ -297,7 +297,7 @@ const About: React.FC = () => {
                   Our Vision
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  {companyInfo.vision}. We envision a future where technology
+                We envision a future where technology
                   seamlessly integrates with healthcare to create better
                   experiences for both providers and patients, ultimately
                   leading to improved health outcomes for communities worldwide.
@@ -308,71 +308,21 @@ const About: React.FC = () => {
         </div>
       </section>
          {/* InsourceSoftware */}
-        <InsourceSoftware/>
+        {/* <InsourceSoftware/> */}
 
 {/* GlobalImpact */}
 {/* <GlobalImpact/> */}
 {/* Events */}
- <Events/>
+ {/* <Events/> */}
 
      
 
 {/* CustomerSuccess */}
-<CustomerSuccess/>
+{/* <CustomerSuccess/> */}
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              What Our{" "}
-              <span className="animate-gradient-text">Clients Say</span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Trusted by healthcare professionals worldwide
-            </p>
-          </AnimatedSection>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <AnimatedSection key={testimonial.name} delay={index * 0.1}>
-                <Card className="p-8 h-full">
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Icons.Star
-                        key={i}
-                        className="w-5 h-5 text-yellow-400 fill-current"
-                      />
-                    ))}
-                  </div>
-
-                  <blockquote className="text-gray-600 mb-6 leading-relaxed">
-                    "{testimonial.quote}"
-                  </blockquote>
-
-                  <div className="flex items-center">
-                    {/* <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-12 h-12 rounded-full object-cover mr-4"
-                    /> */}
-                    <div>
-                      <div className="font-semibold text-gray-900">
-                        {testimonial.name}
-                      </div>
-                      {/* <div className="text-sm text-gray-600">{testimonial.position}</div>
-                      <div className="text-sm text-blue-600">{testimonial.company}</div> */}
-                    </div>
-                  </div>
-                </Card>
-              </AnimatedSection>
-            ))}
-          </div>
-        </div>
-         {/* <section> */}
-        <Customers />
-      
-      </section>
+     
+      <Customers />
     </div>
   );
 };
