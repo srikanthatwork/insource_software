@@ -603,7 +603,7 @@ const ProductDetail: React.FC = () => {
                         <div className={`w-8 h-8 bg-gradient-to-r ${product.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                           <Icons.CheckCircle className="w-4 h-4 text-white" />
                         </div>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="font-bold text-gray-600 leading-relaxed">
                           {benefits}
                         </p>
                       </Card>
@@ -716,7 +716,7 @@ const ProductDetail: React.FC = () => {
                             </div>
                             <BenefitIcon className="w-5 h-5 text-black flex-shrink-0" />
                           </div>
-                          <p className="text-gray-600 text-[10px] xs:text-xs leading-tight line-clamp-2 min-h-[2rem] flex items-center justify-center">
+                          <p className="font-bold text-gray-600 text-[12px]  xs:text-xs leading-tight line-clamp-2 min-h-[2rem] flex items-center justify-center">
                             {benefit.text}
                           </p>
                         </div>

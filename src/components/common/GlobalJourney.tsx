@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { CheckCircle, X, AlertCircle, AlertTriangle } from 'lucide-react';
 
-interface GlobalTeamProps {
+interface GlobalJourneyProps {
   isOpen: boolean;
   onClose: () => void;
 }
@@ -15,7 +15,7 @@ interface FormErrors {
   description?: string;
 }
 
-const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
+const GlobalJourney: React.FC<GlobalJourneyProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     name: '',
     mobile: '',
@@ -33,7 +33,6 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
   const validateForm = (): boolean => {
     const errors: FormErrors = {};
     
-    // Required field validation
     if (!formData.name.trim()) {
       errors.name = 'Name is required';
     } else if (formData.name.trim().length < 2) {
@@ -75,7 +74,6 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
       [name]: value
     }));
 
-    // Clear error when user starts typing
     if (formErrors[name as keyof FormErrors]) {
       setFormErrors(prev => ({
         ...prev,
@@ -90,13 +88,12 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
     setShowNotification(true);
     setTimeout(() => {
       setShowNotification(false);
-    }, 5000);
+    }, 3000);
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    // Validate form before submission
     if (!validateForm()) {
       showNotificationMessage('warning', 'Please fill all required fields correctly before submitting.');
       return;
@@ -105,14 +102,14 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Here you would typically send the data to your backend
+
       console.log('Form submitted successfully:', formData);
-      
-      // Show success notification
-      showNotificationMessage('success', 'Thank you! Your demo request has been submitted successfully. We will contact you within 24 hours.');
+
+      showNotificationMessage(
+        'success',
+        'Thank you! Your request has been submitted successfully. We will contact you within 24 hours.'
+      );
       
       // Reset form
       setFormData({
@@ -122,21 +119,24 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
         designation: '',
         description: ''
       });
-      
-      // Clear any existing errors
       setFormErrors({});
-      
-      // Close modal after a delay
-      setTimeout(() => {
-        onClose();
-      }, 2000);
-      
+
+      // ✅ Close modal immediately after success
+      onClose();
     } catch (error) {
       console.error('Error submitting form:', error);
-      showNotificationMessage('error', 'Sorry, there was an error submitting your request. Please try again or contact support.');
+      showNotificationMessage(
+        'error',
+        'Sorry, there was an error submitting your request. Please try again or contact support.'
+      );
     } finally {
       setIsSubmitting(false);
     }
+  };
+
+  // ✅ Let user close modal anytime
+  const handleClose = () => {
+    onClose();
   };
 
   const modalVariants = {
@@ -258,7 +258,7 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
             animate="visible"
             exit="exit"
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-[100]"
-            onClick={onClose}
+            onClick={handleClose}
           >
             <motion.div
               variants={modalVariants}
@@ -275,17 +275,17 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
                 {/* Header */}
                 <div className="flex justify-between items-center mb-6">
                   <h2 id="modal-title" className="text-2xl font-bold text-gray-900">
-                    Request a Demo
+                    Start Your Global Journey
                   </h2>
                   <button
-                    onClick={onClose}
+                    onClick={handleClose}
                     className="text-gray-400 hover:text-gray-600 text-2xl font-light transition-colors"
-                    disabled={isSubmitting}
                     aria-label="Close modal"
                   >
                     ×
                   </button>
                 </div>
+                
 
                 <form onSubmit={handleSubmit} className="space-y-4">
                   {/* Name */}
@@ -437,7 +437,7 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
                           Submitting...
                         </>
                       ) : (
-                        'Request Demo'
+                        'Start Your Journey'
                       )}
                     </motion.button>
                   </div>
@@ -456,25 +456,25 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className={`fixed top-4 right-4 z-[110] max-w-sm w-full ${notificationStyles.bg} ${notificationStyles.border} rounded-lg shadow-lg p-4`}
+            className={`fixed top-4 right-4 left-4 sm:left-auto sm:right-4 z-[110] max-w-sm w-[calc(100vw-2rem)] sm:w-full ${notificationStyles.bg} ${notificationStyles.border} rounded-lg shadow-lg p-4`}
             role="alert"
           >
             <div className="flex items-start gap-3">
-              <div className={`flex-shrink-0 ${notificationStyles.icon}`}>
+              <div className={`flex-shrink-0 ${notificationStyles.icon} mt-0.5`}>
                 {notificationStyles.iconComponent}
               </div>
-              <div className="flex-1">
-                <p className={`text-sm font-medium ${notificationStyles.title}`}>
+              <div className="flex-1 min-w-0">
+                <p className={`text-sm font-medium ${notificationStyles.title} break-words`}>
                   {notificationType === 'success' ? 'Success!' : 
                    notificationType === 'error' ? 'Error!' : 'Warning!'}
                 </p>
-                <p className={`text-sm ${notificationStyles.text} mt-1`}>
+                <p className={`text-sm ${notificationStyles.text} mt-1 break-words`}>
                   {notificationMessage}
                 </p>
               </div>
               <button
                 onClick={() => setShowNotification(false)}
-                className={`flex-shrink-0 ${
+                className={`flex-shrink-0 mt-0.5 ${
                   notificationType === 'success' 
                     ? 'text-green-400 hover:text-green-600' 
                     : notificationType === 'error'
@@ -493,4 +493,4 @@ const GlobalTeam: React.FC<GlobalTeamProps> = ({ isOpen, onClose }) => {
   );
 };
 
-export default GlobalTeam;
+export default GlobalJourney;

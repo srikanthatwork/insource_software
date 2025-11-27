@@ -827,7 +827,7 @@ export const products: Product[] = [
   {
   id: "hmsehr",
   name: "Health Plus",
-  fullName: "Hospital Management Electronic Health Records",
+  fullName: "Integrated Health Care Management",
   description: "Insource Healthcare Management transforms healthcare operations with a unified, cloud-based solution for hospitals, clinics, and diagnostic centers. It seamlessly integrates clinical, administrative, and financial modules under one intelligent system — designed with HL7/FHIR standards and enhanced with AI-driven analytics for better patient outcomes and compliance.",
   shortDescription: "Advanced Healthcare Platform for Tomorrows Providers",
   icon: "Heart",
@@ -843,19 +843,19 @@ export const products: Product[] = [
     ],
     benefits2: [
       {
-        text: "Reduce administrative costs",
+        text: " administrative costs",
         initialValue: 40,
         icon: "ArrowDown",
         color: "from-green-500 to-emerald-500"
       },
       {
-        text: "Improve patient satisfaction",
+        text: " patient satisfaction",
         initialValue: 35,
         icon: "ArrowUp", 
         color: "from-blue-500 to-cyan-500"
       },
       {
-        text: "Decrease medication errors",
+        text: " medication errors",
         initialValue: 60,
         icon: "ArrowDown",
         color: "from-red-500 to-pink-500"
@@ -1039,19 +1039,19 @@ export const products: Product[] = [
       ],
     benefits2: [
   {
-    text: "Reduce HR administrative time",
+    text: " HR administrative time",
     initialValue: 60,
     icon: "ArrowDown",
     color: "from-green-500 to-emerald-500"
   },
   {
-    text: "Improve employee satisfaction",
+    text: " employee satisfaction",
     initialValue: 45,
     icon: "ArrowUp", 
     color: "from-blue-500 to-cyan-500"
   },
   {
-    text: "Decrease payroll processing time",
+    text: " payroll processing time",
     initialValue: 70,
     icon: "ArrowDown",
     color: "from-red-500 to-pink-500"
@@ -1063,7 +1063,7 @@ export const products: Product[] = [
     color: "from-purple-500 to-indigo-500"
   },
   {
-    text: "Increase performance management effectiveness",
+    text: " performance management effectiveness",
     initialValue: 40,
     icon: "ArrowUp",
     color: "from-orange-500 to-amber-500"
@@ -1255,19 +1255,19 @@ export const products: Product[] = [
    benefits2: [
  
   {
-    text: "Reduce stockouts with AI forecasting",
+    text: " stockouts with AI forecasting",
     initialValue: 80,
     icon: "ArrowDown",
     color: "from-teal-500 to-green-500"
   },
   {
-    text: "Improve inventory accuracy",
+    text: " inventory accuracy",
     initialValue: 99.8,
     icon: "ArrowUp",
     color: "from-indigo-500 to-purple-500"
   },
   {
-    text: "Decrease carrying costs",
+    text: " carrying costs",
     initialValue: 35,
     icon: "ArrowDown",
     color: "from-rose-500 to-pink-500"
@@ -1279,7 +1279,7 @@ export const products: Product[] = [
     color: "from-yellow-500 to-orange-500"
   },
   {
-    text: "Increase supplier performance",
+    text: " supplier performance",
     initialValue: 45,
     icon: "ArrowUp",
     color: "from-cyan-500 to-blue-500"

@@ -124,7 +124,7 @@ const Footer: React.FC = () => {
                   </span>
                   <div className="text-sm text-gray-400">Software Solutions</div>
                 </div> */}
-                <img src={logo} alt="" width={80}/>
+                <img src={logo} alt="" width={60} height={20}/>
               </div>
 
               <p className="text-gray-300 leading-relaxed">
